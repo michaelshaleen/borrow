@@ -9,7 +9,11 @@ function AboutPage() {
   return (
     <div className="container">
       <div>
-        <p>This about page is for anyone to read!</p>
+        <p>If you have any questions or need assistance
+          please use the following contact methods
+        </p>
+        <div>Email: toi_admin@gmail.com</div>
+        <div>Phone: 801-010-8010</div>
       </div>
     </div>
   );
