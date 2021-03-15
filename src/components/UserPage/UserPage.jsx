@@ -1,30 +1,43 @@
 import React from 'react';
 import LogOutButton from '../LogOutButton/LogOutButton';
-import {useSelector} from 'react-redux';
-import { HashRouter as Router, Route, Link } from 'react-router-dom';
+import {useSelector, useDispatch} from 'react-redux';
+import { useEffect } from 'react';
+
 
 function UserPage() {
   // this component doesn't do much to start, just renders some user reducer info to the DOM
   const user = useSelector((store) => store.user);
+  const dispatch = useDispatch();
+
+  useEffect(()=>{
+    dispatch({
+      type: 'FETCH_TOYS'
+    })
+  }, []);
+
+  
   return (
     <div className="container">
       <h2>Welcome, {user.username}!</h2>
-      {/* <p>Your ID is: {user.id}</p> */}
-      {/* <LogOutButton className="btn" /> */}
+      <p>Your ID is: {user.id}</p>
       <table>
-        <thead>
-          Toys I've Shared
-        </thead>
-          <tr>
-            <th>Name</th>
-            <th>Age Group</th>
-          </tr>
-          <tr>
-            <td>BasketBall</td>
-            <td>5-10</td>
-            <td> <button onClick={()=>alert('deleted')}>Delete</button></td>
-          </tr>
-       </table>
+        <tr>
+          <th>Description</th>
+          <th>Available</th>
+          <th>Age</th>
+        </tr>
+        <tr>
+          <td>BasketBall</td>
+          <td>Yes</td>
+          <td><button>Delete</button></td>
+        </tr>
+        <tr>
+          <td>Ice Skates</td>
+          <td>No</td>
+          <td><button>Delete</button></td>
+        </tr>
+      </table>
+      <LogOutButton className="btn" />
     </div>
   );
 }
