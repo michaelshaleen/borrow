@@ -4,8 +4,6 @@ import { createStore, applyMiddleware } from 'redux';
 import { Provider } from 'react-redux';
 import createSagaMiddleware from 'redux-saga';
 import logger from 'redux-logger';
-import { takeEvery, put } from 'redux-saga/effects';
-
 
 import rootReducer from './redux/reducers/_root.reducer'; // imports ./redux/reducers/index.js
 import rootSaga from './redux/sagas/_root.saga'; // imports ./redux/sagas/index.js
@@ -14,21 +12,6 @@ import App from './components/App/App';
 
 const sagaMiddleware = createSagaMiddleware();
 
-function* rootSaga() {
-  yield takeEvery('FETCH_TOYS', FetchToys);
-
-}
-
-function* FetchToys() {
-  try {
-      const toys = yield axios.get('/api/user/');
-      //console.log('get all:', movies.data);
-      yield put({ type: 'SET_MOVIES', payload: movies.data });
-  } catch {
-      console.log('get all error');
-  }      
-}
-  
 // this line creates an array of all of redux middleware you want to use
 // we don't want a whole ton of console logs in our production code
 // logger will only be added to your project if your in development mode

@@ -6,6 +6,17 @@ const router = express.Router();
  * GET route template
  */
 router.get('/', (req, res) => {
+  const query = 
+  `SELECT * FROM "toys"`;
+  
+  pool.query(query)
+  .then( result => {
+    res.send(result.rows);
+  })
+  .catch(err => {
+    console.log('ERROR: Get all movies', err);
+    res.sendStatus(500)
+  })
   // GET route code here
 });
 

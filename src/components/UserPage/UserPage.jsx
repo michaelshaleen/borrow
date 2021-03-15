@@ -12,14 +12,22 @@ function UserPage() {
   useEffect(()=>{
     dispatch({
       type: 'FETCH_TOYS'
+      //payload: user.id
     })
   }, []);
 
-  
+  const grabToys = () => {
+    dispatch({
+      type: 'FETCH_TOYS'
+    })
+  }
+
+
   return (
     <div className="container">
       <h2>Welcome, {user.username}!</h2>
       <p>Your ID is: {user.id}</p>
+      <button onClick={grabToys}>Grab data</button>
       <table>
         <tr>
           <th>Description</th>
