@@ -8,11 +8,6 @@ function UserPage() {
   const user = useSelector((store) => store.user);
   return (
     <div className="container">
-      <nav>
-        <Link>Search New Toy</Link>
-        <Link>Share New Toy</Link>
-        
-      </nav>
       <h2>Welcome, {user.username}!</h2>
       <p>Your ID is: {user.id}</p>
       {/* <LogOutButton className="btn" /> */}

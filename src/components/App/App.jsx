@@ -15,7 +15,8 @@ import ProtectedRoute from '../ProtectedRoute/ProtectedRoute';
 
 import AboutPage from '../AboutPage/AboutPage';
 import UserPage from '../UserPage/UserPage';
-import InfoPage from '../InfoPage/InfoPage';
+import SearchToy from '../SearchToy/SearchToy';
+import ShareToys from '../ShareToys/ShareToys';
 import LandingPage from '../LandingPage/LandingPage';
 import LoginPage from '../LoginPage/LoginPage';
 import RegisterPage from '../RegisterPage/RegisterPage';
@@ -63,7 +64,14 @@ function App() {
             exact
             path="/info"
           >
-            <InfoPage />
+            <SearchToy />
+          </ProtectedRoute>
+          <ProtectedRoute
+            // logged in shows InfoPage else shows LoginPage
+            exact
+            path="/share_toys"
+          >
+            <ShareToys />
           </ProtectedRoute>
 
           {/* When a value is supplied for the authRedirect prop the user will
