@@ -43,16 +43,21 @@ function UserPage() {
     })
   }
 
-  const availableBtn = (available) => {
-    console.log(available)
-    if(available !== true){
-      setAvailable('true')
-
-      console.log("available is now", available)
-    }if(available !== false){
-      setAvailable('false')
-      console.log("available is now", available)
+  const availableBtn = (event) => {
+    console.log(event.target.id, "target id")
+    // match event.target.id to id in toys list
+    //for loop
+    if(available === true){
+      console.log()
+      //available = 'false',
+      setAvailable(false);
     }
+    if(available == false){
+      setAvailable(true)
+    }
+
+
+    return available;
   }
 
 
@@ -69,12 +74,12 @@ function UserPage() {
           <th> Available </th>
         </tr>
         {toys.map((toy)=>{
-          return(
+          return(// make as own component
             <tr key={toy.id}>
           <td>{toy.name}</td>
           <td>{toy.ages}</td>
           {/* <td>{toy.available}</td>  */}
-          <td><button onClick={() => {availableBtn(toy.available) }}>Available</button></td>
+          <td><button id={toy.id} onClick={availableBtn}>Available</button></td>
           
           <button onClick={()=>{ deleteBtn(toy.id) }}>Delete</button>
           </tr>

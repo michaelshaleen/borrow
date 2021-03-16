@@ -38,7 +38,8 @@ function ShareToys() {
      // this.useRef["toyName"].value = "";
     return(
       setToyName(''),
-      setAgeGroup('')   
+      setAgeGroup(''),
+      setAvailable('')   
     )
   }
   return(
