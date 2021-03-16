@@ -41,7 +41,6 @@ console.log(searchedToys, "searched toys")
     <button>Cancel</button>
 
     <table>
-      <thead><th>Results</th></thead>
           <tr>
           <th>Description</th>
           <th> Available </th>
@@ -49,12 +48,11 @@ console.log(searchedToys, "searched toys")
         </tr>
         {searchedToys.map((toy)=>{
           return(
-            <tr key={toy.id}>
+        <tr key={toy.id}>
           <td>{toy.name}</td>
           <td>{toy.available}</td> 
           <td>{toy.ages}</td>
-          
-          </tr>
+        </tr>
             )
         })}
       </table>

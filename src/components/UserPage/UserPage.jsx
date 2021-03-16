@@ -1,7 +1,7 @@
 import React from 'react';
 import LogOutButton from '../LogOutButton/LogOutButton';
 import {useSelector, useDispatch} from 'react-redux';
-import { useEffect } from 'react';
+import { useEffect, useState} from 'react';
 import axios from "axios";
 
 
@@ -12,6 +12,8 @@ function UserPage() {
   console.log(toys, "toys in user page")
   console.log(user, "user in user page")
   const dispatch = useDispatch();
+
+  const [available, setAvailable] = useState('');
 
   useEffect(()=>{
     dispatch({
@@ -41,6 +43,19 @@ function UserPage() {
     })
   }
 
+  const availableBtn = (available) => {
+    console.log(available)
+    if(available !== true){
+      setAvailable('true')
+
+      console.log("available is now", available)
+    }if(available !== false){
+      setAvailable('false')
+      console.log("available is now", available)
+    }
+  }
+
+
 
   return (
     <div className="container">
@@ -50,17 +65,19 @@ function UserPage() {
       <table>
           <tr>
           <th>Description</th>
-          <th> Available </th>
           <th> Age</th>
+          <th> Available </th>
         </tr>
         {toys.map((toy)=>{
           return(
             <tr key={toy.id}>
           <td>{toy.name}</td>
-          <td>{toy.available}</td> 
           <td>{toy.ages}</td>
+          {/* <td>{toy.available}</td>  */}
+          <td><button onClick={() => {availableBtn(toy.available) }}>Available</button></td>
           
-          <button onClick={()=>{ deleteBtn(toy.id) }}>Delete</button></tr>
+          <button onClick={()=>{ deleteBtn(toy.id) }}>Delete</button>
+          </tr>
             )
         })}
       </table>
