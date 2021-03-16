@@ -3,7 +3,7 @@ import { put, takeLatest } from 'redux-saga/effects';
 
 // worker Saga: will be fired on "FETCH_USER" actions
 function* shareToy(action) {
-  console.log(acton.payload, "payload in share saga")
+  console.log(action.payload, "payload in share saga")
   try {
     const response = yield axios.post('/api/toy', action.payload);
     yield put({ type: 'ADD_TOY', payload: response.data });

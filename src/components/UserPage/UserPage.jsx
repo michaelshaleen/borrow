@@ -20,11 +20,20 @@ function UserPage() {
     })
   }, []);
 
+  const fetchToys = () => {
+    console.log("fetch toys")
+    dispatch({
+      type: 'FETCH_TOY'
+      //payload: user.id
+    })
+  }
+
   const deleteBtn = (toyId) => {
     console.log('delete content')
     axios.delete(`/api/toy/${toyId}`)
     .then((res) => {
       console.log("successful delete",res);
+      fetchToys();
       
     })
     .catch(err => {
@@ -32,35 +41,12 @@ function UserPage() {
     })
   }
 
-    // dispatch({
-    //   type: 'DELETE',
-    //   payload: toyId
- 
-
 
   return (
     <div className="container">
       <h2>Welcome, {user.username}!</h2>
       <h4>These are the toys you've shared!</h4>
       {/* <p>Your ID is: {user.id}</p> */}
-      {/* <button onClick={grabToys}>Grab data</button> */}
-      {/* <table> */}
-       
-        {/* <tr>
-          <td>{toys.name}</td>
-          <td>Yes</td>
-          <td>5-10</td>
-          <td><button onClick={deleteBtn}>Delete</button></td>
-        </tr>
-        <tr>
-          <td>Ice Skates</td>
-          <td>No</td>
-          <td>5-10</td>
-          <td><button onClick={deleteBtn}>Delete</button></td>
-        </tr>
-      </table> */}
-
-
       <table>
           <tr>
           <th>Description</th>
@@ -78,7 +64,7 @@ function UserPage() {
             )
         })}
       </table>
-      <LogOutButton className="btn" />
+      {/* <LogOutButton className="btn" /> */}
     </div>
   );
 }
