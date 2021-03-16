@@ -11,7 +11,7 @@ function ShareToys() {
   console.log(newToy, "new Toy")
 
 
-
+//setToyname empty set age group empty
 
   const shareToy = (action) => {
     //console.log("share toy")
@@ -23,6 +23,13 @@ function ShareToys() {
       }
     })
   }
+
+
+  const cancelBtn = () => {
+    console.log("cancel")
+    // location.reload();
+    // setAgeGroup("0-3");
+  }
   return(
     <>
     <p>Share New Toys</p>
@@ -33,13 +40,13 @@ function ShareToys() {
     />
     <select name="Ages" id="ages"
       onChange={(event) => setAgeGroup(event.target.value)}>
-        
+      <option>  </option>
       <option value="0-3">0-3 Years Old</option>
       <option value="3-5">3-5 Years Old</option>
       <option value="5-10">5-10 Years Old</option>
     </select>
     <button onClick={shareToy}>Share Toy</button>
-    <button>Cancel</button>
+    <button onClick={cancelBtn}>Cancel</button>
 
     </>
   )
