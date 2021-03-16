@@ -1,12 +1,10 @@
 const toyReducer = (state = {}, action) => {
+  console.log(action.payload, "action type reducer")
   switch (action.type) {
     case 'SET_TOY':
       return action.payload;
-    case 'UNSET_TOY':
-      return {};
-    default:
-      return state;
-  }
+    }
+    return state;
 };
 
 // user will be on the redux state at:
