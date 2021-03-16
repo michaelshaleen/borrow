@@ -19,12 +19,9 @@ function UserPage() {
     })
   }, []);
 
-  // const grabToys = () => {
-  //   console.log('grab toys')
-  //   dispatch({
-  //     type: 'FETCH_TOY'
-  //   })
-  // }
+  const deleteBtn = () => {
+    console.log('delete content')
+  }
 
 
   return (
@@ -41,12 +38,14 @@ function UserPage() {
         <tr>
           <td>{toys.name}</td>
           <td>Yes</td>
-          <td><button>Delete</button></td>
+          <td>5-10</td>
+          <td><button onClick={deleteBtn}>Delete</button></td>
         </tr>
         <tr>
           <td>Ice Skates</td>
           <td>No</td>
-          <td><button>Delete</button></td>
+          <td>5-10</td>
+          <td><button onClick={deleteBtn}>Delete</button></td>
         </tr>
       </table>
       <LogOutButton className="btn" />

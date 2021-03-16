@@ -25,7 +25,26 @@ router.get('/', (req, res) => {
  * POST route template
  */
 router.post('/', (req, res) => {
-  // POST route code here
+  const newToy= req.body;
+  console.log(newToy, "new toy")
+   const queryText = `
+    INSERT INTO toys (name, ages) 
+    VALUES ($1, $2);`;
+      
+  const queryParams = [
+    newToy.name,
+    newToy.ages
+  ]
+
+  pool.query(queryText, queryParams)
+      .then((result) => {
+        console.log(result, "result pool")
+          res.sendStatus(201);
+      })
+      .catch((err) => {
+          console.log(`Error making query ${queryText}`, err);
+          res.sendStatus(500);
+      });
 });
 
 module.exports = router;
