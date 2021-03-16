@@ -20,6 +20,7 @@ import RegisterPage from '../RegisterPage/RegisterPage';
 import SearchToys from '../SearchToys/SearchToys';
 import ShareToys from '../ShareToys/ShareToys';
 import UserPage from '../UserPage/UserPage';
+import ToyList from '../ToyList/ToyList';
 
 import './App.css';
 

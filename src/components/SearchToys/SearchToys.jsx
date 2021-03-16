@@ -1,5 +1,6 @@
 import {useSelector, useDispatch} from 'react-redux';
 import {useState} from 'react';
+import ToyList from '../ToyList/ToyList';
 
 
 function SearchToys() {
@@ -46,15 +47,12 @@ console.log(searchedToys, "searched toys")
           <th> Available </th>
           <th> Age</th>
         </tr>
+        <tbody>
+
         {searchedToys.map((toy)=>{
-          return(
-        <tr key={toy.id}>
-          <td>{toy.name}</td>
-          <td>{toy.available}</td> 
-          <td>{toy.ages}</td>
-        </tr>
-            )
-        })}
+          return <ToyList key={toy.id}/>
+          })}
+          </tbody>
       </table>
 
 

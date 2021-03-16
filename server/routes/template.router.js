@@ -58,7 +58,7 @@ router.delete('/:toyId', (req, res) => {
   RETURNING *`; 
 
 
-  queryParams = req.params.toyId;
+  const queryParams = req.params.toyId;
   console.log(queryParams, "params")
 
   pool.query(queryText, [queryParams])
@@ -70,5 +70,16 @@ router.delete('/:toyId', (req, res) => {
     res.sendStatus(500)
   })
 });
+
+
+router.put('/:toyId', (req, res) => {
+  console.log(req.params.toyId, 'TOY ID HERE')
+  const queryText = `
+  UPDATE "toys"
+  SET "available" = false
+  WHERE id = $1`
+})
+
+const queryParams = 
 
 module.exports = router;

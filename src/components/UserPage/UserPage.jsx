@@ -3,6 +3,7 @@ import LogOutButton from '../LogOutButton/LogOutButton';
 import {useSelector, useDispatch} from 'react-redux';
 import { useEffect, useState} from 'react';
 import axios from "axios";
+import ToyList from '../ToyList/ToyList';
 
 
 
@@ -73,18 +74,12 @@ function UserPage() {
           <th> Age</th>
           <th> Available </th>
         </tr>
-        {toys.map((toy)=>{
-          return(// make as own component
-            <tr key={toy.id}>
-          <td>{toy.name}</td>
-          <td>{toy.ages}</td>
-          {/* <td>{toy.available}</td>  */}
-          <td><button id={toy.id} onClick={availableBtn}>Available</button></td>
-          
-          <button onClick={()=>{ deleteBtn(toy.id) }}>Delete</button>
-          </tr>
-            )
+        <tbody>
+            {toys.map(toy => {
+          return <ToyList key={toy.id} toy={toy}/>
+          // make as own component
         })}
+        </tbody>
       </table>
       {/* <LogOutButton className="btn" /> */}
     </div>
@@ -93,3 +88,13 @@ function UserPage() {
 
 // this allows us to use <App /> in index.js
 export default UserPage;
+
+
+// <tr key={toy.id}>
+// <td>{toy.name}</td>
+// <td>{toy.ages}</td>
+// {/* <td>{toy.available}</td>  */}
+// <td><button id={toy.id} onClick={availableBtn}>Available</button></td>
+
+// <button onClick={()=>{ deleteBtn(toy.id) }}>Delete</button>
+// </tr>

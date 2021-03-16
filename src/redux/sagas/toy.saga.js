@@ -20,9 +20,21 @@ function* deleteToy(toyId) {
   }
 }
 
+function* updateToy(toyId){
+  console.log("update in saga")
+  try{
+    const updatedToy = yield axios.put(`api/toy, ${toyId}`);
+
+  }
+  catch(error) {
+    console.log(error, "error updateToy sagas")
+  }
+}
+
 function* toySaga() {
   yield takeLatest('FETCH_TOY', fetchToy);
   yield takeLatest('DELETE', deleteToy)
+  yield takeLatest('UPDATE_TOY', updateToy)
 }
 
 export default toySaga;
