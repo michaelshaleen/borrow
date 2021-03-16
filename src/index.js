@@ -29,6 +29,7 @@ const store = createStore(
 
 // tells the saga middleware to use the rootSaga
 // rootSaga contains all of our other sagas
+//dispatch runs through this
 sagaMiddleware.run(rootSaga);
 
 ReactDOM.render(

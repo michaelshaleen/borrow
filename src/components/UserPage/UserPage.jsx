@@ -7,18 +7,21 @@ import { useEffect } from 'react';
 function UserPage() {
   // this component doesn't do much to start, just renders some user reducer info to the DOM
   const user = useSelector((store) => store.user);
+  const toys = useSelector((store) => store.toys);
+  console.log(toys, "toys in user page")
   const dispatch = useDispatch();
 
-  useEffect(()=>{
-    dispatch({
-      type: 'FETCH_TOYS'
-      //payload: user.id
-    })
-  }, []);
+  // useEffect(()=>{
+  //   dispatch({
+  //     type: 'FETCH_TOYS'
+  //     //payload: user.id
+  //   })
+  // }, []);
 
   const grabToys = () => {
+    console.log('grab toys')
     dispatch({
-      type: 'FETCH_TOYS'
+      type: 'FETCH_TOY'
     })
   }
 
