@@ -6,7 +6,7 @@ function* shareToy(action) {
   console.log(action.payload, "payload in share saga")
   try {
     const response = yield axios.post('/api/toy', action.payload);
-    yield put({ type: 'ADD_TOY', payload: response.data });
+    yield put({ type: 'FETCH_TOY', payload: response.data });
   } catch (error) {
     console.log('User get request failed', error);
   }

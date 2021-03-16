@@ -29,7 +29,7 @@ function Nav() {
 
         {user.id && (
           <>
-            <Link className="navLink" to="/info">
+            <Link className="navLink" to="/search_toys">
               Search New Toy
             </Link>
             <Link className="navLink" to="/share_toys">
