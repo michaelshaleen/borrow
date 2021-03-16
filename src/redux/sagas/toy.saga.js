@@ -24,7 +24,7 @@ function* updateToy(toyId){
   console.log("update in saga")
   try{
     const updatedToy = yield axios.put(`api/toy, ${toyId}`);
-
+    yield put({type: 'FETCH_TOY', payload: updatedToy.data})
   }
   catch(error) {
     console.log(error, "error updateToy sagas")

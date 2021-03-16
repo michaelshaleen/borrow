@@ -74,12 +74,23 @@ router.delete('/:toyId', (req, res) => {
 
 router.put('/:toyId', (req, res) => {
   console.log(req.params.toyId, 'TOY ID HERE')
+
   const queryText = `
   UPDATE "toys"
   SET "available" = false
-  WHERE id = $1`
-})
+  WHERE id = $1`;
 
-const queryParams = 
+  const queryParams = req.params.toyId;
+
+  pool.query(queryText, [queryParams])
+  .then(dbRes => {
+    console.log("updated rows", dbRes.rows)
+  })
+  .catch(error => {
+    console.log(error, "err router.put")
+    res.sendStatus(500)
+  })
+});
+
 
 module.exports = router;
