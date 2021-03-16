@@ -15,9 +15,8 @@ function* fetchToy() {
 function* deleteToy(toyId) {
   try {
     axios.delete(`/api/toy/${toyId}`);
-    yield put({ type: 'SET_TOY', payload: toys.data });
   } catch (error) {
-    console.log('User get request failed', error);
+    console.log('delete toy request failed', error);
   }
 }
 

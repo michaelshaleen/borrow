@@ -10,6 +10,7 @@ const {rejectUnauthenticated} = require('../modules/authentication-middleware');
 router.get('/', rejectUnauthenticated, (req, res) => {
   const query = 
   `SELECT * FROM "toys"`;
+  //pass userId in as param later to grab specific toy
   
   pool.query(query)
   .then( result => {
@@ -50,30 +51,24 @@ router.post('/', rejectUnauthenticated, (req, res) => {
 });
 
 
-router.delete('/:toyId', rejectUnauthenticated, (req, res) => {
+router.delete('/:toyId', (req, res) => {
   const queryText = `
   DELETE FROM "toys"
   WHERE id = $1
   RETURNING *`; 
 
 
-  queryParams = [req.params.petId];
+  queryParams = req.params.toyId;
+  console.log(queryParams, "params")
 
-  pool.query(queryText, queryParams)
+  pool.query(queryText, [queryParams])
   .then(dbRes =>{
     console.log("deleted rows", dbRes.rows)
-    if(dbRes.rows.length === 0){
-      res.sendStatus(403);
-    }
-    else{
-      res.sendStatus(204);
-    }
-    res.sendStatus(204);
   })
   .catch(error => {
     console.log(error, "error pool query delete")
     res.sendStatus(500)
   })
-})
+});
 
 module.exports = router;

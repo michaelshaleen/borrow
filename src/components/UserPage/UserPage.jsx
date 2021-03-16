@@ -2,10 +2,11 @@ import React from 'react';
 import LogOutButton from '../LogOutButton/LogOutButton';
 import {useSelector, useDispatch} from 'react-redux';
 import { useEffect } from 'react';
+import axios from "axios";
+
 
 
 function UserPage() {
-  // this component doesn't do much to start, just renders some user reducer info to the DOM
   const user = useSelector((store) => store.user);
   const toys = useSelector((store) => store.toy);
   console.log(toys, "toys in user page")
@@ -21,18 +22,20 @@ function UserPage() {
 
   const deleteBtn = (toyId) => {
     console.log('delete content')
-    dispatch({
-      type: 'DELETE',
-      payload: toyId
-    // }).then((res) => {
-    //   console.log("successful delete",res);
-    //   loadPets();
-    // })
-    // .catch(err => {
-    //   console.log(err, "delete pet error")
-    // })
-  })
-}
+    axios.delete(`/api/toy/${toyId}`)
+    .then((res) => {
+      console.log("successful delete",res);
+      
+    })
+    .catch(err => {
+      console.log(err, "delete toy error")
+    })
+  }
+
+    // dispatch({
+    //   type: 'DELETE',
+    //   payload: toyId
+ 
 
 
   return (
@@ -41,13 +44,9 @@ function UserPage() {
       <h4>These are the toys you've shared!</h4>
       {/* <p>Your ID is: {user.id}</p> */}
       {/* <button onClick={grabToys}>Grab data</button> */}
-      <table>
-        <tr>
-          <th>Description</th>
-          <th> Available </th>
-          <th> Age</th>
-        </tr>
-        <tr>
+      {/* <table> */}
+       
+        {/* <tr>
           <td>{toys.name}</td>
           <td>Yes</td>
           <td>5-10</td>
@@ -59,17 +58,26 @@ function UserPage() {
           <td>5-10</td>
           <td><button onClick={deleteBtn}>Delete</button></td>
         </tr>
-      </table>
+      </table> */}
 
 
-      <ul>
+      <table>
+          <tr>
+          <th>Description</th>
+          <th> Available </th>
+          <th> Age</th>
+        </tr>
         {toys.map((toy)=>{
-          <li key={toy.id}>{toy.name},
-          {toy.ages}, 
-          {toy.available}
-          <button onClick={()=>{ deleteBtn(toy.id) }}>Delete</button></li>
+          return(
+            <tr key={toy.id}>
+          <td>{toy.name}</td>
+          <td>{toy.available}</td> 
+          <td>{toy.ages}</td>
+          
+          <button onClick={()=>{ deleteBtn(toy.id) }}>Delete</button></tr>
+            )
         })}
-      </ul>
+      </table>
       <LogOutButton className="btn" />
     </div>
   );
