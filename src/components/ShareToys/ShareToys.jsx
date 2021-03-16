@@ -13,7 +13,7 @@ function ShareToys() {
 
 
 
-  const shareToy = () => {
+  const shareToy = (action) => {
     //console.log("share toy")
     dispatch({
       type: 'ADD_TOY',

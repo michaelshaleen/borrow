@@ -19,21 +19,33 @@ function UserPage() {
     })
   }, []);
 
-  const deleteBtn = () => {
+  const deleteBtn = (toyId) => {
     console.log('delete content')
-  }
+    dispatch({
+      type: 'DELETE',
+      payload: toyId
+    // }).then((res) => {
+    //   console.log("successful delete",res);
+    //   loadPets();
+    // })
+    // .catch(err => {
+    //   console.log(err, "delete pet error")
+    // })
+  })
+}
 
 
   return (
     <div className="container">
       <h2>Welcome, {user.username}!</h2>
-      <p>Your ID is: {user.id}</p>
+      <h4>These are the toys you've shared!</h4>
+      {/* <p>Your ID is: {user.id}</p> */}
       {/* <button onClick={grabToys}>Grab data</button> */}
       <table>
         <tr>
           <th>Description</th>
-          <th>Available</th>
-          <th>Age</th>
+          <th> Available </th>
+          <th> Age</th>
         </tr>
         <tr>
           <td>{toys.name}</td>
@@ -48,6 +60,16 @@ function UserPage() {
           <td><button onClick={deleteBtn}>Delete</button></td>
         </tr>
       </table>
+
+
+      <ul>
+        {toys.map((toy)=>{
+          <li key={toy.id}>{toy.name},
+          {toy.ages}, 
+          {toy.available}
+          <button onClick={()=>{ deleteBtn(toy.id) }}>Delete</button></li>
+        })}
+      </ul>
       <LogOutButton className="btn" />
     </div>
   );

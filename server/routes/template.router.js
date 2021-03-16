@@ -1,11 +1,13 @@
 const express = require('express');
 const pool = require('../modules/pool');
 const router = express.Router();
+const {rejectUnauthenticated} = require('../modules/authentication-middleware');
+
 
 /**
  * GET route template
  */
-router.get('/', (req, res) => {
+router.get('/', rejectUnauthenticated, (req, res) => {
   const query = 
   `SELECT * FROM "toys"`;
   
@@ -15,7 +17,7 @@ router.get('/', (req, res) => {
     res.send(result.rows);
   })
   .catch(err => {
-    console.log('ERROR: Get all movies', err);
+    console.log('ERROR: in router.get toys', err);
     res.sendStatus(500)
   })
   // GET route code here
@@ -24,7 +26,7 @@ router.get('/', (req, res) => {
 /**
  * POST route template
  */
-router.post('/', (req, res) => {
+router.post('/', rejectUnauthenticated, (req, res) => {
   const newToy= req.body;
   console.log(newToy, "new toy")
    const queryText = `
@@ -46,5 +48,32 @@ router.post('/', (req, res) => {
           res.sendStatus(500);
       });
 });
+
+
+router.delete('/:toyId', rejectUnauthenticated, (req, res) => {
+  const queryText = `
+  DELETE FROM "toys"
+  WHERE id = $1
+  RETURNING *`; 
+
+
+  queryParams = [req.params.petId];
+
+  pool.query(queryText, queryParams)
+  .then(dbRes =>{
+    console.log("deleted rows", dbRes.rows)
+    if(dbRes.rows.length === 0){
+      res.sendStatus(403);
+    }
+    else{
+      res.sendStatus(204);
+    }
+    res.sendStatus(204);
+  })
+  .catch(error => {
+    console.log(error, "error pool query delete")
+    res.sendStatus(500)
+  })
+})
 
 module.exports = router;

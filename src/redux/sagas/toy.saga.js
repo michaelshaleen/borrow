@@ -12,9 +12,18 @@ function* fetchToy() {
     console.log('User get request failed', error);
   }
 }
+function* deleteToy(toyId) {
+  try {
+    axios.delete(`/api/toy/${toyId}`);
+    yield put({ type: 'SET_TOY', payload: toys.data });
+  } catch (error) {
+    console.log('User get request failed', error);
+  }
+}
 
 function* toySaga() {
   yield takeLatest('FETCH_TOY', fetchToy);
+  yield takeLatest('DELETE', deleteToy)
 }
 
 export default toySaga;

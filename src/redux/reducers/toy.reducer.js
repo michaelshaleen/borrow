@@ -1,4 +1,4 @@
-const toyReducer = (state = {}, action) => {
+const toyReducer = (state = [{}], action) => {
   console.log(action.payload, "action toy reducer")
   switch (action.type) {
     case 'SET_TOY':
@@ -7,6 +7,4 @@ const toyReducer = (state = {}, action) => {
     return state;
 };
 
-// user will be on the redux state at:
-// state.toy
 export default toyReducer;
