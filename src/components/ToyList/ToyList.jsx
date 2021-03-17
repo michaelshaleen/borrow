@@ -6,6 +6,8 @@ import {useSelector, useDispatch} from 'react-redux';
 
 function ToyList({ toy }) {
   const [available, setAvailable] = useState(true);
+  //useState for each .prop(toy.available) to put a body on 
+  // it to use toy.id
   const dispatch = useDispatch();
 
   const availableBtn = (toyId, available) => {
@@ -19,7 +21,8 @@ function ToyList({ toy }) {
         toyId: toyId,
         available: available
       }
-    })    
+    })  
+      
   }
 
 
@@ -36,15 +39,12 @@ function ToyList({ toy }) {
     })
   }
 
-
-
-  //if toy.available == true
   return(
     <>
     <tr>
       <td>{toy.name}</td>
       <td>{toy.ages}</td>
-     <td>{available}</td>
+      <td>{toy.available ? <span> true </span>:<span> false </span>}</td>
       <td><button onClick={() =>{ availableBtn(toy.id, toy.available) }}>Available</button></td>
       <td><button onClick={()=>{ deleteBtn(toy.id) }}>Delete</button></td> 
     </tr>

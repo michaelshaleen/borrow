@@ -14,7 +14,7 @@ function UserPage() {
   //console.log(user, "user in user page")
   const dispatch = useDispatch();
 
-  const [available, setAvailable] = useState('');
+  //const [available, setAvailable] = useState('');
 
   useEffect(()=>{
     dispatch({
@@ -69,18 +69,20 @@ function UserPage() {
       <h4>These are the toys you've shared!</h4>
       {/* <p>Your ID is: {user.id}</p> */}
       <table>
-          <tr>
-          <th>Description</th>
-          <th>Age</th>
-          <th>Available</th>
+        <thead>
+        <tr>
+          <th>Description </th>
+          <th> Age</th>
+          <th> Available</th>
         </tr>
+        </thead>
         <tbody>
-            {toys.map(toy => {
+            { toys.map(toy => {
               return <ToyList key={toy.id} toy={toy}/>              
             })}
+
         </tbody>
       </table>
-      {/* <LogOutButton className="btn" /> */}
     </div>
   );
 }
@@ -88,12 +90,3 @@ function UserPage() {
 // this allows us to use <App /> in index.js
 export default UserPage;
 
-
-// <tr key={toy.id}>
-// <td>{toy.name}</td>
-// <td>{toy.ages}</td>
-// {/* <td>{toy.available}</td>  */}
-// <td><button id={toy.id} onClick={availableBtn}>Available</button></td>
-
-// <button onClick={()=>{ deleteBtn(toy.id) }}>Delete</button>
-// </tr>
