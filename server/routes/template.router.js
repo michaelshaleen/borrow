@@ -78,6 +78,10 @@ router.put('/:toyId', (req, res) => {
   SET "available" = false
   WHERE id = $1`;
 
+
+
+  
+
   const queryParams = req.params.toyId;
 
   pool.query(queryText, [queryParams])

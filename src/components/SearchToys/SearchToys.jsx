@@ -51,12 +51,15 @@ console.log(searchedToys, "searched toys")
         </tr>
         <tbody>
             {searchedToys.map(toy => {
-              <tr>
+              return(
+
+                <tr>
                 <td key={toy.id}>
-                 <td>{toy.name}</td>
-                 <td>{toy.ages}</td>
+                 <td>{toy.name} </td>
+                 <td> {toy.ages}</td>
                 </td>
               </tr>
+                )
             })}
 
           </tbody>
