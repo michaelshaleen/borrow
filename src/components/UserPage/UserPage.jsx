@@ -71,15 +71,13 @@ function UserPage() {
       <table>
           <tr>
           <th>Description</th>
-          <th> Age</th>
-          <th> Available </th>
+          <th>Age</th>
+          <th>Available</th>
         </tr>
         <tbody>
-          <tr>
             {toys.map(toy => {
               return <ToyList key={toy.id} toy={toy}/>              
             })}
-            </tr>
         </tbody>
       </table>
       {/* <LogOutButton className="btn" /> */}

@@ -5,7 +5,7 @@ import { put, takeLatest } from 'redux-saga/effects';
 function* fetchToy() {
   try {
     const toys = yield axios.get('/api/toy');
-    //console.log(toys.data, "toys in saga")
+    console.log(toys.data, "toys in saga")
 //set_toy sends to reducer
     yield put({ type: 'SET_TOY', payload: toys.data });
   } catch (error) {

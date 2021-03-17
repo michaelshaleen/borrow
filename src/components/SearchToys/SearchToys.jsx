@@ -50,12 +50,19 @@ console.log(searchedToys, "searched toys")
           <th> Age</th>
         </tr>
         <tbody>
-        {searchedToys.map(toy => {
-          return <ToyList key={toy.id} toy={toy}/>
-          })}
+            {searchedToys.map(toy => {
+              <tr>
+                <td key={toy.id}>
+                 <td>{toy.name}</td>
+                 <td>{toy.ages}</td>
+                </td>
+              </tr>
+            })}
+
           </tbody>
       </table>
 
+        {/*return <ToyList key={toy.id} toy={toy}/> */}
 
 </>
   )

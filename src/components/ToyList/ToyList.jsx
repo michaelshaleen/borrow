@@ -51,11 +51,13 @@ function ToyList({ toy }) {
 
   return(
     <>
-    <td>{toy.name}</td>
-    <td>{toy.ages}</td>
-    {/* <td>{toy.available}</td> */}
-    <td><button onClick={() =>{ availableBtn(toy.id) }}>Available</button></td>
-    <td><button onClick={()=>{ deleteBtn(toy.id) }}>Delete</button></td> 
+    <tr>
+      <td>{toy.name}</td>
+      <td>{toy.ages}</td>
+      {/* <td>{toy.available}</td> */}
+      <td><button onClick={() =>{ availableBtn(toy.id) }}>Available</button></td>
+      <td><button onClick={()=>{ deleteBtn(toy.id) }}>Delete</button></td> 
+    </tr>
 
     {/* id={toy.id} */}
     </>
