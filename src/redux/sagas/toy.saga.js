@@ -21,11 +21,13 @@ function* deleteToy(toyId) {
 }
 
 function* updateToy(action){
-  const adjustedToy = action.payload;
+  const adjustedToy = action.payload.toyId;
+  const adjustedAvailable = action.payload.available;
+  console.log("ADJUSTED AVAILABLE", adjustedAvailable)
   console.log('IN UPDATE SAGA', adjustedToy)
 
   try{
-     const newToy = yield axios.put(`/api/toy/${adjustedToy}`);
+     const newToy = yield axios.put(`/api/toy/${adjustedToy}`, { adjustedAvailable });
     //yield put({type: 'FETCH_TOY', payload: updatedToy.data})
   }
   catch(error) {

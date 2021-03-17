@@ -72,17 +72,31 @@ router.delete('/:toyId', (req, res) => {
 
 
 router.put('/:toyId', (req, res) => {
-  console.log(req.params.toyId, 'TOY ID HERE')
-  const queryText = `
-  UPDATE "toys"
-  SET "available" = false
-  WHERE id = $1`;
-
-
-
   
+  const id = req.params.toyId;
+  console.log(id, 'TOY ID HERE')
+  const available = req.body.adjustedAvailable;
+  console.log(available, 'TOY BOOLEAN HERE')
 
-  const queryParams = req.params.toyId;
+
+  if(available !== false){
+
+    const queryText = `
+    UPDATE "toys" 
+    SET "available" = false
+    WHERE "id" = $1;`;
+
+  }if(available !== true){
+      const queryText = `
+      UPDATE "toys" 
+      SET "available" = true
+      WHERE "id" = $1;`
+  }
+
+
+
+
+  const queryParams = id;
 
   pool.query(queryText, [queryParams])
   .then(dbRes => {
