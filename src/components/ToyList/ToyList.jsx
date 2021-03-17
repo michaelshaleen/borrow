@@ -5,7 +5,7 @@ import {useSelector, useDispatch} from 'react-redux';
 
 
 function ToyList({ toy }) {
-  const [available, setAvailable] = useState("true");
+  const [available, setAvailable] = useState(true);
   const dispatch = useDispatch();
 
   const availableBtn = (toyId, available) => {
@@ -20,22 +20,6 @@ function ToyList({ toy }) {
         available: available
       }
     })    
-
-
-    // console.log(toyId, "target id")
-    // setAvailable(toy.available)
-    // console.log(available, "available val")
-    // // match event.target.id to id in toys list
-    // //for loop
-    // if(available === true){
-    //   setAvailable(false);
-    // }
-    // if(available == false){
-    //   setAvailable(true)
-    // }
-
-
-    //return available;
   }
 
 
@@ -52,6 +36,9 @@ function ToyList({ toy }) {
     })
   }
 
+
+
+  //if toy.available == true
   return(
     <>
     <tr>
