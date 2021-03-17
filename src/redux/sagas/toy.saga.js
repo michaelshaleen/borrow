@@ -21,10 +21,12 @@ function* deleteToy(toyId) {
 }
 
 function* updateToy(toyId){
-  console.log("update in saga")
+  const putToy = `${toyId}`;
+ console.log( putToy, "PAYLOAD IN UPDATE")
   try{
-    const updatedToy = yield axios.put(`api/toy, ${toyId}`);
-    yield put({type: 'FETCH_TOY', payload: updatedToy.data})
+    const updatedToy = yield axios.put(`/api/toy/${toyId}`);
+    console.log(updatedToy.data, "updated toy in saga")
+    //yield put({type: 'FETCH_TOY', payload: updatedToy.data})
   }
   catch(error) {
     console.log(error, "error updateToy sagas")

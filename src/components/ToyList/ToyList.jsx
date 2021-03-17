@@ -10,8 +10,7 @@ function ToyList({ toy }) {
 
 
 
-  const availableBtn = (event) => {
-    const toyId = event.target.id;
+  const availableBtn = (toyId) => {
     console.log(toyId, "id in avail function")
     dispatch({
       type: 'UPDATE_TOY',
@@ -54,10 +53,10 @@ function ToyList({ toy }) {
     <td>{toy.name}</td>
     <td>{toy.ages}</td>
     <td>{toy.available}</td>
-    <td><button id={toy.id} onClick={availableBtn}>Available</button></td>
-    <td><button onClick={()=>{ deleteBtn(toy.id) }}>Delete</button></td>
+    <td><button onClick={() =>{ availableBtn(toy.id) }}  >Available</button></td>
+    <td><button onClick={()=>{ deleteBtn(toy.id) }}    >Delete</button></td>
 
-
+    {/* id={toy.id} */}
     </>
   )
 }

@@ -1,5 +1,5 @@
 const toyReducer = (state = [{}], action) => {
-  console.log(action.payload, "action toy reducer")
+  //console.log(action.payload, "action toy reducer")
   // if(toys.available === true){
   //   toys.available = 'true'
   // }if(toys.available === false){
