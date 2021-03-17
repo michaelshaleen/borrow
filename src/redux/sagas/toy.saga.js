@@ -5,7 +5,7 @@ import { put, takeLatest } from 'redux-saga/effects';
 function* fetchToy() {
   try {
     const toys = yield axios.get('/api/toy');
-    console.log(toys.data, "toys in saga")
+    //console.log(toys.data, "toys in saga")
 //set_toy sends to reducer
     yield put({ type: 'SET_TOY', payload: toys.data });
   } catch (error) {
@@ -20,12 +20,12 @@ function* deleteToy(toyId) {
   }
 }
 
-function* updateToy(toyId){
-  const putToy = `${toyId}`;
- console.log( putToy, "PAYLOAD IN UPDATE")
+function* updateToy(action){
+  const adjustedToy = action.payload;
+  console.log('IN UPDATE SAGA', adjustedToy)
+
   try{
-    const updatedToy = yield axios.put(`/api/toy/${toyId}`);
-    console.log(updatedToy.data, "updated toy in saga")
+     const newToy = yield axios.put(`/api/toy/${adjustedToy}`);
     //yield put({type: 'FETCH_TOY', payload: updatedToy.data})
   }
   catch(error) {
@@ -33,10 +33,22 @@ function* updateToy(toyId){
   }
 }
 
+function* searchedToy(toyId){
+  try{
+    axios.get(`/api/toy/${toyId}`);
+  }
+  catch (error){
+    console.log(error, "err in searchedToy")
+  }
+}
+
+
+
 function* toySaga() {
   yield takeLatest('FETCH_TOY', fetchToy);
   yield takeLatest('DELETE', deleteToy)
   yield takeLatest('UPDATE_TOY', updateToy)
+  yield takeLatest('FETCH_THIS_TOY', searchedToy)
 }
 
 export default toySaga;

@@ -24,9 +24,8 @@ router.get('/', rejectUnauthenticated, (req, res) => {
   // GET route code here
 });
 
-/**
- * POST route template
- */
+
+
 router.post('/', rejectUnauthenticated, (req, res) => {
   const newToy= req.body;
   console.log(newToy, "new toy")
@@ -74,7 +73,6 @@ router.delete('/:toyId', (req, res) => {
 
 router.put('/:toyId', (req, res) => {
   console.log(req.params.toyId, 'TOY ID HERE')
-
   const queryText = `
   UPDATE "toys"
   SET "available" = false

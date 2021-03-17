@@ -5,16 +5,17 @@ import {useSelector, useDispatch} from 'react-redux';
 
 
 function ToyList({ toy }) {
-  const [available, setAvailable] = useState('');
+  const [available, setAvailable] = useState(true);
   const dispatch = useDispatch();
 
-
-
   const availableBtn = (toyId) => {
+    //setAvailable( !available )
     console.log(toyId, "id in avail function")
     dispatch({
       type: 'UPDATE_TOY',
-      payload: toyId
+      payload: 
+        toyId,
+        //available
     })    
 
 
@@ -52,9 +53,9 @@ function ToyList({ toy }) {
     <>
     <td>{toy.name}</td>
     <td>{toy.ages}</td>
-    <td>{toy.available}</td>
-    <td><button onClick={() =>{ availableBtn(toy.id) }}  >Available</button></td>
-    <td><button onClick={()=>{ deleteBtn(toy.id) }}    >Delete</button></td>
+    {/* <td>{toy.available}</td> */}
+    <td><button onClick={() =>{ availableBtn(toy.id) }}>Available</button></td>
+    <td><button onClick={()=>{ deleteBtn(toy.id) }}>Delete</button></td> 
 
     {/* id={toy.id} */}
     </>

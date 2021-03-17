@@ -10,8 +10,8 @@ import ToyList from '../ToyList/ToyList';
 function UserPage() {
   const user = useSelector((store) => store.user);
   const toys = useSelector((store) => store.toy);
-  console.log(toys, "toys in user page")
-  console.log(user, "user in user page")
+  //console.log(toys, "toys in user page")
+  //console.log(user, "user in user page")
   const dispatch = useDispatch();
 
   const [available, setAvailable] = useState('');
@@ -75,10 +75,11 @@ function UserPage() {
           <th> Available </th>
         </tr>
         <tbody>
+          <tr>
             {toys.map(toy => {
-          return <ToyList key={toy.id} toy={toy}/>
-          // make as own component
-        })}
+              return <ToyList key={toy.id} toy={toy}/>              
+            })}
+            </tr>
         </tbody>
       </table>
       {/* <LogOutButton className="btn" /> */}

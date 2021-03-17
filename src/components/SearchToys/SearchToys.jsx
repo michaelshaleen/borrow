@@ -8,10 +8,12 @@ function SearchToys() {
   const searchedToys = useSelector((store) => store.toy)
 
 
-  const searchBtn = () => {
-    console.log("search")
+  const searchBtn = (event) => {
+    //console.log(event.target.value, "value in search")
     dispatch({
-      type:'FETCH_TOY'
+      type:'FETCH__TOY',
+      // payload: 
+      // toyId = {toyId}
     })
   }
 
@@ -26,7 +28,7 @@ console.log(searchedToys, "searched toys")
     // onChange={(event) => setToyName(event.target.value)}
     />
     <select 
-    // value={ageGroup.value}
+    //value={ageGroup.value}
     name="Ages" 
     id="ages"
     // onChange={(event) => setAgeGroup(event.target.value)}
@@ -38,7 +40,7 @@ console.log(searchedToys, "searched toys")
       <option value="5-10">5-10 Years Old</option>
 
     </select>
-    <button onClick={searchBtn}>Search Toy</button>
+    <button onClick={() => {searchBtn}}>Search Toy</button>
     <button>Cancel</button>
 
     <table>
@@ -48,9 +50,8 @@ console.log(searchedToys, "searched toys")
           <th> Age</th>
         </tr>
         <tbody>
-
-        {searchedToys.map((toy)=>{
-          return <ToyList key={toy.id}/>
+        {searchedToys.map(toy => {
+          return <ToyList key={toy.id} toy={toy}/>
           })}
           </tbody>
       </table>
