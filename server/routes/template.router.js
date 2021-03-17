@@ -77,30 +77,35 @@ router.put('/:toyId', (req, res) => {
   console.log(id, 'TOY ID HERE')
   const available = req.body.adjustedAvailable;
   console.log(available, 'TOY BOOLEAN HERE')
+  // if(available == false){
+  //   console.log('SUCCESS')
+  // }
 
-
-  if(available !== false){
-
-    const queryText = `
-    UPDATE "toys" 
-    SET "available" = false
-    WHERE "id" = $1;`;
-
-  }if(available !== true){
-      const queryText = `
-      UPDATE "toys" 
-      SET "available" = true
-      WHERE "id" = $1;`
-  }
-
-
-
+  let queryText = '';
 
   const queryParams = id;
+
+    if(available == false){
+     queryText = `
+      UPDATE "toys" 
+      SET "available" = true
+      WHERE "id" = $1;`;
+    }
+    else{
+      queryText = `
+      UPDATE "toys" 
+      SET "available" = false
+      WHERE "id" = $1;`
+    }
+
+    console.log(queryText, "text")
+
+
 
   pool.query(queryText, [queryParams])
   .then(dbRes => {
     console.log("updated rows", dbRes.rows)
+    res.send(200)
   })
   .catch(error => {
     console.log(error, "err router.put")

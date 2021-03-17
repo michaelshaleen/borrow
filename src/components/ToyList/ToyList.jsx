@@ -5,7 +5,7 @@ import {useSelector, useDispatch} from 'react-redux';
 
 
 function ToyList({ toy }) {
-  const [available, setAvailable] = useState(true);
+  const [available, setAvailable] = useState("true");
   const dispatch = useDispatch();
 
   const availableBtn = (toyId, available) => {
@@ -57,7 +57,7 @@ function ToyList({ toy }) {
     <tr>
       <td>{toy.name}</td>
       <td>{toy.ages}</td>
-      {/* <td>{toy.available}</td> */}
+     <td>{available}</td>
       <td><button onClick={() =>{ availableBtn(toy.id, toy.available) }}>Available</button></td>
       <td><button onClick={()=>{ deleteBtn(toy.id) }}>Delete</button></td> 
     </tr>
