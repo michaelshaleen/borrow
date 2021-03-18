@@ -24,11 +24,6 @@ router.get('/', rejectUnauthenticated, (req, res) => {
   // GET route code here
 });
 
-router.get('/this', rejectUnauthenticated, (req, res) => {
-  console.log(req.body, "req.body")
-} )
-
-
 
 router.post('/', rejectUnauthenticated, (req, res) => {
   const newToy= req.body;

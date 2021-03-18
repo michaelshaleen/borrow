@@ -45,14 +45,14 @@ function* updateToy(action){
 
 function* searchedToy(action){
   const searchName = action.payload.name;
-  const searchAges = action.payload.ages
+  const searchAges = action.payload.ages;
   console.log(searchName, "name")
   console.log(searchAges, "ages")
 
   try{
-   const ResultsToy = yield axios.get(`/api/toy/this`, { searchName }, { searchAges });
-   console.log(ResultsToy.data, "TOY DATA")
-   yield put({ type: 'SEARCH_RESULT', payload: thisToy.data });
+   const ResultsToy = yield axios.get(`/api/search/${searchName}`, {params: { ages: searchAges }});
+   console.log(ResultsToy.data, "SEARCHED DATA")
+   yield put({ type: 'SEARCH_RESULT', payload: ResultsToy.data });
 
   }
   catch (error){

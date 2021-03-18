@@ -15,7 +15,7 @@ function SearchToys() {
     dispatch({
       type:'SEARCH_TOY',
       payload: {
-        name: toyName,
+        name: toyName,//input value being sent on search click
         ages: ageGroup      
       }
     })
@@ -70,6 +70,8 @@ function SearchToys() {
                 <td key={toy.id}>
                  <td>{toy.name}</td>
                  <td>{toy.ages}</td>
+                 <td>{toy.available ? <span> true </span>:<span> false </span>}</td>
+
                 </td>
               </tr>
           </tbody>
