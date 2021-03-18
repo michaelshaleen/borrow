@@ -5,20 +5,22 @@ import ToyList from '../ToyList/ToyList';
 
 function SearchToys() {
   const dispatch = useDispatch();
-  const searchedToys = useSelector((store) => store.toy)
+  const searchedToys = useSelector((store) => store.searchedToy)
 
 
   const [toyName, setToyName] = useState('');
   const [ageGroup, setAgeGroup] = useState('');
-  const [available, setAvailable] = useState('');
 
-  const searchBtn = () => {
-    //console.log("vain search")
+  const searchBtn = (action) => {
     dispatch({
-      type:'SEARCH_TOY'
+      type:'SEARCH_TOY',
+      payload: {
+        name: toyName,
+        ages: ageGroup      
+      }
     })
   }
-
+//
 
   const cancelBtn = () => {
     console.log("cancel")
