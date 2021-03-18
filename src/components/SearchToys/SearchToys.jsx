@@ -12,8 +12,8 @@ function SearchToys() {
     //console.log(event.target.value, "value in search")
     dispatch({
       type:'FETCH__TOY',
-      // payload: 
-      // toyId = {toyId}
+      payload: 
+      toyId = {toyId}
     })
   }
 
@@ -55,8 +55,8 @@ console.log(searchedToys, "searched toys")
 
                 <tr>
                 <td key={toy.id}>
-                 <td>{toy.name} </td>
-                 <td> {toy.ages}</td>
+                 <td>{toy.name}</td>
+                 <td>{toy.ages}</td>
                 </td>
               </tr>
                 )

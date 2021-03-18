@@ -3,6 +3,7 @@ import { put, takeLatest } from 'redux-saga/effects';
 
 // worker Saga: will be fired on "FETCH_USER" actions
 function* fetchToy() {
+  console.log("fetch saga")
   try {
     const toys = yield axios.get('/api/toy');
     console.log(toys.data, "toys in saga")
@@ -12,9 +13,12 @@ function* fetchToy() {
     console.log('User get request failed', error);
   }
 }
-function* deleteToy(toyId) {
+function* deleteToy(action) {
+  const toyId = action.payload;
+  //console.log(toyId, "action Payload saga")
   try {
     axios.delete(`/api/toy/${toyId}`);
+    yield put({type: 'FETCH_TOY'})
   } catch (error) {
     console.log('delete toy request failed', error);
   }

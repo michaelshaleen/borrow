@@ -28,16 +28,25 @@ function ToyList({ toy }) {
 
   const deleteBtn = (toyId) => {
     console.log('delete content')
-    axios.delete(`/api/toy/${toyId}`)
-    .then((res) => {
-      console.log("successful delete",res);
-      fetchToys();
+    dispatch({
+      type: 'DELETE',
+      payload: toyId
+    })
+    
+    
+    // axios.delete(`/api/toy/${toyId}`)
+    // .then((res) => {
+    //   console.log("successful delete",res);
+    //   fetchToys();
       
-    })
-    .catch(err => {
-      console.log(err, "delete toy error")
-    })
+    // })
+    // .catch(err => {
+    //   console.log(err, "delete toy error")
+    // })
   }
+
+
+
 
   return(
     <>

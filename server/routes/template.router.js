@@ -51,11 +51,11 @@ router.post('/', rejectUnauthenticated, (req, res) => {
 
 
 router.delete('/:toyId', (req, res) => {
+
   const queryText = `
   DELETE FROM "toys"
   WHERE id = $1
   RETURNING *`; 
-
 
   const queryParams = req.params.toyId;
   console.log(queryParams, "params")
@@ -63,6 +63,7 @@ router.delete('/:toyId', (req, res) => {
   pool.query(queryText, [queryParams])
   .then(dbRes =>{
     console.log("deleted rows", dbRes.rows)
+    res.sendStatus(200)
   })
   .catch(error => {
     console.log(error, "error pool query delete")
