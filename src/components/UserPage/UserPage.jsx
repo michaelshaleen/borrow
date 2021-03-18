@@ -31,26 +31,12 @@ function UserPage() {
     })
   }
 
-  // const deleteBtn = (toyId) => {
-  //   console.log('delete content')
-  //   axios.delete(`/api/toy/${toyId}`)
-  //   .then((res) => {
-  //     console.log("successful delete",res);
-  //     fetchToys();
-      
-  //   })
-  //   .catch(err => {
-  //     console.log(err, "delete toy error")
-  //   })
-  // }
-
   const availableBtn = (event) => {
     console.log(event.target.id, "target id")
     // match event.target.id to id in toys list
     //for loop
     if(available === true){
       console.log()
-      //available = 'false',
       setAvailable(false);
     }
     if(available == false){

@@ -9,7 +9,7 @@ function ShareToys() {
   const [ageGroup, setAgeGroup] = useState('');
   const [available, setAvailable] = useState('');
   const newToy = useSelector((store) => store.toy)
-  console.log(newToy, "new Toy in share")
+  //console.log(newToy, "new Toy in share")
 
 
 

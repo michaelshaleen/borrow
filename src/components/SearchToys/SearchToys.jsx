@@ -6,7 +6,7 @@ import ToyList from '../ToyList/ToyList';
 function SearchToys() {
   const dispatch = useDispatch();
   const searchedToys = useSelector((store) => store.searchedToy)
-
+  console.log(searchedToys, "check for available")
 
   const [toyName, setToyName] = useState('');
   const [ageGroup, setAgeGroup] = useState('');
@@ -70,7 +70,7 @@ function SearchToys() {
                 <td key={toy.id}>
                  <td>{toy.name}</td>
                  <td>{toy.ages}</td>
-                 <td>{toy.available ? <span> true </span>:<span> false </span>}</td>
+                 <td>{toy.available ? <span> true </span>:<span> false </span> }</td>
 
                 </td>
               </tr>

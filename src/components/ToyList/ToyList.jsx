@@ -32,17 +32,6 @@ function ToyList({ toy }) {
       type: 'DELETE',
       payload: toyId
     })
-    
-    
-    // axios.delete(`/api/toy/${toyId}`)
-    // .then((res) => {
-    //   console.log("successful delete",res);
-    //   fetchToys();
-      
-    // })
-    // .catch(err => {
-    //   console.log(err, "delete toy error")
-    // })
   }
 
 
@@ -58,7 +47,6 @@ function ToyList({ toy }) {
       <td><button onClick={()=>{ deleteBtn(toy.id) }}>Delete</button></td> 
     </tr>
 
-    {/* id={toy.id} */}
     </>
   )
 }
