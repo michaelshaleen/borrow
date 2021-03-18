@@ -13,14 +13,20 @@ console.log(req.query.ages, "req.query")
 
 
 let name = req.params.name;
-console.log(name,'name')
+name = '%' + name + '%'
 
+console.log(name,'name')
 
 //express to access req.body
   const query = 
-  `SELECT * FROM "toys"`;
+  `
+  SELECT "name"
+  FROM "toys"
+  WHERE "name" ILIKE $1
+  `;
+
   
-  pool.query(query)
+  pool.query(query, [name])
   .then( result => {
     console.log(result.rows, "search result")
     res.send(result.rows);
