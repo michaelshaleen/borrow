@@ -12,10 +12,8 @@ function ShareToys() {
   console.log(newToy, "new Toy in share")
 
 
-//setToyname empty set age group empty
 
   const shareToy = (action) => {
-    //console.log("share toy")
     dispatch({
       type: 'ADD_TOY',
       payload: {
@@ -32,10 +30,6 @@ function ShareToys() {
 
   const cancelBtn = () => {
     console.log("cancel")
-    // location.reload(); // setAgeGroup("0-3"); 
-    // ageGroup.val(''),  // toyName.val('')
-    // <input ref={inputRef} />
-     // this.useRef["toyName"].value = "";
     return(
       setToyName(''),
       setAgeGroup(''),
@@ -49,7 +43,7 @@ function ShareToys() {
     inputRef={el => this.inputElement = el}
     value={toyName}
     type="text"
-    placeholder="description"
+    placeholder="Name"
     onChange={(event) => setToyName(event.target.value)}
     />
     <select 

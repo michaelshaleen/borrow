@@ -8,6 +8,10 @@ function SearchToys() {
   const searchedToys = useSelector((store) => store.toy)
 
 
+  const [toyName, setToyName] = useState('');
+  const [ageGroup, setAgeGroup] = useState('');
+  const [available, setAvailable] = useState('');
+
   const searchBtn = () => {
     //console.log("vain search")
     dispatch({
@@ -15,19 +19,32 @@ function SearchToys() {
     })
   }
 
-//console.log(searchedToys, "searched toys")
+
+  const cancelBtn = () => {
+    console.log("cancel")
+    return(
+      setToyName(''),
+      setAgeGroup('')
+    )
+  }
 
   return(
     <>
     <p>Search Toys</p>
     <input
+    value={toyName}
     type="text"
-    placeholder="description"
+    placeholder="Name"
+    onChange={(event) => setToyName(event.target.value)}
+
     />
     <select 
+    value={ageGroup}
     name="Ages" 
     id="ages"
+    onChange={(event) => setAgeGroup(event.target.value)}
     >
+
 
       <option>  </option>
       <option value="0-3">0-3 Years Old</option>
@@ -36,7 +53,7 @@ function SearchToys() {
 
     </select>
     <button onClick={searchBtn}>Search Toy</button>
-    <button>Cancel</button>
+    <button onClick={cancelBtn}>Cancel</button>
 
     <table>
           <tr>
@@ -58,9 +75,6 @@ function SearchToys() {
             })}
 
       </table>
-
-        {/*return <ToyList key={toy.id} toy={toy}/> */}
-
 </>
   )
 }
