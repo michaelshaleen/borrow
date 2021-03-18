@@ -13,16 +13,20 @@ function* fetchToy() {
     console.log('User get request failed', error);
   }
 }
+
+
 function* deleteToy(action) {
   const toyId = action.payload;
   //console.log(toyId, "action Payload saga")
   try {
-    axios.delete(`/api/toy/${toyId}`);
-    yield put({type: 'FETCH_TOY'})
+    yield axios.delete(`/api/toy/${toyId}`);
+    yield put ({type: 'FETCH_TOY'})
   } catch (error) {
     console.log('delete toy request failed', error);
   }
 }
+
+
 
 function* updateToy(action){
   const adjustedToy = action.payload.toyId;

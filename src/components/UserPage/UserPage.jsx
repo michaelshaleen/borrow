@@ -31,18 +31,18 @@ function UserPage() {
     })
   }
 
-  const deleteBtn = (toyId) => {
-    console.log('delete content')
-    axios.delete(`/api/toy/${toyId}`)
-    .then((res) => {
-      console.log("successful delete",res);
-      fetchToys();
+  // const deleteBtn = (toyId) => {
+  //   console.log('delete content')
+  //   axios.delete(`/api/toy/${toyId}`)
+  //   .then((res) => {
+  //     console.log("successful delete",res);
+  //     fetchToys();
       
-    })
-    .catch(err => {
-      console.log(err, "delete toy error")
-    })
-  }
+  //   })
+  //   .catch(err => {
+  //     console.log(err, "delete toy error")
+  //   })
+  // }
 
   const availableBtn = (event) => {
     console.log(event.target.id, "target id")

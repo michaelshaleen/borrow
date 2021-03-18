@@ -55,7 +55,8 @@ router.delete('/:toyId', (req, res) => {
   const queryText = `
   DELETE FROM "toys"
   WHERE id = $1
-  RETURNING *`; 
+  RETURNING *
+  `; 
 
   const queryParams = req.params.toyId;
   console.log(queryParams, "params")
