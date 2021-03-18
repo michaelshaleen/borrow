@@ -44,13 +44,14 @@ function* updateToy(action){
 }
 
 function* searchedToy(action){
-  //Start with a get *
-console.log(action.payload.name, "name")
-console.log(action.payload.ages, "ages")
+  const searchName = action.payload.name;
+  const searchAges = action.payload.ages
+  console.log(searchName, "name")
+  console.log(searchAges, "ages")
 
   try{
-   const thisToy = yield axios.get(`/api/toy`);
-   console.log(thisToy.data, "TOY DATA")
+   const ResultsToy = yield axios.get(`/api/toy/this`, { searchName }, { searchAges });
+   console.log(ResultsToy.data, "TOY DATA")
    yield put({ type: 'SEARCH_RESULT', payload: thisToy.data });
 
   }
