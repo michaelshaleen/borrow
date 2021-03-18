@@ -70,7 +70,7 @@ function SearchToys() {
                 <td key={toy.id}>
                  <td>{toy.name}</td>
                  <td>{toy.ages}</td>
-                 {/* <td>{toy.available ? <span> true </span>:<span> false </span>}</td> */}
+                 <td>{toy.available ? <span> true </span>:<span> false </span>}</td>
 
                 </td>
               </tr>

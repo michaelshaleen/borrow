@@ -20,8 +20,7 @@ console.log(name,'name')
 //express to access req.body
   const query = 
   `
-  SELECT "name"
-  FROM "toys"
+  SELECT * FROM "toys"
   WHERE "name" ILIKE $1
   `;
 
