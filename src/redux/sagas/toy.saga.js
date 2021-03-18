@@ -6,7 +6,7 @@ function* fetchToy() {
   console.log("fetch saga")
   try {
     const toys = yield axios.get('/api/toy');
-    console.log(toys.data, "toys in saga")
+   // console.log(toys.data, "toys in saga")
 //set_toy sends to reducer
     yield put({ type: 'SET_TOY', payload: toys.data });
   } catch (error) {
@@ -43,9 +43,14 @@ function* updateToy(action){
   }
 }
 
-function* searchedToy(toyId){
+function* searchedToy(){
+  //Start with a get *
+console.log("in searched toy")
   try{
-    axios.get(`/api/toy/${toyId}`);
+   const thisToy = yield axios.get(`/api/toy`);
+   console.log(thisToy.data, "TOY DATA")
+   yield put({ type: 'SET_TOY', payload: thisToy.data });
+
   }
   catch (error){
     console.log(error, "err in searchedToy")
@@ -58,7 +63,7 @@ function* toySaga() {
   yield takeLatest('FETCH_TOY', fetchToy);
   yield takeLatest('DELETE', deleteToy)
   yield takeLatest('UPDATE_TOY', updateToy)
-  yield takeLatest('FETCH_THIS_TOY', searchedToy)
+  yield takeLatest('SEARCH_TOY', searchedToy)
 }
 
 export default toySaga;
