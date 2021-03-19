@@ -6,8 +6,11 @@ import ToyList from '../ToyList/ToyList';
 function SearchToys() {
   const dispatch = useDispatch();
   const searchedToys = useSelector((store) => store.searchedToy)
-  console.log(searchedToys, "check for available")
+  const user = useSelector((store) => store.user);
+  console.log(searchedToys, "available here");
 
+  //if searchedToys.available == true
+  // searchedToys =="true"
   const [toyName, setToyName] = useState('');
   const [ageGroup, setAgeGroup] = useState('');
 
@@ -32,7 +35,7 @@ function SearchToys() {
 
   return(
     <>
-    <p>Search Toys</p>
+    <h2>Search Toys {user.username}</h2>
     <input
     value={toyName}
     type="text"
@@ -66,13 +69,13 @@ function SearchToys() {
             {searchedToys.map(toy => {
               return(
                 <tbody>
+
               <tr>
                 <td key={toy.id}>
-                 <td>{toy.name}</td>
-                 <td>{toy.ages}</td>
-                 <td>{toy.phone}</td>
+                 <td>{toy.name} </td>
+                 <td> {toy.ages}</td>
+                 <td>{ toy.phone}</td>
                  <td>{toy.available ? <span> true </span>:<span> false </span> }</td>
-
                 </td>
               </tr>
           </tbody>

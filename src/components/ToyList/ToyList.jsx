@@ -3,7 +3,6 @@ import { useEffect, useState} from 'react';
 import {useSelector, useDispatch} from 'react-redux';
 
 
-
 function ToyList({ toy }) {
   const [available, setAvailable] = useState(true);
   //useState for each .prop(toy.available) to put a body on 

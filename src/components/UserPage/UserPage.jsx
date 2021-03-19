@@ -10,6 +10,8 @@ import ToyList from '../ToyList/ToyList';
 function UserPage() {
   const user = useSelector((store) => store.user);
   const toys = useSelector((store) => store.toy);
+  const sharkKid = require('../pictures/sharkKid.jpg');
+
   //console.log(toys, "toys in user page")
   //console.log(user, "user in user page")
   const dispatch = useDispatch();
@@ -51,8 +53,8 @@ function UserPage() {
 
   return (
     <div className="container">
-      <h2>Welcome, {user.id}!</h2>
-      <h3>{user.phone}</h3>
+      <h2>Welcome back, {user.username}!</h2>
+      {/* <h3>{user.phone}</h3> */}
       <h4>These are the toys you've shared!</h4>
       {/* <p>Your ID is: {user.id}</p> */}
       <table>
@@ -70,6 +72,17 @@ function UserPage() {
 
         </tbody>
       </table>
+      
+      {/* <svg aria-hidden="true" 
+      focusable="false" role="presentation" 
+      className="icon icon-hamburger"
+      viewBox="0 0 64 64" >
+        <circle cx="50" cy="50" r="40" stroke="green" stroke-width="4" fill="yellow" />
+        </svg> */}
+      {/* <img src={sharkKid}/> */}
+
+
+
     </div>
   );
 }

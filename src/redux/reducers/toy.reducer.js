@@ -1,7 +1,7 @@
 import { useSelector } from 'react-redux';
 
 
-const toyReducer = (state = [{ id: 0 , name: '', ages: '', available: true }], action) => {
+const toyReducer = (state = [], action) => {
   switch (action.type) {
     case 'SET_TOY':
       return action.payload;
