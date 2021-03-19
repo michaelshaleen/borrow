@@ -68,8 +68,8 @@ function ShareToys() {
 
     <select 
     value={available}
-    name="Ages" 
-    id="ages"
+    name="Available" 
+    id="available"
     onChange={(event) => setAvailable(event.target.value)}>
 
       <option></option>
