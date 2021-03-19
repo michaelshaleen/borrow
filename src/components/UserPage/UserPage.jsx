@@ -52,6 +52,7 @@ function UserPage() {
   return (
     <div className="container">
       <h2>Welcome, {user.username}!</h2>
+      <h3>{user.phone}</h3>
       <h4>These are the toys you've shared!</h4>
       {/* <p>Your ID is: {user.id}</p> */}
       <table>

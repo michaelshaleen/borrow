@@ -9,7 +9,9 @@ function ShareToys() {
   const [ageGroup, setAgeGroup] = useState('');
   const [available, setAvailable] = useState('');
   const newToy = useSelector((store) => store.toy)
-  //console.log(newToy, "new Toy in share")
+  const phone = useSelector((store) => store.user.phone);
+
+  console.log(phone, "is this phone number?")
 
 
 
@@ -19,7 +21,8 @@ function ShareToys() {
       payload: {
         name: toyName,
         ages: ageGroup,
-        available: available
+        available: available,
+        phone: phone,
       }
     })
     alert('Successful Add!')
@@ -38,9 +41,9 @@ function ShareToys() {
   }
   return(
     <>
+    <h1>{phone}, This is phone</h1>
     <p>Share New Toys</p>
     <input
-    inputRef={el => this.inputElement = el}
     value={toyName}
     type="text"
     placeholder="Name"
