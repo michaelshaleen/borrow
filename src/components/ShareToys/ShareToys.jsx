@@ -12,7 +12,7 @@ function ShareToys() {
   const phone = useSelector((store) => store.user.phone);
   const userId = useSelector((store) => store.user.id);
 
-  console.log(newToy, "is this new Toy?")
+  //console.log(newToy, "is this new Toy?")
 
 
 

@@ -8,11 +8,19 @@ const {rejectUnauthenticated} = require('../modules/authentication-middleware');
  * GET route template
  */
 router.get('/', rejectUnauthenticated, (req, res) => {
+
+  const userID = req.user.id;
+  console.log(userID, "userID")
   const query = 
-  `SELECT * FROM "toys"`;
+  `
+  SELECT * FROM "toys"
+  WHERE "user_id" = $1;
+  `;
+
   //pass userId in as param later to grab specific toy
-  
-  pool.query(query)
+  //select from toys where user_id = req.body.id
+  // req.user.id
+  pool.query(query, [userID])
   .then( result => {
     console.log(result.rows, "get result")
     res.send(result.rows);
