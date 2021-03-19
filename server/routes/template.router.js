@@ -27,14 +27,15 @@ router.get('/', rejectUnauthenticated, (req, res) => {
 
 router.post('/', rejectUnauthenticated, (req, res) => {
   const newToy= req.body;
-  console.log(newToy, "new toy")
+  console.log(newToy.phone, "new toy phone")
    const queryText = `
-    INSERT INTO toys (name, ages) 
-    VALUES ($1, $2);`;
+    INSERT INTO toys (name, ages, phone) 
+    VALUES ($1, $2, $3);`;
       
   const queryParams = [
     newToy.name,
-    newToy.ages
+    newToy.ages,
+    newToy.phone
   ]
 
   pool.query(queryText, queryParams)

@@ -11,7 +11,7 @@ function ShareToys() {
   const newToy = useSelector((store) => store.toy)
   const phone = useSelector((store) => store.user.phone);
 
-  console.log(phone, "is this phone number?")
+  //console.log(phone, "is this phone number?")
 
 
 
@@ -41,7 +41,7 @@ function ShareToys() {
   }
   return(
     <>
-    <h1>{phone}, This is phone</h1>
+    {/* <h1>{phone}, This is phone</h1> */}
     <p>Share New Toys</p>
     <input
     value={toyName}
