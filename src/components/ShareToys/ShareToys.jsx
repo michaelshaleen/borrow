@@ -26,7 +26,7 @@ function ShareToys() {
 
   const shareToy = (action) => {
     swal({
-      title: "Here's a title!",
+      title: "Thanks for sharing",
     });    cancelBtn();
     dispatch({
       type: 'ADD_TOY',

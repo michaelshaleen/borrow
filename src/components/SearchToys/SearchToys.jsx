@@ -63,8 +63,8 @@ function SearchToys() {
     <table>
           <tr>
           <th>Description</th>
-          <th> Available </th>
-          <th> Age</th>
+          <th>Ages</th>
+          <th>Available</th>
         </tr>
             {searchedToys.map(toy => {
               return(
@@ -74,8 +74,8 @@ function SearchToys() {
                 <td key={toy.id}>
                  <td>{toy.name} </td>
                  <td> {toy.ages}</td>
-                 <td> <CallIcon /> { toy.phone}</td>
                  <td>{toy.available ? <span> true </span>:<span> false </span> }</td>
+                 <td> <CallIcon /> { toy.phone}</td>
                 </td>
               </tr>
           </tbody>
