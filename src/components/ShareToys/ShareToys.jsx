@@ -53,7 +53,7 @@ function ShareToys() {
     )
   }
   return(
-    <>
+    <div className="divShare">
     {/* <h1>{phone}, This is phone</h1>
     <h1>{userId}, This is id</h1> */}
 
@@ -65,12 +65,17 @@ function ShareToys() {
     onChange={(event) => setToyName(event.target.value)}
     />
     <select 
+    placeholder="Ages"
     value={ageGroup}
     name="Ages" 
     id="ages"
-    onChange={(event) => setAgeGroup(event.target.value)}>
+    onChange={(event) => setAgeGroup(event.target.value)}
+    defaultValue="Choose-origin"
+    >
 
-      <option>  </option>
+
+
+      <option></option>
       <option value="0-3">0-3 Years Old</option>
       <option value="3-5">3-5 Years Old</option>
       <option value="5-10">5-10 Years Old</option>
@@ -117,7 +122,7 @@ function ShareToys() {
       Cancel
     </Button>
 
-    </>
+    </div>
   )
 
 }

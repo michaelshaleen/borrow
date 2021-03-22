@@ -57,6 +57,8 @@ function SearchToys() {
       <option value="5-10">5-10 Years Old</option>
 
     </select>
+
+     
     <button onClick={searchBtn}>Search Toy</button>
     <button onClick={cancelBtn}>Cancel</button>
 

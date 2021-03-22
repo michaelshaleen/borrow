@@ -2,6 +2,9 @@ import React from 'react';
 import { useDispatch } from 'react-redux';
 import ExitToAppIcon from '@material-ui/icons/ExitToApp';
 import Button from '@material-ui/core/Button';
+import Tabs from '@material-ui/core/Tabs';
+import Tab from '@material-ui/core/Tab';
+
 
 
 function LogOutButton(props) {
@@ -17,9 +20,10 @@ function LogOutButton(props) {
       className={props.className}
       onClick={() => dispatch({ type: 'LOGOUT' })}
       >
-        <ExitToAppIcon />
+        
+  <Tab
+  label="LogOut" icon={<ExitToAppIcon/> } />
     
-      Log Out
     </Button>
   );
 }

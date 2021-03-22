@@ -15,6 +15,7 @@ import Tab from '@material-ui/core/Tab';
 import Box from '@material-ui/core/Box';
 
 
+
 function Nav() {
   const user = useSelector((store) => store.user);
 
@@ -33,33 +34,71 @@ function Nav() {
 
 
 
+{/* 
+<AppBar position="static">
+  <Toolbar />
+
+   <Tabs variant="fullWidth" >
       <Link to="/home">
-        <h2 className="nav-title">ToiChare</h2>< HomeIcon color="primary"/>
+      <h2 className="nav-title">ToiChare</h2>< HomeIcon color="primary"/>
+        <Tab label="Home here" icon={<HomeIcon />}/>
+    </Link>
+
+
+     <Link className="navLink" to="/search_toys">
+       <Tab label="Search Toys" icon={<SearchIcon />} />
+    </Link>
+
+
+    <Link className="navLink" to="/share_toys">
+     <Tab label="Share Toys" icon={<ShareIcon />}/>
       </Link>
-      <div>
-        <Link className="navLink" to={loginLinkData.path}>
-          {loginLinkData.text}
-        </Link>
+      <Link className="navLink" to="/about">
+     <Tab label="About" icon={<InfoIcon />}/>
+     
+  </Link>
+     <Tab label="LogOut" icon={<ExitToAppIcon/> }/>
+   </Tabs>
+   <Toolbar />
+</AppBar> */}
 
-        {user.id && (
-          <>
-            <Link className="navLink" to="/search_toys">
-              Search New Toy<SearchIcon />
 
-            </Link>
-            <Link className="navLink" to="/share_toys">
-              Share New Toy<ShareIcon />
-            </Link>
-            <LogOutButton className="navLink" />
-          </>
-        )}
 
-        <Link className="navLink" to="/about">
-          About
-        <InfoIcon 
-          />
-        </Link>
-      </div>
+<Link to="/home">
+ {/* <h2 className="nav-title">ToiChare</h2> */}
+<Tab label="Home here" icon={<HomeIcon />}/>
+
+</Link>
+<div>
+<Link className="navLink" to={loginLinkData.path}>
+{loginLinkData.text}
+</Link>
+
+{user.id && (
+  <>
+
+  <Link className="navLink" to="/search_toys">
+    <Tab label="Search Toys" icon={<SearchIcon />} />
+  </Link>
+
+  <Link className="navLink" to="/share_toys">
+     <Tab label="Share Toys" icon={<ShareIcon />}/>
+  </Link>
+
+  <LogOutButton
+  className="navLink" />
+  </>
+  )}
+  
+  <Link className="navLink" to="/about">
+     <Tab label="About" icon={<InfoIcon />}/>
+  </Link>
+</div> 
+
+
+
+
+
     </div>
   );
 }
@@ -67,29 +106,3 @@ function Nav() {
 export default Nav;
 
 
-
-
-
-{/* <AppBar position="static">
-  <Toolbar />
-   <Typography>Home</Typography>
-   <Tabs>
-     <Tab label="Home here"/>
-   </Tabs>
-
-    <Tabs>
-     <Tab label="Search Toys"/>
-   </Tabs>
-
-   <Toolbar />
-</AppBar>
-
-<TabPanel >
-  Item One
-</TabPanel>
-<TabPanel>
-  Item Two
-</TabPanel>
-<TabPanel>
-  Item Three
-</TabPanel> */}
