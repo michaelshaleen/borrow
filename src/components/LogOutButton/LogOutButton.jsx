@@ -11,7 +11,7 @@ function LogOutButton(props) {
   const dispatch = useDispatch();
   return (
     <Button
-    color="secondary"
+    // color="secondary"
     
     
       // This button shows up in multiple locations and is styled differently
@@ -21,7 +21,7 @@ function LogOutButton(props) {
       onClick={() => dispatch({ type: 'LOGOUT' })}
       >
         
-  <Tab
+  <Tab fullWidth 
   label="LogOut" icon={<ExitToAppIcon/> } />
     
     </Button>

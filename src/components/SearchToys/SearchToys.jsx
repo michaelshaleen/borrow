@@ -1,7 +1,7 @@
 import {useSelector, useDispatch} from 'react-redux';
 import {useState} from 'react';
 import ToyList from '../ToyList/ToyList';
-import CallIcon from '@material-ui/icons/Call';
+import DisplayToys from '../DisplayToys/DisplayToys';
 
 function SearchToys() {
   const dispatch = useDispatch();
@@ -62,28 +62,20 @@ function SearchToys() {
     <button onClick={searchBtn}>Search Toy</button>
     <button onClick={cancelBtn}>Cancel</button>
 
-    <table>
-          <tr>
-          <th>Description</th>
-          <th>Ages</th>
-          <th>Available</th>
+    <table >
+    <thead>
+        <tr>
+          <th>Description </th>
+          <th>Age </th>
+          <th>Available </th>
+          <th>Owner's Phone</th>
         </tr>
+        </thead>
+        <tbody>
             {searchedToys.map(toy => {
-              return(
-                <tbody>
-
-              <tr>
-                <td key={toy.id}>
-                 <td>{toy.name} </td>
-                 <td> {toy.ages}</td>
-                 <td>{toy.available ? <span> true </span>:<span> false </span> }</td>
-                 <td> <CallIcon /> { toy.phone}</td>
-                </td>
-              </tr>
-          </tbody>
-                )
-            })}
-
+              return <DisplayToys key={toy.id} toy={toy}/>  
+              })}
+              </tbody>
       </table>
 </>
   )

@@ -7,7 +7,7 @@ body,
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   margin: 0px;
-  background-image: linear-gradient(45deg, orange, yellow);
+  background-color: rgb(204, 204, 138);
 }
 
 img {
@@ -20,7 +20,7 @@ Container
 -------------------------------------------------------------------------------- */
 
 .container {
-  padding: 20px;
+  padding: 5px;
 }
 
 /* --------------------------------------------------------------------------------

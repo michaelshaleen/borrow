@@ -26,7 +26,7 @@ function Nav() {
 
   if (user.id != null) {
     loginLinkData.path = '/user';
-    loginLinkData.text =<Tab label="Home here" icon={<HomeIcon />}/>
+    loginLinkData.text =<Tab variant="fullWidth" label="Home" icon={<HomeIcon />}/>
     ;
   }
 
@@ -40,18 +40,21 @@ function Nav() {
 
 
   
-      <Link className="navLink" to={loginLinkData.path}>
-        {loginLinkData.text}
-      </Link>
+        <Link className="navLink" to={loginLinkData.path}>
+          {loginLinkData.text}
+        </Link>
+        <Link className="navLink" to="/about">
+          <Tab variant="fullWidth" label="About" icon={<InfoIcon />}/>
+        </Link>
 
       {user.id && (
           <>
             <Link className="navLink" to="/search_toys">
-              <Tab label="Search Toys" icon={<SearchIcon />} />
+              <Tab variant="fullWidth" label="Search Toys" icon={<SearchIcon />} />
             </Link>
 
             <Link className="navLink" to="/share_toys">
-              <Tab label="Share Toys" icon={<ShareIcon />}/>
+              <Tab variant="fullWidth" label="Share Toys" icon={<ShareIcon />}/>
             </Link>
 
             <LogOutButton
@@ -59,9 +62,6 @@ function Nav() {
           </>
         )}
   
-        <Link className="navLink" to="/about">
-          <Tab label="About" icon={<InfoIcon />}/>
-        </Link>
 
 </div>
 

@@ -76,8 +76,8 @@ function UserPage() {
         <thead>
         <tr>
           <th>Description </th>
-          <th>     Age</th>
-          <th>    Available</th>
+          <th>Age</th>
+          <th>Available</th>
         </tr>
         </thead>
         <tbody>
