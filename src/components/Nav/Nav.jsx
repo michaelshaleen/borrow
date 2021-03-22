@@ -26,80 +26,48 @@ function Nav() {
 
   if (user.id != null) {
     loginLinkData.path = '/user';
-    loginLinkData.text = 'Home';
+    loginLinkData.text =<Tab label="Home here" icon={<HomeIcon />}/>
+    ;
   }
 
   return (
+
+    
     <div className="nav">
-
-
-
-{/* 
-<AppBar position="static">
-  <Toolbar />
-
-   <Tabs variant="fullWidth" >
-      <Link to="/home">
-      <h2 className="nav-title">ToiChare</h2>< HomeIcon color="primary"/>
-        <Tab label="Home here" icon={<HomeIcon />}/>
+    <Link to="/home">
+      {/* <h2 className="nav-title">ToiChare</h2> */}
     </Link>
 
 
-     <Link className="navLink" to="/search_toys">
-       <Tab label="Search Toys" icon={<SearchIcon />} />
-    </Link>
-
-
-    <Link className="navLink" to="/share_toys">
-     <Tab label="Share Toys" icon={<ShareIcon />}/>
-      </Link>
-      <Link className="navLink" to="/about">
-     <Tab label="About" icon={<InfoIcon />}/>
-     
-  </Link>
-     <Tab label="LogOut" icon={<ExitToAppIcon/> }/>
-   </Tabs>
-   <Toolbar />
-</AppBar> */}
-
-
-
-<Link to="/home">
- {/* <h2 className="nav-title">ToiChare</h2> */}
-<Tab label="Home here" icon={<HomeIcon />}/>
-
-</Link>
-<div>
-<Link className="navLink" to={loginLinkData.path}>
-{loginLinkData.text}
-</Link>
-
-{user.id && (
-  <>
-
-  <Link className="navLink" to="/search_toys">
-    <Tab label="Search Toys" icon={<SearchIcon />} />
-  </Link>
-
-  <Link className="navLink" to="/share_toys">
-     <Tab label="Share Toys" icon={<ShareIcon />}/>
-  </Link>
-
-  <LogOutButton
-  className="navLink" />
-  </>
-  )}
   
-  <Link className="navLink" to="/about">
-     <Tab label="About" icon={<InfoIcon />}/>
-  </Link>
-</div> 
+      <Link className="navLink" to={loginLinkData.path}>
+        {loginLinkData.text}
+      </Link>
+
+      {user.id && (
+          <>
+            <Link className="navLink" to="/search_toys">
+              <Tab label="Search Toys" icon={<SearchIcon />} />
+            </Link>
+
+            <Link className="navLink" to="/share_toys">
+              <Tab label="Share Toys" icon={<ShareIcon />}/>
+            </Link>
+
+            <LogOutButton
+            className="navLink" />
+          </>
+        )}
+  
+        <Link className="navLink" to="/about">
+          <Tab label="About" icon={<InfoIcon />}/>
+        </Link>
+
+</div>
 
 
 
 
-
-    </div>
   );
 }
 
