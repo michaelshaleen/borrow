@@ -1,7 +1,9 @@
 import axios from "axios";
 import { useEffect, useState} from 'react';
 import {useSelector, useDispatch} from 'react-redux';
-
+import Button from '@material-ui/core/Button';
+import DeleteIcon from '@material-ui/icons/Delete';
+import Checkbox from '@material-ui/icons/CheckBox';
 
 function ToyList({ toy }) {
   const [available, setAvailable] = useState(true);
@@ -26,11 +28,29 @@ function ToyList({ toy }) {
 
 
   const deleteBtn = (toyId) => {
-    console.log('delete content')
-    dispatch({
-      type: 'DELETE',
-      payload: toyId
-    })
+    swal("Are you sure you want to delete?", {
+  buttons: {
+    cancel: "Nahhhh",
+    delete: true,
+  },
+})
+.then((value) => {
+  switch (value) {
+ 
+    case "delete":
+      swal("okay, I guess children shouldn't be happy");
+      console.log('delete content')
+      dispatch({
+        type: 'DELETE',
+        payload: toyId
+      })
+      break;
+    default:
+      swal("okay, cool...");
+  }
+});
+
+   
   }
 
 
@@ -42,8 +62,28 @@ function ToyList({ toy }) {
       <td>{toy.name}</td>
       <td>{toy.ages}</td>
       <td>{toy.available ? <span> true </span>:<span> false </span>}</td>
-      <td><button onClick={() =>{ availableBtn(toy.id, toy.available) }}>Available</button></td>
-      <td><button onClick={()=>{ deleteBtn(toy.id) }}>Delete</button></td> 
+      <td>{toy.image}</td>
+
+      <td><Button 
+      variant="contained"
+      color="primary"
+      onClick={() =>{ availableBtn(toy.id, toy.available) }}>
+        Available
+        </Button></td>
+
+      <td><Button 
+      startIcon={ <DeleteIcon /> }
+      variant="contained"
+      color="secondary"
+      onClick={()=>{ deleteBtn(toy.id) }}>
+        Delete
+      </Button></td> 
+{/* 
+      <Checkbox
+     
+       value="checkedA"
+       inputProps={{ 'aria-label': 'Checkbox A' }}
+     /> */}
     </tr>
 
     </>

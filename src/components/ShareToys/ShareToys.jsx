@@ -1,5 +1,12 @@
 import {useSelector, useDispatch} from 'react-redux';
 import {useState} from 'react';
+import Button from '@material-ui/core/Button';
+
+import AddCircleIcon from '@material-ui/icons/AddCircle';
+import CancelIcon from '@material-ui/icons/Cancel';
+import TextField from '@material-ui/core/TextField';
+import swal from 'sweetalert';
+
 
 
 function ShareToys() {
@@ -8,15 +15,19 @@ function ShareToys() {
   const [toyName, setToyName] = useState('');
   const [ageGroup, setAgeGroup] = useState('');
   const [available, setAvailable] = useState('');
+  const [toyImage, setImage] = useState('');
   const newToy = useSelector((store) => store.toy)
   const phone = useSelector((store) => store.user.phone);
   const userId = useSelector((store) => store.user.id);
 
-  //console.log(newToy, "is this new Toy?")
+
 
 
 
   const shareToy = (action) => {
+    swal({
+      title: "Here's a title!",
+    });    cancelBtn();
     dispatch({
       type: 'ADD_TOY',
       payload: {
@@ -24,11 +35,10 @@ function ShareToys() {
         ages: ageGroup,
         available: available,
         phone: phone,
-        ID: userId
+        ID: userId,
+        image: toyImage
       }
     })
-    alert('Successful Add!')
-    cancelBtn();
     
   }
 
@@ -38,7 +48,8 @@ function ShareToys() {
     return(
       setToyName(''),
       setAgeGroup(''),
-      setAvailable('')   
+      setAvailable(''),
+      setImage('')  
     )
   }
   return(
@@ -47,7 +58,7 @@ function ShareToys() {
     <h1>{userId}, This is id</h1> */}
 
     <p>Share New Toys</p>
-    <input
+    <TextField 
     value={toyName}
     type="text"
     placeholder="Name"
@@ -77,8 +88,34 @@ function ShareToys() {
       <option value="false">Not Available</option>
 
     </select>
-    <button onClick={shareToy}>Share Toy</button>
-    <button onClick={cancelBtn}>Cancel</button>
+
+
+  <input 
+  type="file" 
+  // value={toyImage}
+  className="custom-file-input"
+  id="customFile" 
+  onChange={(event) => setImage(event.target.files) }/>
+
+  <label className="custom-file-label" htmlFor="customFile"></label>
+     
+    <Button 
+    variant="contained"
+    color="secondary"
+    size="small"
+     endIcon={ <AddCircleIcon /> }
+     onClick={shareToy}>
+     Share Toy
+    </Button>
+
+    <Button 
+      variant="contained"
+      color="primary"
+      size="small"
+      endIcon={ <CancelIcon /> }
+      onClick={cancelBtn}>
+      Cancel
+    </Button>
 
     </>
   )

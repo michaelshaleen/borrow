@@ -37,17 +37,19 @@ router.post('/', rejectUnauthenticated, (req, res) => {
   const newToy= req.body;
   console.log(newToy.available, "new available")
   console.log(newToy.ID, "owner ID")
+  console.log(newToy.image, "image linky here")
 
    const queryText = `
-    INSERT INTO toys (name, ages, phone, user_id, available) 
-    VALUES ($1, $2, $3, $4, $5);`;
+    INSERT INTO toys (name, ages, phone, user_id, available, image) 
+    VALUES ($1, $2, $3, $4, $5, $6);`;
       
   const queryParams = [
     newToy.name,
     newToy.ages,
     newToy.phone,
     newToy.ID,
-    newToy.available
+    newToy.available,
+    newToy.image
   ]
 
   pool.query(queryText, queryParams)

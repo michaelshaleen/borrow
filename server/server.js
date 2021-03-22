@@ -3,6 +3,7 @@ const bodyParser = require('body-parser');
 require('dotenv').config();
 
 const app = express();
+const fileUpload = require('express-fileupload');
 
 const sessionMiddleware = require('./modules/session-middleware');
 const passport = require('./strategies/user.strategy');
@@ -11,6 +12,8 @@ const passport = require('./strategies/user.strategy');
 const userRouter = require('./routes/user.router');
 const toyRouter = require('./routes/template.router');
 const searchRouter = require('./routes/search.router');
+
+app.use(fileUpload());
 
 // Body parser middleware
 app.use(bodyParser.json());
