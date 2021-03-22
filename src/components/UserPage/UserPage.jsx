@@ -88,13 +88,6 @@ function UserPage() {
         </tbody>
       </table>
       
-      {/* <svg aria-hidden="true" 
-      focusable="false" role="presentation" 
-      className="icon icon-hamburger"
-      viewBox="0 0 64 64" >
-        <circle cx="50" cy="50" r="40" stroke="green" stroke-width="4" fill="yellow" />
-        </svg> */}
-      {/* <img src={sharkKid}/> */}
 
 
 
@@ -102,6 +95,5 @@ function UserPage() {
   );
 }
 
-// this allows us to use <App /> in index.js
 export default UserPage;
 

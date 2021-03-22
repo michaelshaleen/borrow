@@ -106,7 +106,7 @@ function ShareToys() {
      
     <Button 
     variant="contained"
-    color="secondary"
+    color="default"
     size="small"
      endIcon={ <AddCircleIcon /> }
      onClick={shareToy}>
@@ -115,7 +115,7 @@ function ShareToys() {
 
     <Button 
       variant="contained"
-      color="primary"
+      color="inherit"
       size="small"
       endIcon={ <CancelIcon /> }
       onClick={cancelBtn}>

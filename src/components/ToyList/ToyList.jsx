@@ -74,16 +74,11 @@ function ToyList({ toy }) {
       <td><Button 
       startIcon={ <DeleteIcon /> }
       variant="contained"
-      color="secondary"
+      color="default"
       onClick={()=>{ deleteBtn(toy.id) }}>
         Delete
       </Button></td> 
-{/* 
-      <Checkbox
-     
-       value="checkedA"
-       inputProps={{ 'aria-label': 'Checkbox A' }}
-     /> */}
+
     </tr>
 
     </>

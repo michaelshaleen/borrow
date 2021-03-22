@@ -2,6 +2,8 @@ import {useSelector, useDispatch} from 'react-redux';
 import {useState} from 'react';
 import ToyList from '../ToyList/ToyList';
 import DisplayToys from '../DisplayToys/DisplayToys';
+import Button from '@material-ui/core/Button';
+
 
 function SearchToys() {
   const dispatch = useDispatch();
@@ -36,31 +38,32 @@ function SearchToys() {
   return(
     <>
     <h2>Search Toys {user.username}</h2>
-    <input
-    value={toyName}
-    type="text"
-    placeholder="Name"
-    onChange={(event) => setToyName(event.target.value)}
-
-    />
+      <input
+      value={toyName}
+      type="text"
+      placeholder="Name"
+      onChange={(event) => setToyName(event.target.value)}
+      />
     <select 
-    value={ageGroup}
-    name="Ages" 
-    id="ages"
-    onChange={(event) => setAgeGroup(event.target.value)}
-    >
-
-
-      <option>  </option>
-      <option value="0-3">0-3 Years Old</option>
-      <option value="3-5">3-5 Years Old</option>
-      <option value="5-10">5-10 Years Old</option>
-
+        className="ageDrop"
+        value={ageGroup}
+        name="Ages" 
+        id="ages"
+        onChange={(event) => setAgeGroup(event.target.value)}
+        >
+        <option>  </option>
+        <option value="0-3">0-3 Years Old</option>
+        <option value="3-5">3-5 Years Old</option>
+        <option value="5-10">5-10 Years Old</option>
     </select>
+ 
 
      
     <button onClick={searchBtn}>Search Toy</button>
     <button onClick={cancelBtn}>Cancel</button>
+
+
+ 
 
     <table >
     <thead>
@@ -82,3 +85,14 @@ function SearchToys() {
 }
 
 export default SearchToys;
+    // <Button class="btn btn-secondary dropdown-toggle" 
+    //   type="button" id="dropdownMenuButton" 
+    //   data-toggle="dropdown" aria-haspopup="true" 
+    //   aria-expanded="false">
+    //     Button 
+    // </Button>
+    // <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+    //     <a class="dropdown-item" href="#">Action</a>
+    //     <a class="dropdown-item" href="#">Another action</a>
+    //     <a class="dropdown-item" href="#">Something else here</a>
+    // </div>
