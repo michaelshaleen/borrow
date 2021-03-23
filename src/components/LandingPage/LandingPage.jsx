@@ -42,6 +42,7 @@ function LandingPage() {
           {/* </center> */}
         </div>
       </div>
+
     </div>
   );
 }

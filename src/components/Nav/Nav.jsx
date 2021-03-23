@@ -13,6 +13,8 @@ import {AppBar, Typography, Toolbar} from '@material-ui/core'
 import Tabs from '@material-ui/core/Tabs';
 import Tab from '@material-ui/core/Tab';
 import Box from '@material-ui/core/Box';
+import { height } from '@material-ui/system';
+
 
 
 
@@ -31,6 +33,8 @@ function Nav() {
   }
 
   return (
+   
+
 
     
     <div className="nav">
@@ -48,13 +52,13 @@ function Nav() {
         </Link>
 
       {user.id && (
-          <>
+        <>
             <Link className="navLink" to="/search_toys">
               <Tab variant="fullWidth" label="Search Toys" icon={<SearchIcon />} />
             </Link>
 
             <Link className="navLink" to="/share_toys">
-              <Tab variant="fullWidth" label="Share Toys" icon={<ShareIcon />}/>
+              <Tab variant="fullWidth" label="Share Toys" icon={<ShareIcon />}/>     
             </Link>
 
             <LogOutButton

@@ -3,6 +3,7 @@ import {useState} from 'react';
 import ToyList from '../ToyList/ToyList';
 import DisplayToys from '../DisplayToys/DisplayToys';
 import Button from '@material-ui/core/Button';
+import swal from 'sweetalert';
 
 
 function SearchToys() {
@@ -17,13 +18,20 @@ function SearchToys() {
   const [ageGroup, setAgeGroup] = useState('');
 
   const searchBtn = (action) => {
-    dispatch({
-      type:'SEARCH_TOY',
-      payload: {
-        name: toyName,//input value being sent on search click
-        ages: ageGroup      
-      }
-    })
+    if(!toyName || !ageGroup){
+      swal({
+        title: "please enter input values"
+      });
+    }else{
+
+      dispatch({
+        type:'SEARCH_TOY',
+        payload: {
+          name: toyName,//input value being sent on search click
+          ages: ageGroup      
+        }
+      })
+    }
   }
 //
 
@@ -80,6 +88,20 @@ function SearchToys() {
               })}
               </tbody>
       </table>
+
+
+
+
+      <section className="showcase">
+        <header>
+          <h2 className="logo">Travel</h2>
+          <div className="toggle"></div>
+        </header>
+        <video src="Video/Video.mp4" muted loop autoplay>
+
+
+        </video>
+      </section>
 </>
   )
 }

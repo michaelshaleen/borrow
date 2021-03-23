@@ -17,10 +17,10 @@
 .navLink {
   display: inline;
   color: #f2f2f2;
-  /* background-color: #f6ba38; */
+  background-color:  rgb(124, 124, 74);
   text-align: center;
   padding: 14px 5px;
-  width: 15px;  
+  width: 5px;  
   font-size: 25px;
 
   /* these last two make the logout button in
@@ -31,5 +31,10 @@
 }
 
 .navLink:hover {
-  background-color: rgb(155, 155, 113);
+  background-color: rgb(82, 82, 57);
+}
+
+.AppBar {
+  background-color: bisque;
+
 }
