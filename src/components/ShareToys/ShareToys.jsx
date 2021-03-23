@@ -25,22 +25,29 @@ function ShareToys() {
 
 
   const shareToy = (action) => {
-    swal({
-      title: "Thanks for sharing",
-    });    cancelBtn();
-    dispatch({
-      type: 'ADD_TOY',
-      payload: {
-        name: toyName,
-        ages: ageGroup,
-        available: available,
-        phone: phone,
-        ID: userId,
-        image: toyImage
-      }
-    })
-    
-  }
+    if(!toyName || !ageGroup || !available){
+      swal({
+        title: "please complete input form"
+      });
+    }else{
+
+      swal({
+        title: "Thanks for sharing",
+      });    cancelBtn();
+      dispatch({
+        type: 'ADD_TOY',
+        payload: {
+          name: toyName,
+          ages: ageGroup,
+          available: available,
+          phone: phone,
+          ID: userId,
+          image: toyImage
+        }
+      })
+    }
+      
+    }
 
 
   const cancelBtn = () => {
