@@ -51,7 +51,7 @@ function* searchedToy(action){
 
   try{
    const ResultsToy = yield axios.get(`/api/search/${searchName}`, {params: { ages: searchAges }});
-   console.log(ResultsToy.data, "SEARCHED DATA")
+   console.log(ResultsToy.data.length, "SEARCHED DATA")
    yield put({ type: 'SEARCH_RESULT', payload: ResultsToy.data });
 
   }

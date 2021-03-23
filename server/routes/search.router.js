@@ -27,6 +27,10 @@ console.log(name,'name')
   
   pool.query(query, [name])
   .then( result => {
+    if(result.rows.length < 1 ){
+      console.log("none found")
+      
+    }
     console.log(result.rows, "search result")
     res.send(result.rows);
   })

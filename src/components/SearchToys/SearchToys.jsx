@@ -10,10 +10,15 @@ function SearchToys() {
   const dispatch = useDispatch();
   const searchedToys = useSelector((store) => store.searchedToy)
   const user = useSelector((store) => store.user);
-  console.log(searchedToys, "available here");
 
-  //if searchedToys.available == true
-  // searchedToys =="true"
+  if(searchedToys.length == 0){
+     
+    }
+  else{
+    console.log("more than zero")
+  }
+
+  
   const [toyName, setToyName] = useState('');
   const [ageGroup, setAgeGroup] = useState('');
 
@@ -31,7 +36,7 @@ function SearchToys() {
           ages: ageGroup      
         }
       })
-    }
+     }
   }
 //
 
@@ -83,16 +88,18 @@ function SearchToys() {
         </tr>
         </thead>
         <tbody>
-            {searchedToys.map(toy => {
-              return <DisplayToys key={toy.id} toy={toy}/>  
-              })}
+                {searchedToys.map(toy => {
+                return <DisplayToys key={toy.id} toy={toy}/>  
+              }
+              )}
               </tbody>
       </table>
+      {/* if searchedToys === null */}
 
 
 
 
-      <section className="showcase">
+      {/* <section className="showcase">
         <header>
           <h2 className="logo">Travel</h2>
           <div className="toggle"></div>
@@ -101,7 +108,7 @@ function SearchToys() {
 
 
         </video>
-      </section>
+      </section> */}
 </>
   )
 }
