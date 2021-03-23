@@ -1,4 +1,4 @@
-const newToyReducer = (state = {}, action) => {
+const newToyReducer = (state, action) => {
   console.log(action.payload, "share reducer")
   switch (action.type) {
     case 'ADD_TOY':

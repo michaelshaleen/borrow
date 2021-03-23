@@ -15,7 +15,7 @@ function ShareToys() {
   const [toyName, setToyName] = useState('');
   const [ageGroup, setAgeGroup] = useState('');
   const [available, setAvailable] = useState('');
-  const [toyImage, setImage] = useState('');
+  const [toyImage, setImage] = useState({});
   const newToy = useSelector((store) => store.toy)
   const phone = useSelector((store) => store.user.phone);
   const userId = useSelector((store) => store.user.id);
@@ -107,7 +107,7 @@ function ShareToys() {
   // value={toyImage}
   className="custom-file-input"
   id="customFile" 
-  onChange={(event) => setImage(event.target.files) }/>
+  onChange={(event) => setImage(event.target.value) }/>
 
   <label className="custom-file-label" htmlFor="customFile"></label>
      

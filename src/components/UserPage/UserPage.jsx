@@ -15,8 +15,7 @@ function UserPage() {
   const user = useSelector((store) => store.user);
   const toys = useSelector((store) => store.toy);
 
-  console.log(toys, "toys in user page")
-  //console.log(user, "user in user page")
+  console.log(toys.image, "toys in user page")
   const dispatch = useDispatch();
 
   //const [available, setAvailable] = useState('');
@@ -36,32 +35,7 @@ function UserPage() {
     })
   }
 
-  // const availableBtn = (event) => {
-  //   console.log(event.target.id, "target id")
-  //   // match event.target.id to id in toys list
-  //   //for loop
-  //   if(available === true){
-  //     console.log()
-  //     setAvailable(false);
-  //   }
-  //   if(available == false){
-  //     setAvailable(true)
-  //   }
-
-
-  //   return available;
-  // }
-
-  // if (toys.length = 0) {
-  //    <div> You have posted no toys</div>
-  //   }
-  //   else{ toys.map}
-
-
-  function ButtonStyled() {
-    const classes = UseStyles();
-    return <Button className={classes.root}>Styled Button</Button>
-  }
+  
 
 
   return (
