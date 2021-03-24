@@ -6,14 +6,33 @@ function Video() {
 
 
   <section className="showcase">
+
+
   <header>
     {/* <h2 className="logo">Travel</h2> */}
-    <div className="toggle"></div>
   </header>
   <video src={process.env.PUBLIC_URL + '/kids_playing.mp4'} muted loop autoPlay> </video>
   <div className="overlay"></div>
   <div className="text">
+
+
     <h2> </h2> 
+
+
+  <div className="toggle">
+      <div class="menu">
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">News</a></li>
+          <li><a href="#">Destination</a></li>
+          <li><a href="#">Blog</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </div>
+  </div>
+
+
+
     <h3>Exploring ToiChare</h3>
     <p >Welcome to ToiChare, please Log in 
     or Register an account to begin using!</p>
@@ -29,15 +48,7 @@ function Video() {
 
   </ul>
 </section>
-<div class="menu">
-  <ul>
-    <li><a href="#">Home</a></li>
-    <li><a href="#">News</a></li>
-    <li><a href="#">Destination</a></li>
-    <li><a href="#">Blog</a></li>
-    <li><a href="#">Contact</a></li>
-  </ul>
-</div>
+
 
 
 </>
