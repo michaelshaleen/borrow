@@ -51,14 +51,26 @@ function Nav() {
   </ul>
 </div>       */}
 
-    <div className="toggle" ><MenuIcon />
+
+<div className="toggle">
+      <div class="menu">
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">News</a></li>
+          <li><a href="#">Destination</a></li>
+          <li><a href="#">Blog</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </div>
+  </div>
+
+
+    {/* <div className="toggle" ><MenuIcon /> */}
 
     <Link to="/landing">
       <h2 className="nav-title">ToiChare</h2>
     </Link>
 
-
-  
         <Link className="navLink" to={loginLinkData.path}>
           {loginLinkData.text}
         </Link>
@@ -84,11 +96,8 @@ function Nav() {
             className="navLink" />
           </>
         )}
-  
-
+      {/* </div> */}
 </div>
-
-        </div>
 
 </>
   );
