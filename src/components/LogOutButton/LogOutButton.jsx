@@ -10,9 +10,7 @@ import Tab from '@material-ui/core/Tab';
 function LogOutButton(props) {
   const dispatch = useDispatch();
   return (
-    <Button
-    // color="secondary"
-    
+    <Button    
     
       // This button shows up in multiple locations and is styled differently
       // because it's styled differently depending on where it is used, the className

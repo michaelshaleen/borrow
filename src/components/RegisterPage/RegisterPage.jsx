@@ -2,12 +2,15 @@ import React from 'react';
 
 import { useHistory } from 'react-router-dom';
 import RegisterForm from '../RegisterForm/RegisterForm';
+import Nav from '../Nav/Nav';
+
 
 function RegisterPage() {
   const history = useHistory();
 
   return (
     <div>
+      <Nav />
       <RegisterForm />
 
       <center>

@@ -14,6 +14,7 @@ import Tabs from '@material-ui/core/Tabs';
 import Tab from '@material-ui/core/Tab';
 import Box from '@material-ui/core/Box';
 import { height } from '@material-ui/system';
+import MenuIcon from '@material-ui/icons/Menu';
 
 
 
@@ -33,12 +34,25 @@ function Nav() {
   }
 
   return (
+    <>
    
 
 
-    
+
     <div className="nav">
-      
+        
+        <div class="menu">
+  <ul>
+    <li><a href="#">Home</a></li>
+    <li><a href="#">News</a></li>
+    <li><a href="#">Destination</a></li>
+    <li><a href="#">Blog</a></li>
+    <li><a href="#">Contact</a></li>
+  </ul>
+</div>      
+
+    <div className="toggle" ><MenuIcon />
+
     <Link to="/landing">
       <h2 className="nav-title">ToiChare</h2>
     </Link>
@@ -74,8 +88,9 @@ function Nav() {
 
 </div>
 
+        </div>
 
-
+</>
   );
 }
 

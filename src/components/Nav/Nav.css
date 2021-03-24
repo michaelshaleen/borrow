@@ -14,6 +14,30 @@
 }
 
 
+.toggle
+{
+  position: relative;
+  width: 60px;
+  height: 60px;
+  /* background: url(https://i.ibb.co/HrfVRcx/menu.png); */
+  background-repeat: no-repeat;
+  background-size: 30px;
+  background-position: center;
+  cursor: pointer;
+}
+.menu
+{
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 300px;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
 .navLink {
   display: inline;
   color: #f2f2f2;
