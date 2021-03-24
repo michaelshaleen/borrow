@@ -30,6 +30,7 @@ header .logo
 .toggle
 {
   position: relative;
+  display: inline-block;
   width: 60px;
   height: 60px;
   background: url(https://i.ibb.co/HrfVRcx/menu.png);
@@ -38,14 +39,16 @@ header .logo
   background-position: center;
   cursor: pointer;
 }
-.toggle.hover
-.menu
+.toggle:hover
 {
   background: url(https://i.ibb.co/rt3HybH/close.png);
   background-repeat: no-repeat;
   background-size: 25px;
   background-position: center;
   cursor: pointer;
+}
+.toggle:hover .menu {
+  display: inline-block;
 }
 .showcase
 {
@@ -166,7 +169,7 @@ header .logo
   right: 0;
   width: 300px;
   height: 100%;
-  display: flex;
+  display: none;
   justify-content: center;
   align-items: center;
 }
