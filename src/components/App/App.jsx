@@ -21,6 +21,7 @@ import SearchToys from '../SearchToys/SearchToys';
 import ShareToys from '../ShareToys/ShareToys';
 import UserPage from '../UserPage/UserPage';
 import ToyList from '../ToyList/ToyList';
+import Video from '../Video/Video';
 
 import './App.css';
 
@@ -46,6 +47,13 @@ function App() {
             path="/about"
           >
             <AboutPage />
+          </Route>
+          <Route
+            // shows AboutPage at all times (logged in or not)
+            exact
+            path="/home"
+          >
+            <Video />
           </Route>
 
           {/* For protected routes, the view could show one of several things on the same route.
@@ -107,10 +115,10 @@ function App() {
             // - if logged in, redirects to "/user"
             // - else shows LandingPage at "/home"
             exact
-            path="/home"
+            path="/Landing"
             authRedirect="/user"
           >
-            <LandingPage />
+            <Video />
           </ProtectedRoute>
 
           {/* If none of the other routes matched, we will show a 404. */}

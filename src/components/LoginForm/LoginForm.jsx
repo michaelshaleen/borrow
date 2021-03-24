@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import {useSelector} from 'react-redux';
+import ReactPlayer from 'react-player';
 
 function LoginForm() {
   const [username, setUsername] = useState('');
@@ -26,12 +27,17 @@ function LoginForm() {
 
   return (
     <>
+
+
     <body className="landing">
 
-    <p className="intro">Welcome to ToiChare, please Log in 
+<div class="text">
+    <p >Welcome to ToiChare, please Log in 
       or Register an account to begin using!
     </p>
+    </div>
     </body>
+    
     <form className="formPanel" onSubmit={login}>
       <h2 style={{color:'white', fontFamily:'cursive'}}>
         Login
@@ -70,9 +76,12 @@ function LoginForm() {
       <div>
         <input className="btn" type="submit" name="submit" value="Log In" />
       </div>
-    </form>
+    </form> 
 
-  {/* try video here */}
+
+
+
+
 
 
     </>
