@@ -6,6 +6,7 @@ import axios from "axios";
 import ToyList from '../ToyList/ToyList';
 import Button from '@material-ui/core/Button';
 import PersonIcon from '@material-ui/icons/Person';
+import Nav from '../Nav/Nav';
 
 
 
@@ -41,6 +42,7 @@ function UserPage() {
   return (
     <div className="container">
       <h2>Welcome back, {user.username}! </h2>
+      <Nav />
       <PersonIcon />
      
       {/* <h3>{user.phone}</h3> */}
