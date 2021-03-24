@@ -23,7 +23,9 @@ function Video() {
     <li><a href="#"><img src="https://i.ibb.co/x7P24fL/facebook.png"/></a></li>
     <li><a href="#"><img src="https://i.ibb.co/Wnxq2Nq/twitter.png"/></a></li>
     <li><a href="#"><img src="https://i.ibb.co/ySwtH4B/instagram.png"/></a></li>
-    <li><a href="#"><img src="https://i.ibb.co/ySwtH4B/instagram.png"/></a></li>
+    <li><a href="#"><img src="https://www.freepnglogos.com/pics/linkedin-logo-png"/></a></li>
+        {/* <li style={'size: 10px'}><a href="#"><img src={process.env.PUBLIC_URL + '/linkedIn.png'}/></a></li> */}
+
 
   </ul>
 </section>
