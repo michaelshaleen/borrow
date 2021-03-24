@@ -1,9 +1,10 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 require('dotenv').config();
+const fileUpload = require('express-fileUpload');
 
 const app = express();
-const fileUpload = require('express-fileupload');
+
 
 const sessionMiddleware = require('./modules/session-middleware');
 const passport = require('./strategies/user.strategy');
@@ -12,7 +13,7 @@ const passport = require('./strategies/user.strategy');
 const userRouter = require('./routes/user.router');
 const toyRouter = require('./routes/template.router');
 const searchRouter = require('./routes/search.router');
-
+// const upload = require('./template.router');
 app.use(fileUpload());
 
 // Body parser middleware
@@ -30,6 +31,7 @@ app.use(passport.session());
 app.use('/api/user', userRouter);
 app.use('/api/toy', toyRouter);
 app.use('/api/search', searchRouter);
+// app.use('/api/upload', upload)
 
 // Serve static files
 app.use(express.static('build'));

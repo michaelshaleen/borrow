@@ -25,15 +25,25 @@ function LoginForm() {
   }; // end login
 
   return (
+    <>
+    <body className="landing">
+
+    <p className="intro">Welcome to ToiChare, please Log in 
+      or Register an account to begin using!
+    </p>
+    </body>
     <form className="formPanel" onSubmit={login}>
-      <h2>Login</h2>
+      <h2 style={{color:'white', fontFamily:'cursive'}}>
+        Login
+      </h2>
       {errors.loginMessage && (
         <h3 className="alert" role="alert">
           {errors.loginMessage}
         </h3>
       )}
       <div>
-        <label htmlFor="username">
+        <label htmlFor="username"
+        style={{color:'white'}}>
           Username:
           <input
             type="text"
@@ -45,7 +55,8 @@ function LoginForm() {
         </label>
       </div>
       <div>
-        <label htmlFor="password">
+        <label htmlFor="password"
+        style={{color:'white'}}>
           Password:
           <input
             type="password"
@@ -60,6 +71,11 @@ function LoginForm() {
         <input className="btn" type="submit" name="submit" value="Log In" />
       </div>
     </form>
+
+  {/* try video here */}
+
+
+    </>
   );
 }
 

@@ -61,12 +61,19 @@ function* searchedToy(action){
 }
 
 
+function* fileUpload(action){
+  const newFile = action.payload.file;
+  console.log(newFile, "new file")
+
+}
+
 
 function* toySaga() {
   yield takeLatest('FETCH_TOY', fetchToy);
   yield takeLatest('DELETE', deleteToy)
   yield takeLatest('UPDATE_TOY', updateToy)
   yield takeLatest('SEARCH_TOY', searchedToy)
+  yield takeLatest('ADD_FILE', fileUpload)
 }
 
 export default toySaga;

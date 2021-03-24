@@ -24,14 +24,15 @@ function RegisterForm() {
 
   return (
     <form className="formPanel" onSubmit={registerUser}>
-      <h2>Register User</h2>
+      <h2 style={{color:'white'}}>Register User</h2>
       {errors.registrationMessage && (
         <h3 className="alert" role="alert">
           {errors.registrationMessage}
         </h3>
       )}
       <div>
-        <label htmlFor="username">
+        <label htmlFor="username"
+        style={{color:'white'}}>
           Username:
           <input
             type="text"
@@ -43,7 +44,8 @@ function RegisterForm() {
         </label>
       </div>
       <div>
-        <label htmlFor="password">
+        <label htmlFor="password"
+        style={{color:'white'}}>
           Password:
           <input
             type="password"
@@ -55,7 +57,8 @@ function RegisterForm() {
         </label>
       </div>
       <div>
-        <label htmlFor="phone">
+        <label htmlFor="phone"
+        style={{color:'white'}}>
           Phone Number:
           <input
             type="tel"

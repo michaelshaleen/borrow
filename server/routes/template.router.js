@@ -33,6 +33,29 @@ router.get('/', rejectUnauthenticated, (req, res) => {
 });
 
 
+
+router.post('/upload', rejectUnauthenticated, (req, res) => {
+  const uploadedFile = req.files
+  console.log(uploadedFile, "files here")
+
+  const sqlText = `
+  INSERT INTO 
+  VALUES ($1)`;
+
+  const paramsText = uploadedFile.image;
+
+  pool.query(sqlText, paramsText)
+  .then((result) => {
+    console.log(result, "file results")
+    res.sendStatus(201);
+
+  })
+  .catch((error) => {
+    console.log("error post upload", error)
+    res.sendStatus(500);
+  })
+})
+
 router.post('/', rejectUnauthenticated, (req, res) => {
   const newToy= req.body;
   console.log(newToy.available, "new available")

@@ -1,6 +1,11 @@
 import {useSelector, useDispatch} from 'react-redux';
 import {useState} from 'react';
 import Button from '@material-ui/core/Button';
+import axios from 'axios';
+
+// const express = require('express');
+// const fileUpload = require('express-fileupload');
+// const app = express();
 
 import AddCircleIcon from '@material-ui/icons/AddCircle';
 import CancelIcon from '@material-ui/icons/Cancel';
@@ -21,10 +26,14 @@ function ShareToys() {
   const userId = useSelector((store) => store.user.id);
 
 
+  console.log(toyImage, "image");
+  
+
 
 
 
   const shareToy = (action) => {
+    console.log(toyImage, "image here")
     if(!toyName || !ageGroup || !available){
       swal({
         title: "please complete input form"
@@ -50,6 +59,21 @@ function ShareToys() {
     }
 
 
+    // dispatch({
+    //   type: 'ADD_FILE',
+    //   payload:{
+    //     file: toyImage
+    //   }
+    const sendImage = (event) => {
+      event.preventDefault();
+      console.log(toyImage, "send image value")
+     
+      
+        
+      }
+    
+
+
   const cancelBtn = () => {
     console.log("cancel")
     return(
@@ -61,8 +85,22 @@ function ShareToys() {
   }
   return(
     <div className="divShare">
-    {/* <h1>{phone}, This is phone</h1>
-    <h1>{userId}, This is id</h1> */}
+
+    <form 
+    // ref='uploadForm'   
+      id='uploadForm'
+      //url='http://localhost:3000/upload' 
+      action='http://localhost:3000/upload' 
+      method='post'
+      encType="multipart/form-data">
+
+        <input type="file" name="sampleFile"
+        onChange={(event)=> setImage(event.target.value)} />
+
+        <input type='submit' value='Upload!'/>
+         {/* onClick={(event)=> sendImage(event.target.value)} /> */}
+    </form>
+
 
     <p>Share New Toys</p>
     <TextField 
@@ -102,12 +140,19 @@ function ShareToys() {
     </select>
 
 
-  <input 
+  {/* <input 
   type="file" 
   // value={toyImage}
   className="custom-file-input"
   id="customFile" 
-  onChange={(event) => setImage(event.target.value) }/>
+  onChange={(event) => setImage(event.target.value) }/> */}
+
+ 
+
+
+  {/* <script>
+    document.query.
+  </script> */}
 
   <label className="custom-file-label" htmlFor="customFile"></label>
      
