@@ -4,6 +4,8 @@ import ToyList from '../ToyList/ToyList';
 import DisplayToys from '../DisplayToys/DisplayToys';
 import Button from '@material-ui/core/Button';
 import swal from 'sweetalert';
+import Nav from '../Nav/Nav';
+
 
 
 function SearchToys() {
@@ -50,6 +52,7 @@ function SearchToys() {
 
   return(
     <>
+    <Nav />
     <h2>Search Toys {user.username}</h2>
       <input
       value={toyName}

@@ -1,4 +1,6 @@
 import React from 'react';
+import Nav from '../Nav/Nav';
+
 
 // This is one of our simplest components
 // It doesn't have local state,
@@ -8,6 +10,7 @@ import React from 'react';
 function AboutPage() {
   return (
     <div className="container">
+      <Nav />
       <div>
         <p>If you have any questions or need assistance
           please use the following contact methods

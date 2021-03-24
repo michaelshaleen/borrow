@@ -39,8 +39,8 @@ function Nav() {
     
     <div className="nav">
       
-    <Link to="/home">
-      {/* <h2 className="nav-title">ToiChare</h2> */}
+    <Link to="/landing">
+      <h2 className="nav-title">ToiChare</h2>
     </Link>
 
 
