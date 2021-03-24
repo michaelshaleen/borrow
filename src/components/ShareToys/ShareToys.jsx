@@ -2,6 +2,8 @@ import {useSelector, useDispatch} from 'react-redux';
 import {useState} from 'react';
 import Button from '@material-ui/core/Button';
 import axios from 'axios';
+import Nav from '../Nav/Nav';
+
 
 // const express = require('express');
 // const fileUpload = require('express-fileupload');
@@ -85,6 +87,7 @@ function ShareToys() {
   }
   return(
     <div className="divShare">
+      <Nav />
 
     <form 
     // ref='uploadForm'   
