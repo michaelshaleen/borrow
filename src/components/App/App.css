@@ -38,7 +38,8 @@ header .logo
   background-position: center;
   cursor: pointer;
 }
-.toggle.active
+.toggle.hover
+.menu
 {
   background: url(https://i.ibb.co/rt3HybH/close.png);
   background-repeat: no-repeat;
