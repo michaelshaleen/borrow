@@ -38,6 +38,7 @@ function Nav() {
 
     
     <div className="nav">
+      
     <Link to="/home">
       {/* <h2 className="nav-title">ToiChare</h2> */}
     </Link>
@@ -47,12 +48,13 @@ function Nav() {
         <Link className="navLink" to={loginLinkData.path}>
           {loginLinkData.text}
         </Link>
+        
         <Link className="navLink" to="/about">
           <Tab variant="fullWidth" label="About" icon={<InfoIcon />}/>
         </Link>
-        <Link className="navLink" to="/landing">
+        {/* <Link className="navLink" to="/landing">
           <Tab variant="fullWidth" label="Landing" icon={<HomeIcon />}/>
-        </Link>
+        </Link> */}
 
       {user.id && (
         <>
@@ -71,7 +73,6 @@ function Nav() {
   
 
 </div>
-
 
 
 

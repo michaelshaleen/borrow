@@ -1,25 +1,25 @@
-/* --------------------------------------------------------------------------------
+/* /* --------------------------------------------------------------------------------
 Grid
 -------------------------------------------------------------------------------- */
-
+/* 
 .grid {
   display: flex;
   flex: 0 1 auto;
   /* defaults to 'row' */
-  flex-direction: row;
+  /* flex-direction: row;
   flex-wrap: wrap;
   /* defaults to 'flex-start' */
-  justify-content: flex-start;
-  align-items: flex-start;
-}
+  /* justify-content: flex-start;
+  align-items: flex-start; */ */
+/* }
 
 .grid-col {
   flex: 0 0 auto;
   padding: 0 0.5rem 0.5rem;
   box-sizing: border-box;
-}
+} */
 
-.grid-col_1 {
+/* .grid-col_1 {
   flex-basis: 8.33333333%;
   max-width: 8.33333333%;
 }
@@ -32,8 +32,8 @@ Grid
 .grid-col_3 {
   flex-basis: 25%;
   max-width: 25%;
-}
-
+} */
+/* 
 .grid-col_4 {
   flex-basis: 33.33333333%;
   max-width: 33.33333333%;
@@ -52,9 +52,9 @@ Grid
 .grid-col_7 {
   flex-basis: 58.33333333%;
   max-width: 58.33333333%;
-}
+} */
 
-.grid-col_8 {
+/* .grid-col_8 {
   flex-basis: 66.66666667%;
   max-width: 66.66666667%;
 }
@@ -67,9 +67,9 @@ Grid
 .grid-col_10 {
   flex-basis: 83.33333333%;
   max-width: 83.33333333%;
-}
+} */
 
-.grid-col_11 {
+/* .grid-col_11 {
   flex-basis: 91.66666667%;
   max-width: 91.66666667%;
 }
@@ -77,4 +77,4 @@ Grid
 .grid-col_12 {
   flex-basis: 100%;
   max-width: 100%;
-}
+}  */

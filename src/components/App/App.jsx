@@ -21,7 +21,7 @@ import SearchToys from '../SearchToys/SearchToys';
 import ShareToys from '../ShareToys/ShareToys';
 import UserPage from '../UserPage/UserPage';
 import ToyList from '../ToyList/ToyList';
-import Video from '../Video/Video';
+import Video from '../Welcome_Page/Video';
 
 import './App.css';
 
@@ -35,24 +35,17 @@ function App() {
   return (
     <Router>
       <div>
-        <Nav />
+        {/* <Nav /> */}
         <Switch>
           {/* Visiting localhost:3000 will redirect to localhost:3000/home */}
-          <Redirect exact from="/" to="/home" />
+          <Redirect exact from="/" to="/landing" />
 
           {/* Visiting localhost:3000/about will show the about page. */}
-          <Route
-            // shows AboutPage at all times (logged in or not)
-            exact
-            path="/about"
-          >
+          <Route exact path="/about" >
             <AboutPage />
           </Route>
-          <Route
-            // shows AboutPage at all times (logged in or not)
-            exact
-            path="/home"
-          >
+
+          <Route exact path="/landing">
             <Video />
           </Route>
 
@@ -60,27 +53,16 @@ function App() {
             Visiting localhost:3000/user will show the UserPage if the user is logged in.
             If the user is not logged in, the ProtectedRoute will show the LoginPage (component).
             Even though it seems like they are different pages, the user is always on localhost:3000/user */}
-          <ProtectedRoute
-            // logged in shows UserPage else shows LoginPage
-            exact
-            path="/user"
-          >
+            {/* // logged in shows UserPage else shows LoginPage */}
+          <ProtectedRoute exact path="/user">
             <UserPage />
           </ProtectedRoute>
 
-          <ProtectedRoute
-            // logged in shows InfoPage else shows LoginPage
-            exact
-            path="/share_toys"
-          >
+          <ProtectedRoute  exact path="/share_toys">
             <ShareToys />
           </ProtectedRoute>
 
-          <ProtectedRoute
-            // logged in shows InfoPage else shows LoginPage
-            exact
-            path="/search_toys"
-          >
+          <ProtectedRoute exact path="/search_toys">
             <SearchToys />
           </ProtectedRoute>
           
@@ -88,14 +70,10 @@ function App() {
           {/* When a value is supplied for the authRedirect prop the user will
             be redirected to the path supplied when logged in, otherwise they will
             be taken to the component and path supplied. */}
-          <ProtectedRoute
-            // with authRedirect:
+          <ProtectedRoute exact path="/login" authRedirect="/user">
+            {/* // with authRedirect:
             // - if logged in, redirects to "/user"
-            // - else shows LoginPage at /login
-            exact
-            path="/login"
-            authRedirect="/user"
-          >
+            // - else shows LoginPage at /login */}
             <LoginPage />
           </ProtectedRoute>
 
@@ -110,16 +88,16 @@ function App() {
             <RegisterPage />
           </ProtectedRoute>
 
-          <ProtectedRoute
-            // with authRedirect:
+          <Route exact path="/landing">
+            <Video />
+          </Route>
+
+            
+            {/* // with authRedirect:
             // - if logged in, redirects to "/user"
             // - else shows LandingPage at "/home"
-            exact
-            path="/Landing"
-            authRedirect="/user"
-          >
-            <Video />
-          </ProtectedRoute>
+            // authRedirect="/user" */}
+          
 
           {/* If none of the other routes matched, we will show a 404. */}
           <Route>
