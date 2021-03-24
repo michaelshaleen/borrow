@@ -50,6 +50,9 @@ function Nav() {
         <Link className="navLink" to="/about">
           <Tab variant="fullWidth" label="About" icon={<InfoIcon />}/>
         </Link>
+        <Link className="navLink" to="/landing">
+          <Tab variant="fullWidth" label="Landing" icon={<HomeIcon />}/>
+        </Link>
 
       {user.id && (
         <>
