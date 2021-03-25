@@ -6,6 +6,7 @@ function* fetchToy() {
   console.log("fetch saga")
   try {
     const toys = yield axios.get('/api/toy');
+    //get filepath place into an image source html
    // console.log(toys.data, "toys in saga")
 //set_toy sends to reducer
     yield put({ type: 'SET_TOY', payload: toys.data });
