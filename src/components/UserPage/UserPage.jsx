@@ -40,26 +40,14 @@ function UserPage() {
 
   return (
     <>
-    <div>
-      <Nav />
-    </div>
-    <div>
-      hello mattie UI
-    </div>
-    <div className="toggle">
-      <div class="menu">
-        <ul>
-          <li><a href="#/user">Home</a></li>
-          <li><a href="#">News</a></li>
-          <li><a href="#">Destination</a></li>
-          <li><a href="#">Blog</a></li>
-          <li><a href="#/about">Contact</a></li>
-        </ul>
-      </div>
-  </div>
     
     <div className="userBody">
     <div className="container">
+    <div>
+      <Nav />
+    </div>
+    
+    
       <h2>Welcome back, {user.username}! </h2>
       <PersonIcon />
       <div className="overlay"></div>
