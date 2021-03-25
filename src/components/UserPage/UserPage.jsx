@@ -7,6 +7,7 @@ import ToyList from '../ToyList/ToyList';
 import Button from '@material-ui/core/Button';
 import PersonIcon from '@material-ui/icons/Person';
 import Nav from '../Nav/Nav';
+import ToiChare from '../LandingPage/LandingPage';
 
 
 
@@ -40,10 +41,33 @@ function UserPage() {
 
 
   return (
+    <>
+    <div>
+      <ToiChare />
+    </div>
+    <div>
+      <Nav />
+    </div>
+    <div className="userBody">
     <div className="container">
       <h2>Welcome back, {user.username}! </h2>
-      <Nav />
       <PersonIcon />
+      <div className="overlay"></div>
+        <div className="text">
+
+
+      <div className="_toggle">
+      <div class="menu">
+        <ul>
+          <li><a href="#/user">Home</a></li>
+          <li><a href="#">News</a></li>
+          <li><a href="#">Destination</a></li>
+          <li><a href="#">Blog</a></li>
+          <li><a href="#/about">Contact</a></li>
+        </ul>
+      </div>
+  </div>
+  </div>
      
       {/* <h3>{user.phone}</h3> */}
       <h4>These are the toys you've shared!</h4>
@@ -68,6 +92,11 @@ function UserPage() {
 
 
     </div>
+
+      <LogOutButton />
+    </div>
+
+    </>
   );
 }
 

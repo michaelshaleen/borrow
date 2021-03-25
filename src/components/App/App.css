@@ -31,7 +31,7 @@ header .logo
 {
   position: relative;
   display: inline-block;
-  width: 60px;
+  width: 200px;
   height: 60px;
   background: url(https://i.ibb.co/HrfVRcx/menu.png);
   background-repeat: no-repeat;
@@ -63,6 +63,9 @@ header .logo
   background: #111;
   transition: 0.5s;
   z-index: 2;
+}
+.showcase .p{
+  background: rgb(200, 200, 200, .1);
 }
 .showcase.active
 {
@@ -245,6 +248,11 @@ Container
 
 .container {
   padding: 5px;
+}
+.userBody{
+  background-color: thistle;
+  /* background: url('/public/background.jpg') */
+  /* background-image:url('../public/background.jpg'); */
 }
 
 /* --------------------------------------------------------------------------------

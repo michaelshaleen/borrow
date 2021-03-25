@@ -1,16 +1,25 @@
-/* @import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap'); */
-/* * */
-/* {
+
+
+@import url('https://fonts.googleapis.com/css2?family=Lora&display=swap');
+
+
+@import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap');
+*
+{
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: 'Poppins', sans-serif;
-} */
+}
+
+.navSet{
+  display: flex;
+}
 
 .toggle
 {
   position: relative;
-  left: 600px;
+  display: inline-block;
   width: 60px;
   height: 60px;
   background: url(https://i.ibb.co/HrfVRcx/menu.png);
@@ -19,7 +28,6 @@
   background-position: center;
   cursor: pointer;
 }
-
 .toggle:hover
 {
   background: url(https://i.ibb.co/rt3HybH/close.png);
@@ -32,9 +40,63 @@
   display: block;
 }
 
-
-
-
+.overlay
+{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  /* background: #03a9f4; */
+  mix-blend-mode: overlay;
+}
+.text
+{
+  position: relative;
+  z-index: 10;
+}
+.text h2
+{
+  font-size: 5em;
+  font-weight: 800;
+  color: #fff;
+  line-height: 1em;
+  text-transform: uppercase;
+}
+.text h3
+{
+  font-size: 4em;
+  font-weight: 700;
+  color: #fff;
+  line-height: 1em;
+  text-transform: uppercase;
+}
+.text p
+{
+  font-size: 1.1em;
+  color: #fff;
+  margin: 20px 0;
+  font-weight: 400;
+  max-width: 700px;
+}
+.text a
+{
+  display: inline-block;
+  font-size: 1em;
+  background: #fff;
+  padding: 10px 30px;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-weight: 500;
+  margin-top: 10px;
+  color: #111;
+  letter-spacing: 2px;
+  transition: 0.2s;
+}
+.text a:hover
+{
+  letter-spacing: 6px;
+}
 .menu
 {
   position: absolute;
@@ -42,7 +104,7 @@
   right: 0;
   width: 300px;
   height: 100%;
-  display: none;
+  display:inline-block;
   justify-content: center;
   align-items: center;
 }
@@ -101,8 +163,8 @@
 
 .navLink {
   display: inline;
-  color: #f2f2f2;
-  background-color:  #459ce4;
+  /* color: #f2f2f2;
+  background-color:  #459ce4; */
   text-align: center;
   padding: 14px 5px;
   width: 5px;  
@@ -116,10 +178,7 @@
 }
 
 .navLink:hover {
-  background-color: #2e6c9e;
+  /* background-color: #2e6c9e; */
 }
 
-.AppBar {
-  background-color: bisque;
 
-}

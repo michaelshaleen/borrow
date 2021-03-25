@@ -19,6 +19,7 @@ import MenuIcon from '@material-ui/icons/Menu';
 
 
 
+
 function Nav() {
   const user = useSelector((store) => store.user);
 
@@ -35,69 +36,72 @@ function Nav() {
 
   return (
     <>
-   
 
+{/* <nav className="navSet">
+   <div className="toggle">
+
+
+      
+      <div>Nav</div>
+      <div>Nav 2</div>
+      <div> 
+        <Link className="navLink" to="/about" icon={<InfoIcon />}>
+            <Tab variant="fullWidth" label="About" icon={<InfoIcon />}/>
+        </Link>
+      </div>
+    </div>
+ </nav> */}
 
 
     <div className="nav">
-{/*         
-        <div class="menu">
-  <ul>
-    <li><a href="#">Home</a></li>
-    <li><a href="#">News</a></li>
-    <li><a href="#">Destination</a></li>
-    <li><a href="#">Blog</a></li>
-    <li><a href="#">Contact</a></li>
-  </ul>
-</div>       */}
+    <div className="overlay"></div>
+    <div className="text">
 
-
-<div className="toggle">
+  <div className="toggle">
       <div class="menu">
         <ul>
-          <li><a href="#">Home</a></li>
-          <li><a href="#">News</a></li>
-          <li><a href="#">Destination</a></li>
-          <li><a href="#">Blog</a></li>
-          <li><a href="#">Contact</a></li>
+          <li>Hello</li>
+          <li>
+            <Link className="navLink" to="/about" icon={<InfoIcon />}>
+              <Tab variant="fullWidth" label="About" icon={<InfoIcon />}/>
+            </Link>
+          </li>
+          <li> 
+            <Link className="navLink" 
+              to={loginLinkData.path}>
+              {loginLinkData.text}
+            </Link>
+          </li>
+          <li>
+            {user.id && (
+              <>
+              <Link className="navLink" to="/search_toys">
+                <Tab variant="fullWidth" label="Search Toys" icon={<SearchIcon />} />
+              </Link>
+          <li>
+            <Link className="navLink" to="/share_toys">
+              <Tab variant="fullWidth" label="Share Toys" icon={<ShareIcon />}/>     
+            </Link>
+            </li>
+            <li>
+              <LogOutButton
+              className="navLink" />
+            </li>
+          </>
+        )} </li>
         </ul>
       </div>
   </div>
 
+  </div>
 
-    {/* <div className="toggle" ><MenuIcon /> */}
-
-    <Link to="/landing">
-      <h2 className="nav-title">ToiChare</h2>
-    </Link>
-
-        <Link className="navLink" to={loginLinkData.path}>
-          {loginLinkData.text}
-        </Link>
         
-        <Link className="navLink" to="/about">
-          <Tab variant="fullWidth" label="About" icon={<InfoIcon />}/>
-        </Link>
+       
         {/* <Link className="navLink" to="/landing">
           <Tab variant="fullWidth" label="Landing" icon={<HomeIcon />}/>
         </Link> */}
 
-      {user.id && (
-        <>
-            <Link className="navLink" to="/search_toys">
-              <Tab variant="fullWidth" label="Search Toys" icon={<SearchIcon />} />
-            </Link>
-
-            <Link className="navLink" to="/share_toys">
-              <Tab variant="fullWidth" label="Share Toys" icon={<ShareIcon />}/>     
-            </Link>
-
-            <LogOutButton
-            className="navLink" />
-          </>
-        )}
-      {/* </div> */}
-</div>
+</div> 
 
 </>
   );
