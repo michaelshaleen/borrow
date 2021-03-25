@@ -94,10 +94,13 @@ function ShareToys() {
   }
   return(
     <div className="divShare">
-      <ToiChare />
+      <p>Share New Toys</p>
 
       
-      {/* <Nav /> */}
+      {/* <ToiChare /> */}
+
+      
+      <Nav />
     <form 
     // ref='uploadForm'   
       id='uploadForm'
@@ -114,7 +117,6 @@ function ShareToys() {
     </form>
 
 
-    <p>Share New Toys</p>
     <TextField 
     value={toyName}
     type="text"

@@ -35,67 +35,71 @@ function Nav() {
   }
 
   return (
+    <>
+    <nav className="nav">
 
-
-
-    <nav className="navSet">
-      <div><Link className="navLink"> hello</Link></div>
-      <div>2</div>
+      <div><Link className="navLink" to="/about" icon={<InfoIcon />}>
+              <Tab variant="fullWidth" label="About" icon={<InfoIcon />}/>
+            </Link> </div>
+      <div><Link className="navLink" 
+              to={loginLinkData.path}>
+              {loginLinkData.text}
+            </Link>
+      </div>
     </nav>
-//     <>
 
+ 
+    <div className="nav">
+    <div className="overlay"></div>
+    <div className="text">
 
-//     <div className="nav">
-//     <div className="overlay"></div>
-//     <div className="text">
+  <div className="toggle">
+      <div class="menu">
+        <ul>
+          <li>Hello</li>
+          <li>
+            <Link className="navLink" to="/about" icon={<InfoIcon />}>
+              <Tab variant="fullWidth" label="About" icon={<InfoIcon />}/>
+            </Link>
+          </li>
+          <li> 
+            <Link className="navLink" 
+              to={loginLinkData.path}>
+              {loginLinkData.text}
+            </Link>
+          </li>
+          <li>
+            {user.id && (
+              <>
+              <Link className="navLink" to="/search_toys">
+                <Tab variant="fullWidth" label="Search Toys" icon={<SearchIcon />} />
+              </Link>
+          <li>
+            <Link className="navLink" to="/share_toys">
+              <Tab variant="fullWidth" label="Share Toys" icon={<ShareIcon />}/>     
+            </Link>
+            </li>
+            <li>
+              <LogOutButton
+              className="navLink" />
+            </li>
+          </>
+        )} </li>
+        </ul>
+      </div>
+  </div>
 
-//   <div className="toggle">
-//       <div class="menu">
-//         <ul>
-//           <li>Hello</li>
-//           <li>
-//             <Link className="navLink" to="/about" icon={<InfoIcon />}>
-//               <Tab variant="fullWidth" label="About" icon={<InfoIcon />}/>
-//             </Link>
-//           </li>
-//           <li> 
-//             <Link className="navLink" 
-//               to={loginLinkData.path}>
-//               {loginLinkData.text}
-//             </Link>
-//           </li>
-//           <li>
-//             {user.id && (
-//               <>
-//               <Link className="navLink" to="/search_toys">
-//                 <Tab variant="fullWidth" label="Search Toys" icon={<SearchIcon />} />
-//               </Link>
-//           <li>
-//             <Link className="navLink" to="/share_toys">
-//               <Tab variant="fullWidth" label="Share Toys" icon={<ShareIcon />}/>     
-//             </Link>
-//             </li>
-//             <li>
-//               <LogOutButton
-//               className="navLink" />
-//             </li>
-//           </>
-//         )} </li>
-//         </ul>
-//       </div>
-//   </div>
-
-//   </div>
+  </div>
 
         
        
-//         {/* <Link className="navLink" to="/landing">
-//           <Tab variant="fullWidth" label="Landing" icon={<HomeIcon />}/>
-//         </Link> */}
+        {/* <Link className="navLink" to="/landing">
+          <Tab variant="fullWidth" label="Landing" icon={<HomeIcon />}/>
+        </Link> */}
 
-// </div> 
+</div>  
 
-// </>
+</>
   );
 }
 

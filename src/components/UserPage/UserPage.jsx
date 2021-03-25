@@ -55,9 +55,9 @@ function UserPage() {
    </div>
    
      
-      <h3>{user.phone}</h3>
+      {/* <h3>{user.phone}</h3> */}
       <h4>These are the toys you've shared!</h4>
-      <p>Your ID is: {user.id}</p> 
+      {/* <p>Your ID is: {user.id}</p>  */}
       <table>
         <thead>
         <tr>
