@@ -93,102 +93,98 @@ function ShareToys() {
     )
   }
   return(
-    <div className="divShare">
-      <p>Share New Toys</p>
+    <div className="container">
+            <p>Share New Toys</p>
 
-      
-      {/* <ToiChare /> */}
+            
+            {/* <ToiChare /> */}
 
-      
-      <Nav />
-    <form 
-    // ref='uploadForm'   
-      id='uploadForm'
-      //url='http://localhost:3000/upload' 
-      action='http://localhost:3000/upload/file' 
-      method='post'
-      encType="multipart/form-data">
+            
+            <Nav />
+          <form 
+          // ref='uploadForm'   
+            id='uploadForm'
+            //url='http://localhost:3000/upload' 
+            action='http://localhost:3000/upload/file' 
+            method='post'
+            encType="multipart/form-data">
 
-        <input type="file" name="sampleFile"
-        onChange={(event)=> setImage(event.target.files)} />
+              <input type="file" name="sampleFile"
+              onChange={(event)=> setImage(event.target.files)} />
 
-        <input type='submit' value='Upload!'
-         onClick={(event)=> sendFile(event) } />
-    </form>
-
-
-    <TextField 
-    value={toyName}
-    type="text"
-    placeholder="Name"
-    onChange={(event) => setToyName(event.target.value)}
-    />
-    <select 
-    placeholder="Ages"
-    value={ageGroup}
-    name="Ages" 
-    id="ages"
-    onChange={(event) => setAgeGroup(event.target.value)}
-    defaultValue="Choose-origin"
-    >
+              <input type='submit' value='Upload!'
+              onClick={(event)=> sendFile(event) } />
+          </form>
 
 
-
-      <option></option>
-      <option value="0-3">0-3 Years Old</option>
-      <option value="3-5">3-5 Years Old</option>
-      <option value="5-10">5-10 Years Old</option>
-
-    </select>
-
-    <select 
-    value={available}
-    name="Available" 
-    id="available"
-    onChange={(event) => setAvailable(event.target.value)}>
-
-      <option></option>
-      <option value="true">Available Now</option>
-      <option value="false">Not Available</option>
-
-    </select>
+          <TextField 
+          value={toyName}
+          type="text"
+          placeholder="Name"
+          onChange={(event) => setToyName(event.target.value)}
+          />
+          <select 
+          placeholder="Ages"
+          value={ageGroup}
+          name="Ages" 
+          id="ages"
+          onChange={(event) => setAgeGroup(event.target.value)}
+          defaultValue="Choose-origin"
+          >
 
 
-  {/* <input 
-  type="file" 
-  // value={toyImage}
-  className="custom-file-input"
-  id="customFile" 
-  onChange={(event) => setImage(event.target.value) }/> */}
 
- 
+            <option></option>
+            <option value="0-3">0-3 Years Old</option>
+            <option value="3-5">3-5 Years Old</option>
+            <option value="5-10">5-10 Years Old</option>
+
+          </select>
+
+          <select 
+          value={available}
+          name="Available" 
+          id="available"
+          onChange={(event) => setAvailable(event.target.value)}>
+
+            <option></option>
+            <option value="true">Available Now</option>
+            <option value="false">Not Available</option>
+
+          </select>
 
 
-  {/* <script>
-    document.query.
-  </script> */}
+        {/* <input 
+        type="file" 
+        // value={toyImage}
+        className="custom-file-input"
+        id="customFile" 
+        onChange={(event) => setImage(event.target.value) }/> */}
 
-  <label className="custom-file-label" htmlFor="customFile"></label>
-     
-    <Button 
-    variant="contained"
-    color="default"
-    size="small"
-     endIcon={ <AddCircleIcon /> }
-     onClick={shareToy}>
-     Share Toy
-    </Button>
 
-    <Button 
-      variant="contained"
-      color="inherit"
-      size="small"
-      endIcon={ <CancelIcon /> }
-      onClick={cancelBtn}>
-      Cancel
-    </Button>
+
+        <label className="custom-file-label" htmlFor="customFile"></label>
+          
+          <Button 
+          variant="contained"
+          color="default"
+          size="small"
+          endIcon={ <AddCircleIcon /> }
+          onClick={shareToy}>
+          Share Toy
+          </Button>
+
+          <Button 
+            variant="contained"
+            color="inherit"
+            size="small"
+            endIcon={ <CancelIcon /> }
+            onClick={cancelBtn}>
+            Cancel
+          </Button>
 
     </div>
+    
   )
 
 }
