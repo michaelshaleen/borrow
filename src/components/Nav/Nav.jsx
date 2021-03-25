@@ -36,6 +36,8 @@ function Nav() {
 
   return (
     <>
+    <div>
+
     <nav className="nav">
     {/* <div className="nav"> */}
     <div className="text">
@@ -43,18 +45,17 @@ function Nav() {
     <div className="toggle">
       <div class="menu">
         <ul>
-          <li><a href="#/user">Home</a></li>
+          {/* <li><a href="#/user">Home</a></li> */}
           <li><a href="#/landing">Welcome Page</a></li>
-          <li><a href="#">Destination</a></li>
-          <li><a href="#">Blog</a></li>
-          <li><a href="#/about">Contact</a></li>
+          <li><a href="#/about">About</a></li>
+          <li><a href="#/search_toys">Search</a></li>
+          <li><a href="#/share_toys">Share</a></li>
+          <li><LogOutButton /></li>
         </ul>
       </div>
   </div>
-{/* 
-      <div><Link className="navLink" to="/about" icon={<InfoIcon />}>
-              <Tab variant="fullWidth" label="About" icon={<InfoIcon />}/>
-            </Link> </div>
+
+      {/* <div></div>
       <div><Link className="navLink" 
               to={loginLinkData.path}>
               {loginLinkData.text}
@@ -82,10 +83,11 @@ function Nav() {
         )}
       </div>
       <div>
+</div> */}
+
+      </div>
+</nav> 
 </div>
-*/}
-</div>
-    </nav> 
 
  
 </>
