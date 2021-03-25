@@ -11,7 +11,8 @@ import ToiChare from '../LandingPage/LandingPage';
 function AboutPage() {
   return (
     <div className="container">
-      <ToiChare />
+      {/* <ToiChare /> */}
+      <Nav />
       <div>
         <p>If you have any questions or need assistance
           please use the following contact methods
