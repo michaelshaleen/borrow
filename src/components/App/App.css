@@ -247,7 +247,8 @@ Container
 -------------------------------------------------------------------------------- */
 
 .container {
-  padding: 5px;
+  /* padding: 5px; */
+  background-color: thistle;
 }
 .userBody{
   background-color: thistle;

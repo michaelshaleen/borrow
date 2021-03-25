@@ -52,7 +52,7 @@ function SearchToys() {
   }
 
   return(
-    <>
+    <div className="container">
     {/* <ToiChare /> */}
     <Nav />
     <h2>Search Toys {user.username}</h2>
@@ -101,32 +101,9 @@ function SearchToys() {
       </table>
       {/* if searchedToys === null */}
 
-
-
-
-      {/* <section className="showcase">
-        <header>
-          <h2 className="logo">Travel</h2>
-          <div className="toggle"></div>
-        </header>
-        <video src="Video/Video.mp4" muted loop autoplay>
-
-
-        </video>
-      </section> */}
-</>
+</div>
   )
 }
 
 export default SearchToys;
-    // <Button class="btn btn-secondary dropdown-toggle" 
-    //   type="button" id="dropdownMenuButton" 
-    //   data-toggle="dropdown" aria-haspopup="true" 
-    //   aria-expanded="false">
-    //     Button 
-    // </Button>
-    // <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-    //     <a class="dropdown-item" href="#">Action</a>
-    //     <a class="dropdown-item" href="#">Another action</a>
-    //     <a class="dropdown-item" href="#">Something else here</a>
-    // </div>
+    
