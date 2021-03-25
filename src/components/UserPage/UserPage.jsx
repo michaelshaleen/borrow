@@ -8,9 +8,7 @@ import Button from '@material-ui/core/Button';
 import PersonIcon from '@material-ui/icons/Person';
 import Nav from '../Nav/Nav';
 import ToiChare from '../LandingPage/LandingPage';
-
-
-
+import '../Nav/Nav.css';
 
 
 function UserPage() {

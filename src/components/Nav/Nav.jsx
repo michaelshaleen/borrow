@@ -70,9 +70,9 @@ function Nav() {
       <div>
 
       </div>
-    </nav>
+    </nav> 
 
- 
+{/*  
     <div className="nav">
     <div className="overlay"></div>
     <div className="text">
@@ -113,7 +113,7 @@ function Nav() {
       </div>
   </div>
 
-  </div>
+  </div> */}
 
         
        
@@ -121,7 +121,7 @@ function Nav() {
           <Tab variant="fullWidth" label="Landing" icon={<HomeIcon />}/>
         </Link> */}
 
-</div>  
+{/* </div>   */}
 
 </>
   );
