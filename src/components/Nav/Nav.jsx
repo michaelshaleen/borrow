@@ -46,6 +46,30 @@ function Nav() {
               {loginLinkData.text}
             </Link>
       </div>
+      <div>
+      {user.id && (
+              <div className="nav">
+              <div>
+              <Link className="navLink" to="/search_toys">
+                <Tab variant="fullWidth" label="Search Toys" icon={<SearchIcon />} />
+              </Link>
+              </div>
+              <div>
+            <Link className="navLink" to="/share_toys">
+              <Tab variant="fullWidth" label="Share Toys" icon={<ShareIcon />}/>     
+            </Link>
+              </div>
+              <div>
+              <LogOutButton
+              className="navLink" />
+              </div>
+            </div>
+          
+        )}
+      </div>
+      <div>
+
+      </div>
     </nav>
 
  
