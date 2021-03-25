@@ -36,7 +36,9 @@ function Nav() {
 
   return (
     <>
-    <nav className="nav">
+    <nav className="toggle">
+    {/* <div className="nav"> */}
+    <div className="text">
 
       <div><Link className="navLink" to="/about" icon={<InfoIcon />}>
               <Tab variant="fullWidth" label="About" icon={<InfoIcon />}/>
@@ -68,19 +70,19 @@ function Nav() {
         )}
       </div>
       <div>
-
+</div>
       </div>
     </nav> 
 
-{/*  
+ 
     <div className="nav">
     <div className="overlay"></div>
     <div className="text">
 
   <div className="toggle">
-      <div class="menu">
+      {/* <div class="menu"> */}
         <ul>
-          <li>Hello</li>
+          <li><Link to="/material_ui">Here</Link></li>
           <li>
             <Link className="navLink" to="/about" icon={<InfoIcon />}>
               <Tab variant="fullWidth" label="About" icon={<InfoIcon />}/>
@@ -113,7 +115,7 @@ function Nav() {
       </div>
   </div>
 
-  </div> */}
+  </div>
 
         
        
