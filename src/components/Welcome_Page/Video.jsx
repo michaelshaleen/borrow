@@ -16,7 +16,7 @@ function Video() {
 
     <h2> </h2> 
 
-
+{/* 
   <div className="toggle">
       <div class="menu">
         <ul>
@@ -27,7 +27,7 @@ function Video() {
           <li><a href="#/about">Contact</a></li>
         </ul>
       </div>
-  </div>
+  </div> */}
 
 
 

@@ -10,7 +10,17 @@ import Tab from '@material-ui/core/Tab';
 function LogOutButton(props) {
   const dispatch = useDispatch();
   return (
-    <Button    
+    <>
+
+    {/* <div className="toggle">
+      <div class="menu">
+        <ul>     
+          <li><a href="#">Logout</a></li>
+          <li><LogOutButton /></li>
+        </ul>
+      </div>
+  </div> */}
+    <button    
     
       // This button shows up in multiple locations and is styled differently
       // because it's styled differently depending on where it is used, the className
@@ -22,7 +32,9 @@ function LogOutButton(props) {
   <Tab fullWidth 
   label="LogOut" icon={<ExitToAppIcon/> } />
     
-    </Button>
+    </button>
+
+    </>
   );
 }
 
