@@ -34,27 +34,48 @@ router.get('/', rejectUnauthenticated, (req, res) => {
 
 
 
-router.post('/upload', rejectUnauthenticated, (req, res) => {
+router.post('/file', rejectUnauthenticated, (req, res) => {
   const uploadedFile = req.files
+  //save to file
+
   console.log(uploadedFile, "files here")
+  //do not push to github, but front end needs to access the files
+  // Front end needs to access by going to /uploads
+  //time stamp the images
 
-  const sqlText = `
-  INSERT INTO 
-  VALUES ($1)`;
-
-  const paramsText = uploadedFile.image;
-
-  pool.query(sqlText, paramsText)
-  .then((result) => {
-    console.log(result, "file results")
-    res.sendStatus(201);
-
+  
+  uploadedFile.sampleFile.mv('./public/uploads/whatever.jpg', function(err) {
+    if(err){
+      
+      res.sendStatus(500)
+      console.log(err, "error in server file upload")
+      return;
+    }
+    res.send('File uploaded!');
+    console.log("file success")
+    
   })
-  .catch((error) => {
-    console.log("error post upload", error)
-    res.sendStatus(500);
-  })
+  //
+
+  // const sqlText = `
+  // INSERT INTO 
+  // VALUES ($1)`;
+
+  // const paramsText = uploadedFile.image;
+
+  // pool.query(sqlText, paramsText)
+  // .then((result) => {
+  //   console.log(result, "file results")
+  //   res.sendStatus(201);
+
+  // })
+  // .catch((error) => {
+  //   console.log("error post upload", error)
+  //   res.sendStatus(500);
+  // })
 })
+
+
 
 router.post('/', rejectUnauthenticated, (req, res) => {
   const newToy= req.body;

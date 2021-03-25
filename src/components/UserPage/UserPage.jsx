@@ -43,35 +43,21 @@ function UserPage() {
   return (
     <>
     <div>
-      <ToiChare />
-    </div>
-    <div>
       <Nav />
     </div>
+    
     <div className="userBody">
     <div className="container">
       <h2>Welcome back, {user.username}! </h2>
       <PersonIcon />
       <div className="overlay"></div>
-        <div className="text">
-
-
-      <div className="_toggle">
-      <div class="menu">
-        <ul>
-          <li><a href="#/user">Home</a></li>
-          <li><a href="#">News</a></li>
-          <li><a href="#">Destination</a></li>
-          <li><a href="#">Blog</a></li>
-          <li><a href="#/about">Contact</a></li>
-        </ul>
-      </div>
-  </div>
-  </div>
+        <div className="text"> 
+   </div>
+   
      
-      {/* <h3>{user.phone}</h3> */}
+      <h3>{user.phone}</h3>
       <h4>These are the toys you've shared!</h4>
-      {/* <p>Your ID is: {user.id}</p> */}
+      <p>Your ID is: {user.id}</p> 
       <table>
         <thead>
         <tr>
@@ -91,10 +77,10 @@ function UserPage() {
 
 
 
-    </div>
+     </div>
 
       <LogOutButton />
-    </div>
+    </div> 
 
     </>
   );

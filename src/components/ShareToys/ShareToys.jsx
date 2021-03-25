@@ -23,19 +23,20 @@ function ShareToys() {
   const [toyName, setToyName] = useState('');
   const [ageGroup, setAgeGroup] = useState('');
   const [available, setAvailable] = useState('');
-  const [Image, setImage] = useState('');
+  const [toyImage, setImage] = useState({});
   const newToy = useSelector((store) => store.toy)
   const phone = useSelector((store) => store.user.phone);
   const userId = useSelector((store) => store.user.id);
 
 
-  console.log(Image, "image");
-  //base 64 file then store
-  //unconvert 64base when getting back
+  console.log(toyImage, "image");
+  
+
+
 
 
   const shareToy = (action) => {
-    console.log(Image, "image here")
+    console.log(toyImage, "image here")
     if(!toyName || !ageGroup || !available){
       swal({
         title: "please complete input form"
@@ -53,13 +54,19 @@ function ShareToys() {
           available: available,
           phone: phone,
           ID: userId,
-          image: Image
+          image: toyImage
         }
       })
     }
       
     }
 
+
+    const sendFile = (event) => {
+
+      axios.post('/upload', toyImage)
+      //how to send other data with form data
+    }
 
     // dispatch({
     //   type: 'ADD_FILE',
@@ -89,12 +96,21 @@ function ShareToys() {
     <div className="divShare">
       <ToiChare />
 
-
+      
       {/* <Nav /> */}
-    <form>
-        <input type="text" name="sampleFile"
-        onChange={(event)=> setImage(event.target.value)} />
-        <input type='submit' value='Upload!'/>
+    <form 
+    // ref='uploadForm'   
+      id='uploadForm'
+      //url='http://localhost:3000/upload' 
+      action='http://localhost:3000/upload/file' 
+      method='post'
+      encType="multipart/form-data">
+
+        <input type="file" name="sampleFile"
+        onChange={(event)=> setImage(event.target.files)} />
+
+        <input type='submit' value='Upload!'
+         onClick={(event)=> sendFile(event) } />
     </form>
 
 

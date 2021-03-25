@@ -54,7 +54,7 @@ function SearchToys() {
   return(
     <>
     <ToiChare />
-    <Nav />
+    {/* <Nav /> */}
     <h2>Search Toys {user.username}</h2>
       <input
       value={toyName}

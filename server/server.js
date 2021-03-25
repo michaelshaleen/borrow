@@ -13,7 +13,7 @@ const passport = require('./strategies/user.strategy');
 const userRouter = require('./routes/user.router');
 const toyRouter = require('./routes/template.router');
 const searchRouter = require('./routes/search.router');
-// const upload = require('./template.router');
+const upload = require('./routes/template.router');
 app.use(fileUpload());
 
 // Body parser middleware
@@ -31,7 +31,7 @@ app.use(passport.session());
 app.use('/api/user', userRouter);
 app.use('/api/toy', toyRouter);
 app.use('/api/search', searchRouter);
-// app.use('/api/upload', upload)
+app.use('/upload', upload)
 
 // Serve static files
 app.use(express.static('build'));
