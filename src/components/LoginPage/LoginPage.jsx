@@ -2,6 +2,7 @@ import React from 'react';
 import LoginForm from '../LoginForm/LoginForm';
 import { useHistory } from 'react-router-dom';
 import Nav from '../Nav/Nav';
+import ToiChare from '../LandingPage/LandingPage';
 
 
 function LoginPage() {
@@ -10,7 +11,8 @@ function LoginPage() {
   return (
     <>
     <div>
-      <Nav />
+      <ToiChare />
+      {/* <Nav /> */}
       <LoginForm />
 
       <center>

@@ -3,6 +3,7 @@ import React from 'react';
 import { useHistory } from 'react-router-dom';
 import RegisterForm from '../RegisterForm/RegisterForm';
 import Nav from '../Nav/Nav';
+import ToiChare from '../LandingPage/LandingPage';
 
 
 function RegisterPage() {
@@ -10,7 +11,8 @@ function RegisterPage() {
 
   return (
     <div>
-      <Nav />
+      {/* <Nav /> */}
+      <ToiChare />
       <RegisterForm />
 
       <center>

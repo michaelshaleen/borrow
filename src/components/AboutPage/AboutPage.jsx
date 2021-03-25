@@ -1,5 +1,6 @@
 import React from 'react';
 import Nav from '../Nav/Nav';
+import ToiChare from '../LandingPage/LandingPage';
 
 
 // This is one of our simplest components
@@ -10,7 +11,7 @@ import Nav from '../Nav/Nav';
 function AboutPage() {
   return (
     <div className="container">
-      <Nav />
+      <ToiChare />
       <div>
         <p>If you have any questions or need assistance
           please use the following contact methods

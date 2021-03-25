@@ -13,6 +13,7 @@ import AddCircleIcon from '@material-ui/icons/AddCircle';
 import CancelIcon from '@material-ui/icons/Cancel';
 import TextField from '@material-ui/core/TextField';
 import swal from 'sweetalert';
+import ToiChare from '../LandingPage/LandingPage';
 
 
 
@@ -22,20 +23,19 @@ function ShareToys() {
   const [toyName, setToyName] = useState('');
   const [ageGroup, setAgeGroup] = useState('');
   const [available, setAvailable] = useState('');
-  const [toyImage, setImage] = useState({});
+  const [Image, setImage] = useState('');
   const newToy = useSelector((store) => store.toy)
   const phone = useSelector((store) => store.user.phone);
   const userId = useSelector((store) => store.user.id);
 
 
-  console.log(toyImage, "image");
-  
-
-
+  console.log(Image, "image");
+  //base 64 file then store
+  //unconvert 64base when getting back
 
 
   const shareToy = (action) => {
-    console.log(toyImage, "image here")
+    console.log(Image, "image here")
     if(!toyName || !ageGroup || !available){
       swal({
         title: "please complete input form"
@@ -53,7 +53,7 @@ function ShareToys() {
           available: available,
           phone: phone,
           ID: userId,
-          image: toyImage
+          image: Image
         }
       })
     }
@@ -87,21 +87,14 @@ function ShareToys() {
   }
   return(
     <div className="divShare">
-      <Nav />
+      <ToiChare />
 
-    <form 
-    // ref='uploadForm'   
-      id='uploadForm'
-      //url='http://localhost:3000/upload' 
-      action='http://localhost:3000/upload' 
-      method='post'
-      encType="multipart/form-data">
 
-        <input type="file" name="sampleFile"
+      {/* <Nav /> */}
+    <form>
+        <input type="text" name="sampleFile"
         onChange={(event)=> setImage(event.target.value)} />
-
         <input type='submit' value='Upload!'/>
-         {/* onClick={(event)=> sendImage(event.target.value)} /> */}
     </form>
 
 
