@@ -147,8 +147,8 @@
 
 .nav {
   /* flex box layout */
-  display:inline-flex;
-  /* justify-content: space-between; */
+  display: inline;
+  justify-content: space-between;
   align-items: center;
 
   margin: 0 0 5px;
@@ -166,9 +166,9 @@
   /* color: #f2f2f2;
   background-color:  #459ce4; */
   text-align: center;
-  padding: 5px 5px;
-  width: 3px;  
-  font-size: 5px;
+  padding: 14px 5px;
+  width: 5px;  
+  font-size: 25px;
 
   /* these last two make the logout button in
   the nav bar look like another link */
