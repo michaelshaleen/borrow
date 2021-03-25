@@ -20,12 +20,12 @@
 {
   position: relative;
   display: inline-block;
-  left: 300px;
-  width: 60px;
-  height: 60px;
+  left: 520px;
+  width: 30px;
+  height: 30px;
   background: url(https://i.ibb.co/HrfVRcx/menu.png);
   background-repeat: no-repeat;
-  background-size: 30px;
+  background-size: 10px;
   background-position: center;
   cursor: pointer;
 }
@@ -33,7 +33,7 @@
 {
   background: url(https://i.ibb.co/rt3HybH/close.png);
   background-repeat: no-repeat;
-  background-size: 25px;
+  background-size: 5px;
   background-position: center;
   cursor: pointer;
 }
@@ -103,7 +103,7 @@
   position: absolute;
   top: 0;
   right: 0;
-  width: 30px;
+  width: 10px;
   height: 100%;
   display:inline-block;
   justify-content: center;
@@ -120,7 +120,7 @@
 .menu ul li a
 {
   text-decoration: none;
-  font-size: 24px;
+  font-size: 10px;
   color: #111;
 }
 .menu ul li a:hover
