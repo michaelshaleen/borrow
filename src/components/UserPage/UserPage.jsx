@@ -46,8 +46,7 @@ function UserPage() {
     <div>
       <Nav />
     </div>
-    
-    
+  
       <h2>Welcome back, {user.username}! </h2>
       <PersonIcon />
       <div className="overlay"></div>

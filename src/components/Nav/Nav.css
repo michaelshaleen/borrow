@@ -103,7 +103,7 @@
   position: absolute;
   top: 0;
   right: 0;
-  width: 300px;
+  width: 30px;
   height: 100%;
   display:inline-block;
   justify-content: center;
@@ -148,7 +148,7 @@
 
 .nav {
   /* flex box layout */
-  display: block;
+  display: inline;
   justify-content: space-between;
   align-items: center;
 
@@ -169,7 +169,7 @@
   text-align: center;
   padding: 14px 5px;
   width: 5px;  
-  font-size: 25px;
+  font-size: 10px;
 
   /* these last two make the logout button in
   the nav bar look like another link */
