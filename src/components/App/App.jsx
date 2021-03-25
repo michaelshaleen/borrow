@@ -65,6 +65,7 @@ function App() {
           <ProtectedRoute exact path="/search_toys">
             <SearchToys />
           </ProtectedRoute>
+         
           
 
           {/* When a value is supplied for the authRedirect prop the user will
