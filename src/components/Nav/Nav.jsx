@@ -75,56 +75,6 @@ function Nav() {
     </nav> 
 
  
-    <div className="nav">
-    <div className="overlay"></div>
-    <div className="text">
-
-  <div className="toggle">
-      {/* <div class="menu"> */}
-        <ul>
-          <li><Link to="/material_ui">Here</Link></li>
-          <li>
-            <Link className="navLink" to="/about" icon={<InfoIcon />}>
-              <Tab variant="fullWidth" label="About" icon={<InfoIcon />}/>
-            </Link>
-          </li>
-          <li> 
-            <Link className="navLink" 
-              to={loginLinkData.path}>
-              {loginLinkData.text}
-            </Link>
-          </li>
-          <li>
-            {user.id && (
-              <>
-              <Link className="navLink" to="/search_toys">
-                <Tab variant="fullWidth" label="Search Toys" icon={<SearchIcon />} />
-              </Link>
-          <li>
-            <Link className="navLink" to="/share_toys">
-              <Tab variant="fullWidth" label="Share Toys" icon={<ShareIcon />}/>     
-            </Link>
-            </li>
-            <li>
-              <LogOutButton
-              className="navLink" />
-            </li>
-          </>
-        )} </li>
-        </ul>
-      </div>
-  </div>
-
-  </div>
-
-        
-       
-        {/* <Link className="navLink" to="/landing">
-          <Tab variant="fullWidth" label="Landing" icon={<HomeIcon />}/>
-        </Link> */}
-
-{/* </div>   */}
-
 </>
   );
 }
