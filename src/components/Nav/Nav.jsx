@@ -50,7 +50,9 @@ function Nav() {
           <li><a href="#/about">About</a></li>
           <li><a href="#/search_toys">Search</a></li>
           <li><a href="#/share_toys">Share</a></li>
-          <li><LogOutButton /></li>
+          <li><a href="#/user">My Profile</a></li>
+          <li><a href="#">Logout</a></li>
+          {/* <li><LogOutButton /></li> */}
         </ul>
       </div>
   </div>
