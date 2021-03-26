@@ -183,6 +183,10 @@ function ShareToys() {
             Cancel
           </Button>
 
+
+          <footer><ToiChare /> </footer>
+
+
     </div>
     
   )
