@@ -52,7 +52,7 @@ function SearchToys() {
   }
 
   return(
-    <div className="container">
+    <div className="search_Container">
     {/* <ToiChare /> */}
     <Nav />
     <h2>Search Toys {user.username}</h2>

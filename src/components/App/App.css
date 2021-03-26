@@ -31,7 +31,7 @@ header .logo
 {
   position: relative;
   display: inline-block;
-  width: 200px;
+  width: 100px;
   height: 60px;
   background: url(https://i.ibb.co/HrfVRcx/menu.png);
   background-repeat: no-repeat;
@@ -43,7 +43,7 @@ header .logo
 {
   background: url(https://i.ibb.co/rt3HybH/close.png);
   background-repeat: no-repeat;
-  background-size: 25px;
+  background-size: 5px;
   background-position: center;
   cursor: pointer;
 }
@@ -55,8 +55,8 @@ header .logo
   position: absolute;
   right: 0;
   width: 100%;
-  min-height: 100vh;
-  padding: 100px;
+  min-height: 10px;
+  padding: 10px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -248,6 +248,9 @@ Container
 
 .container {
   /* padding: 5px; */
+  background-color: thistle;
+}
+.search_Container {
   background-color: thistle;
 }
 .userBody{
