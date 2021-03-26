@@ -6,7 +6,7 @@ function ToiChare() {
   return(
 
     <Link to="/landing">
-    <h2 className="nav-title">ToiChare</h2>
+    <h2 className="nav-title">Exit</h2>
   </Link>
 
 

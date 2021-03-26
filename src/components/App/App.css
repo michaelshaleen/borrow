@@ -253,13 +253,13 @@ Container
 
 .container {
   /* padding: 5px; */
-  background-color: thistle;
+  background-image: url('https://i.pinimg.com/564x/48/31/4e/48314eb9dbdd0426c9f67139dbd71b6e.jpg');
 }
 .search_Container {
   background-color: thi;
 }
 .userBody{
-  background-image: url('https://i.pinimg.com/564x/2f/f9/fd/2ff9fdd9c5d28d11ba8e628524358e30.jpg');
+  background-image: url('https://i.pinimg.com/564x/48/31/4e/48314eb9dbdd0426c9f67139dbd71b6e.jpg');
 }
 
 /* --------------------------------------------------------------------------------
@@ -342,7 +342,7 @@ Form Treatment
   max-width: 100%;
   padding: 25px;
   margin: 0 auto 20px;
-  background-color: #459ce4;
+  background-color: rgb(212, 184, 151);
   border-radius: 3px;
   box-shadow: 0 1px 2px rgb(0, 0, 0, 0.4);
 }

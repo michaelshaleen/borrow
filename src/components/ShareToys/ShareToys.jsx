@@ -94,7 +94,7 @@ function ShareToys() {
   }
   return(
     <div className="container">
-            <p>Share New Toys</p>
+            <p><h3>Share New Toys</h3></p>
 
             
             {/* <ToiChare /> */}

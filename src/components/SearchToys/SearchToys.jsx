@@ -12,6 +12,7 @@ import ToiChare from '../LandingPage/LandingPage';
 function SearchToys() {
   const dispatch = useDispatch();
   const searchedToys = useSelector((store) => store.searchedToy)
+  console.log(searchedToys, "toys heeree")
   const user = useSelector((store) => store.user);
 
   if(searchedToys.length == 0){
@@ -52,6 +53,8 @@ function SearchToys() {
   }
 
   return(
+    <div className="container">
+
     <div className="search_Container">
     {/* <ToiChare /> */}
     <Nav />
@@ -102,6 +105,7 @@ function SearchToys() {
       {/* if searchedToys === null */}
 
 </div>
+              </div>
   )
 }
 

@@ -10,7 +10,7 @@ function RegisterPage() {
   const history = useHistory();
 
   return (
-    <div>
+    <div className="container">
       {/* <Nav /> */}
       <ToiChare />
       <RegisterForm />

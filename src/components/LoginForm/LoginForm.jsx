@@ -47,7 +47,7 @@ function LoginForm() {
       )}
       <div>
         <label htmlFor="username"
-        style={{color:'white'}}>
+        style={{color:'white', fontFamily: 'cursive'}}>
           Username:
           <input
             type="text"
@@ -60,7 +60,7 @@ function LoginForm() {
       </div>
       <div>
         <label htmlFor="password"
-        style={{color:'white'}}>
+        style={{color:'white', fontFamily:'cursive'}}>
           Password:
           <input
             type="password"
