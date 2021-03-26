@@ -32,9 +32,7 @@ function LoginForm() {
     <body className="landing">
 
 <div class="text">
-    <p >Welcome to ToiChare, please Log in 
-      or Register an account to begin using!
-    </p>
+  
     </div>
     </body>
     
