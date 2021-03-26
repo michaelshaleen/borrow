@@ -101,7 +101,7 @@ function ShareToys() {
 
             
             <Nav />
-          <form 
+          {/* <form 
           // ref='uploadForm'   
             id='uploadForm'
             //url='http://localhost:3000/upload' 
@@ -114,7 +114,7 @@ function ShareToys() {
 
               <input type='submit' value='Upload!'
               onClick={(event)=> sendFile(event) } />
-          </form>
+          </form> */}
 
 
           <TextField 

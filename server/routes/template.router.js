@@ -14,7 +14,8 @@ router.get('/', rejectUnauthenticated, (req, res) => {
   const query = 
   `
   SELECT * FROM "toys"
-  WHERE "user_id" = $1;
+  WHERE "user_id" = $1
+  ORDER BY "name";
   `;
 
   //pass userId in as param later to grab specific toy
