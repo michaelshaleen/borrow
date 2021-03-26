@@ -236,8 +236,11 @@ img {
   max-width: 100%;
 }
 
+p.intro {
+  background: rgba(200, 200, 200, 0.1)
+}
  p.intro::first-letter {
-  font-size: 100px; 
+  font-size: 25px; 
 
 }
 
@@ -272,8 +275,8 @@ Button
   border-color: #014041;
   border-width: 1px 1px 3px;
   border-radius: 4px;
-  background-color: #f0f348;
-  color: #080808;
+  background-color: white;
+  color: black;
   font-size: 1.1rem;
   outline: 0;
   cursor: pointer;
@@ -295,9 +298,9 @@ Button
 }
 
 .btn:hover {
-  background-color: #459ce4;
+  background-color: black;
   text-decoration: none;
-  color: white
+  color: #03a9f4; 
 }
 
 /* This line makes the "Register" and "Login" buttons look like links */

@@ -59,11 +59,11 @@ function ToyList({ toy }) {
   return(
     <>
     <tr>
-      <td>{toy.name}</td>
-      <td>{toy.ages}</td>
-      <td>{toy.available ? <span> true </span>:<span> false </span>}</td>
+      <td>{toy.name} </td>
+      <td> {toy.ages} </td>
+      <td>{toy.available ? <span> Available </span>:<span> Unavailable </span>}</td>
       {/* <td>{toy.image}</td> */}
-      <img src={toy.image} width="100px" height="100px"/>
+      {/* <img src={toy.image} width="100px" height="100px"/> */}
 
       <td><Button 
       variant="contained"
