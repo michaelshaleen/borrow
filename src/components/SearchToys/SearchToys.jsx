@@ -104,6 +104,11 @@ function SearchToys() {
       </table>
       {/* if searchedToys === null */}
 
+
+
+
+
+      <footer><ToiChare /> </footer>
 </div>
               </div>
   )

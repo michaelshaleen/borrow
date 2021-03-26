@@ -30,6 +30,10 @@ function AboutPage() {
         children, or both we will be able to help more people and do our part in making the planet
         a more enjoyable place!
       </p>
+
+
+      <footer><ToiChare /> </footer>
+
     </div>
   );
 }

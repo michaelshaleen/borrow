@@ -42,45 +42,47 @@ function UserPage() {
     <>
     
     <div className="userBody">
-    <div className="container">
-    <div>
-      <Nav />
-    </div>
-  
-      <h2>Welcome back, {user.username}! </h2>
-      <PersonIcon />
-      <div className="overlay"></div>
-        <div className="text"> 
-   </div>
+       <div className="container">
+            <div>
+                <Nav />
+             </div>
+        
+            <h2>Welcome back, {user.username}! </h2>
+            <PersonIcon />
+            <div className="overlay"></div>
+              <div className="text"> 
+        </div>
    
-     
-      {/* <h3>{user.phone}</h3> */}
-      <h4>These are the toys you've shared!</h4>
-      {/* <p>Your ID is: {user.id}</p>  */}
-      <table>
-        <thead>
-        <tr>
-          <th>Description </th>
-          <th>Age</th>
-          <th>Available</th>
-        </tr>
-        </thead>
-        <tbody>
-            { toys.map(toy => {
-              return <ToyList key={toy.id} toy={toy}/>              
-            })}
+          
+            {/* <h3>{user.phone}</h3> */}
+            <h4>These are the toys you've shared!</h4>
+            {/* <p>Your ID is: {user.id}</p>  */}
+            <table>
+              <thead>
+              <tr>
+                <th>Description </th>
+                <th>Age</th>
+                <th>Available</th>
+              </tr>
+              </thead>
+              <tbody>
+                  { toys.map(toy => {
+                    return <ToyList key={toy.id} toy={toy}/>              
+                  })}
 
-        </tbody>
-      </table>
-      
+              </tbody>
+            </table>
+            
 
+
+
+            <footer><ToiChare /> </footer>
 
 
      </div>
 
-      <LogOutButton />
-    </div> 
-
+      {/* <LogOutButton /> */}
+  </div> 
     </>
   );
 }

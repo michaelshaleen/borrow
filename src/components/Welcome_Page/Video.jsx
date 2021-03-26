@@ -14,7 +14,7 @@ function Video() {
   <div className="text">
 
 
-    <h2> </h2> 
+    
 
 {/* 
   <div className="toggle">
