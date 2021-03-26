@@ -17,7 +17,7 @@
 {
   position: relative;
   display: flex;
-  left: 520px;
+  left: 540px;
   width: 10px;
   height: 10px;
   background: url(https://i.ibb.co/HrfVRcx/menu.png);
@@ -54,30 +54,30 @@
   position: relative;
   z-index: 10;
 }
-.text h2
+/* .text h2
 {
   font-size: 5em;
   font-weight: 800;
   color: #fff;
   line-height: 1em;
   text-transform: uppercase;
-}
-.text h3
+} */
+/* .text h3
 {
   font-size: 4em;
   font-weight: 700;
   color: #fff;
   line-height: 1em;
   text-transform: uppercase;
-}
-.text p
+} */
+/* .text p
 {
   font-size: 1.1em;
   color: #fff;
   margin: 20px 0;
   font-weight: 400;
   max-width: 700px;
-}
+} */
 .text a
 {
   display: inline-block;
@@ -96,7 +96,7 @@
 {
   letter-spacing: 6px;
 }
- .nav .menu
+.menu
 {
   position: absolute;
   top: 0;

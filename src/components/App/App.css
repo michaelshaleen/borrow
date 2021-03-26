@@ -9,6 +9,11 @@
   box-sizing: border-box;
   font-family: 'Poppins', sans-serif;
 }
+.login_background {
+  background-image: url('https://i.pinimg.com/564x/2f/f9/fd/2ff9fdd9c5d28d11ba8e628524358e30.jpg');
+  /* background-color: thistle; */
+  /* background: image('solo-project-toi-chare/public/pattern.jpeg'); */
+}
 header
 {
   position: absolute;
@@ -31,7 +36,7 @@ header .logo
 {
   position: relative;
   display: inline-block;
-  width: 100px;
+  width: 200px;
   height: 60px;
   background: url(https://i.ibb.co/HrfVRcx/menu.png);
   background-repeat: no-repeat;
@@ -43,7 +48,7 @@ header .logo
 {
   background: url(https://i.ibb.co/rt3HybH/close.png);
   background-repeat: no-repeat;
-  background-size: 5px;
+  background-size: 25px;
   background-position: center;
   cursor: pointer;
 }
@@ -55,8 +60,8 @@ header .logo
   position: absolute;
   right: 0;
   width: 100%;
-  min-height: 10px;
-  padding: 10px;
+  min-height: 100vh;
+  padding: 100px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -251,12 +256,10 @@ Container
   background-color: thistle;
 }
 .search_Container {
-  background-color: thistle;
+  background-color: thi;
 }
 .userBody{
-  background-color: thistle;
-  /* background: url('/public/background.jpg') */
-  /* background-image:url('../public/background.jpg'); */
+  background-image: url('https://i.pinimg.com/564x/2f/f9/fd/2ff9fdd9c5d28d11ba8e628524358e30.jpg');
 }
 
 /* --------------------------------------------------------------------------------
