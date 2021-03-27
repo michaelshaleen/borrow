@@ -127,22 +127,7 @@ function ShareToys() {
   return(
     <div className="container">
             <p><h3>Share New Toys</h3></p>
-            <FormControl className={classes.formControl}>
-        <InputLabel id="demo-simple-select-label">Ages</InputLabel>
-        <Select
-          labelId="demo-simple-select-label"
-          id="demo-simple-select"
-          value={age}
-          onChange={handleChange}
-        >
-          <MenuItem value={3-5}>Ten</MenuItem>
-          <MenuItem value={20}>Twenty</MenuItem>
-          <MenuItem value={30}>Thirty</MenuItem>
-        </Select>
-      </FormControl>
-            
 
-            
             <Nav />
           {/* <form 
           // ref='uploadForm'   
@@ -166,7 +151,22 @@ function ShareToys() {
           placeholder="Name"
           onChange={(event) => setToyName(event.target.value)}
           />
-          <select 
+             
+        <FormControl className={classes.formControl}>
+          <InputLabel id="demo-simple-select-label">Ages</InputLabel>
+          <Select
+            labelId="demo-simple-select-label"
+            id="demo-simple-select"
+            value={ageGroup}
+            onChange={(event) => setAgeGroup(event.target.value)}
+            >
+            <MenuItem value="0-3">0-3</MenuItem>
+            <MenuItem value="3-5">3-5</MenuItem>
+            <MenuItem value="5-10">5-10</MenuItem>
+          </Select>
+        </FormControl>
+
+   {/* <select 
           placeholder="Ages"
           value={ageGroup}
           name="Ages" 
@@ -174,27 +174,24 @@ function ShareToys() {
           onChange={(event) => setAgeGroup(event.target.value)}
           defaultValue="Choose-origin"
           >
-
-
-
             <option></option>
             <option value="0-3">0-3 Years Old</option>
             <option value="3-5">3-5 Years Old</option>
             <option value="5-10">5-10 Years Old</option>
+          </select> */}
 
-          </select>
-
-          <select 
-          value={available}
-          name="Available" 
-          id="available"
-          onChange={(event) => setAvailable(event.target.value)}>
-
-            <option></option>
-            <option value="true">Available Now</option>
-            <option value="false">Not Available</option>
-
-          </select>
+        <FormControl className={classes.formControl}>
+            <InputLabel id="demo-simple-select-label">Ages</InputLabel>
+              <Select
+                labelId="demo-simple-select-label"
+                id="demo-simple-select"
+                value={available}
+                onChange={(event) => setAvailable(event.target.value)}
+                >
+                <MenuItem value="true">Available Now</MenuItem>
+                <MenuItem value="false">Not Available</MenuItem>
+              </Select>
+        </FormControl>
 
 
         {/* <input 
