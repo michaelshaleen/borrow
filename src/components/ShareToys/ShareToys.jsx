@@ -3,6 +3,7 @@ import {useState} from 'react';
 import Button from '@material-ui/core/Button';
 import axios from 'axios';
 import Nav from '../Nav/Nav';
+import React from 'react';
 
 
 // const express = require('express');
@@ -13,8 +14,13 @@ import AddCircleIcon from '@material-ui/icons/AddCircle';
 import CancelIcon from '@material-ui/icons/Cancel';
 import TextField from '@material-ui/core/TextField';
 import swal from 'sweetalert';
+import { makeStyles } from '@material-ui/styles';
 import ToiChare from '../LandingPage/LandingPage';
-
+import InputLabel from '@material-ui/core/InputLabel';
+import MenuItem from '@material-ui/core/MenuItem';
+import FormHelperText from '@material-ui/core/FormHelperText';
+import FormControl from '@material-ui/core/FormControl';
+import Select from '@material-ui/core/Select';
 
 
 function ShareToys() {
@@ -92,12 +98,49 @@ function ShareToys() {
       setImage('')  
     )
   }
+
+  const useStyles = makeStyles((theme) => ({
+    formControl: {
+      // margin: theme.spacing(1),
+      minWidth: 120,
+    },
+    selectEmpty: {
+      // marginTop: theme.spacing(2),
+    },
+  }));
+
+
+
+  
+    const classes = useStyles();
+    const [age, setAge] = React.useState('');
+  
+    const handleChange = (event) => {
+      setAge(event.target.value);
+    };
+
+
+
+  
+
+
   return(
     <div className="container">
             <p><h3>Share New Toys</h3></p>
-
+            <FormControl className={classes.formControl}>
+        <InputLabel id="demo-simple-select-label">Ages</InputLabel>
+        <Select
+          labelId="demo-simple-select-label"
+          id="demo-simple-select"
+          value={age}
+          onChange={handleChange}
+        >
+          <MenuItem value={3-5}>Ten</MenuItem>
+          <MenuItem value={20}>Twenty</MenuItem>
+          <MenuItem value={30}>Thirty</MenuItem>
+        </Select>
+      </FormControl>
             
-            {/* <ToiChare /> */}
 
             
             <Nav />
@@ -192,5 +235,6 @@ function ShareToys() {
   )
 
 }
+
 
 export default ShareToys;
