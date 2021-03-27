@@ -3,9 +3,22 @@ import {useState} from 'react';
 import ToyList from '../ToyList/ToyList';
 import DisplayToys from '../DisplayToys/DisplayToys';
 import Button from '@material-ui/core/Button';
-import swal from 'sweetalert';
 import Nav from '../Nav/Nav';
+import React from 'react';
+
+
+
+import AddCircleIcon from '@material-ui/icons/AddCircle';
+import CancelIcon from '@material-ui/icons/Cancel';
+import TextField from '@material-ui/core/TextField';
+import swal from 'sweetalert';
+import { makeStyles } from '@material-ui/styles';
 import ToiChare from '../LandingPage/LandingPage';
+import InputLabel from '@material-ui/core/InputLabel';
+import MenuItem from '@material-ui/core/MenuItem';
+import FormHelperText from '@material-ui/core/FormHelperText';
+import FormControl from '@material-ui/core/FormControl';
+import Select from '@material-ui/core/Select';
 
 
 
@@ -52,6 +65,27 @@ function SearchToys() {
     )
   }
 
+
+  const useStyles = makeStyles((theme) => ({
+    formControl: {
+      // margin: theme.spacing(1),
+      minWidth: 120,
+    },
+    selectEmpty: {
+      // marginTop: theme.spacing(2),
+    },
+  }));
+
+
+
+  
+    const classes = useStyles();
+    const [age, setAge] = React.useState('');
+  
+    const handleChange = (event) => {
+      setAge(event.target.value);
+    };
+
   return(
     <div className="container">
 
@@ -59,24 +93,29 @@ function SearchToys() {
     {/* <ToiChare /> */}
     <Nav />
     <h2>Search Toys {user.username}</h2>
-      <input
-      value={toyName}
-      type="text"
-      placeholder="Name"
-      onChange={(event) => setToyName(event.target.value)}
-      />
-    <select 
-        className="ageDrop"
-        value={ageGroup}
-        name="Ages" 
-        id="ages"
-        onChange={(event) => setAgeGroup(event.target.value)}
-        >
-        <option>  </option>
-        <option value="0-3">0-3 Years Old</option>
-        <option value="3-5">3-5 Years Old</option>
-        <option value="5-10">5-10 Years Old</option>
-    </select>
+
+
+    <TextField 
+            value={toyName}
+            type="text"
+            placeholder="Name"
+            onChange={(event) => setToyName(event.target.value)}
+            />
+
+
+    <FormControl className={classes.formControl}>
+          <InputLabel id="demo-simple-select-label">Ages</InputLabel>
+          <Select
+            labelId="demo-simple-select-label"
+            id="demo-simple-select"
+            value={ageGroup}
+            onChange={(event) => setAgeGroup(event.target.value)}
+            >
+            <MenuItem value="0-3">0-3</MenuItem>
+            <MenuItem value="3-5">3-5</MenuItem>
+            <MenuItem value="5-10">5-10</MenuItem>
+          </Select>
+        </FormControl>
  
 
      

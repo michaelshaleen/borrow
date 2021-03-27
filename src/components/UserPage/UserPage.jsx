@@ -63,10 +63,12 @@ function UserPage() {
             
             <table>
               <thead>
-              <tr>
-                <th>Description </th>
-                <th>Age</th>
-                <th>Available</th>
+              <tr><u>
+
+                <td>Description </td>
+                <td>Age</td>
+                <td>Availability</td>
+              </u>
               </tr>
               </thead>
               <tbody>
