@@ -43,20 +43,24 @@ function UserPage() {
     
     <div className="userBody">
        <div className="container">
+         <div className="image_back">
+           {/* <image src="https://i.pinimg.com/564x/48/31/4e/48314eb9dbdd0426c9f67139dbd71b6e.jpg"> */}
+
+           {/* </image> */}
+         </div>
             <div>
                 <Nav />
              </div>
         
             <h2>Welcome back, {user.username}! </h2>
-            <PersonIcon />
+            {/* <PersonIcon /> */}
             <div className="overlay"></div>
               <div className="text"> 
         </div>
    
           
-            {/* <h3>{user.phone}</h3> */}
             <h4>These are the toys you've shared!</h4>
-            {/* <p>Your ID is: {user.id}</p>  */}
+            
             <table>
               <thead>
               <tr>
