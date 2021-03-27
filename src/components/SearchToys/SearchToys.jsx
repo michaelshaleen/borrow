@@ -94,16 +94,18 @@ function SearchToys() {
     <Nav />
     <h2>Search Toys {user.username}</h2>
 
+<div>
 
     <TextField 
+            style={{top: '16px'}}
             value={toyName}
             type="text"
             placeholder="Name"
             onChange={(event) => setToyName(event.target.value)}
             />
-
-
     <FormControl className={classes.formControl}>
+
+
           <InputLabel id="demo-simple-select-label">Ages</InputLabel>
           <Select
             labelId="demo-simple-select-label"
@@ -118,10 +120,24 @@ function SearchToys() {
         </FormControl>
  
 
-     
-    <button onClick={searchBtn}>Search Toy</button>
-    <button onClick={cancelBtn}>Cancel</button>
+    <Button 
+          variant="contained"
+          color="default"
+          size="small"
+          endIcon={ <AddCircleIcon /> }
+          onClick={searchBtn}>
+          Share Toy
+          </Button>
 
+          <Button 
+            variant="contained"
+            color="inherit"
+            size="small"
+            endIcon={ <CancelIcon /> }
+            onClick={cancelBtn}>
+            Cancel
+            </Button>
+              </div>
 
  
 
