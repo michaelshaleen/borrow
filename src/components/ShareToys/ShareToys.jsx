@@ -146,10 +146,10 @@ function ShareToys() {
 
 
           <TextField 
-          value={toyName}
-          type="text"
-          placeholder="Name"
-          onChange={(event) => setToyName(event.target.value)}
+            value={toyName}
+            type="text"
+            placeholder="Name"
+            onChange={(event) => setToyName(event.target.value)}
           />
              
         <FormControl className={classes.formControl}>
