@@ -45,11 +45,12 @@ function ShareToys() {
     console.log(toyImage, "image here")
     if(!toyName || !ageGroup || !available){
       swal({
-        title: "please complete input form"
+        text: "Please complete input form"
       });
     }else{
 
       swal({
+        icon: "success",
         title: "Thanks for sharing",
       });    cancelBtn();
       dispatch({
@@ -134,6 +135,7 @@ function ShareToys() {
 
 
           <TextField 
+            style={{top: '16px'}}
             value={toyName}
             type="text"
             placeholder="Name"
