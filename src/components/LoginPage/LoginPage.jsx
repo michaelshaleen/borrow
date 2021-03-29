@@ -11,7 +11,6 @@ function LoginPage() {
   return (
     <>
     <div className="login_background">
-      <ToiChare />
       {/* <Nav /> */}
       <LoginForm />
 

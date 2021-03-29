@@ -12,7 +12,7 @@ function RegisterPage() {
   return (
     <div className="container">
       {/* <Nav /> */}
-      <ToiChare />
+      {/* <ToiChare /> */}
       <RegisterForm />
 
       <center>

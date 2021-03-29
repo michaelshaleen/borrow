@@ -47,12 +47,12 @@ function Nav() {
         <ul>
           {/* <li><a href="#/user">Home</a></li> */}
           <li><a href="#/landing">Welcome Page</a></li>
+          <li><a href="#/user">My Profile</a></li>
           <li><a href="#/search_toys">Search</a></li>
           <li><a href="#/share_toys">Share</a></li>
-          <li><a href="#/user">My Profile</a></li>
           <li><a href="#/about">About</a></li>
-          <li><a href="#">Logout</a></li>
-          <li><LogOutButton /></li>
+          {/* <li><a href="#">Logout</a></li> */}
+          {/* <li><LogOutButton /></li> */}
         </ul>
       </div>
   </div>

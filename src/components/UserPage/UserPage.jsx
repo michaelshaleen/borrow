@@ -82,7 +82,7 @@ function UserPage() {
 
 
 
-            <footer><ToiChare /> </footer>
+            <footer><LogOutButton /> </footer>
 
 
      </div>
