@@ -12,14 +12,14 @@ function LogOutButton(props) {
   return (
     <>
 
-    {/* <div className="toggle">
+    <div className="toggle">
       <div class="menu">
         <ul>     
           <li><a href="#">Logout</a></li>
           <li><LogOutButton /></li>
         </ul>
       </div>
-  </div> */}
+  </div>
     <button    
     
       // This button shows up in multiple locations and is styled differently
@@ -33,7 +33,6 @@ function LogOutButton(props) {
   label="LogOut" icon={<ExitToAppIcon/> } />
     
     </button>
-
     </>
   );
 }
