@@ -1,7 +1,7 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 require('dotenv').config();
-const fileUpload = require('express-fileUpload');
+const fileUpload = require('express-fileupload');
 
 const app = express();
 
