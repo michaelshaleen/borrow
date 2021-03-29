@@ -16,7 +16,6 @@ function LogOutButton(props) {
       <div class="menu">
         <ul>     
           <li><a href="#">Logout</a></li>
-          <li><LogOutButton /></li>
         </ul>
       </div>
   </div>

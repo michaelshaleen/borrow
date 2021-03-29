@@ -38,7 +38,7 @@ function ToyList({ toy }) {
   switch (value) {
  
     case "delete":
-      swal("okay, I guess children shouldn't be happy");
+      swal("okay, toy removed");
       console.log('delete content')
       dispatch({
         type: 'DELETE',
@@ -46,7 +46,7 @@ function ToyList({ toy }) {
       })
       break;
     default:
-      swal("okay, cool...");
+      swal("okay, great!");
   }
 });
 

@@ -19,7 +19,7 @@ import MenuItem from '@material-ui/core/MenuItem';
 import FormHelperText from '@material-ui/core/FormHelperText';
 import FormControl from '@material-ui/core/FormControl';
 import Select from '@material-ui/core/Select';
-
+import LogOutButton from '../LogOutButton/LogOutButton';
 
 
 function SearchToys() {
@@ -90,9 +90,9 @@ function SearchToys() {
     <div className="container">
 
     <div className="search_Container">
-    {/* <ToiChare /> */}
+    <p><h3>Search Toys</h3></p>
+
     <Nav />
-    <h2>Search Toys {user.username}</h2>
 
 <div>
 
@@ -163,7 +163,7 @@ function SearchToys() {
 
 
 
-      <footer><ToiChare /> </footer>
+      <footer><LogOutButton /> </footer>
 </div>
               </div>
   )

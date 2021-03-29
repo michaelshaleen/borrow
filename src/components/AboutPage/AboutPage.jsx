@@ -1,7 +1,7 @@
 import React from 'react';
 import Nav from '../Nav/Nav';
 import ToiChare from '../LandingPage/LandingPage';
-
+import LogOutButton from '../LogOutButton/LogOutButton';
 
 // This is one of our simplest components
 // It doesn't have local state,
@@ -32,7 +32,7 @@ function AboutPage() {
       </p>
 
 
-      <footer><ToiChare /> </footer>
+      <footer><LogOutButton /> </footer>
 
     </div>
   );
