@@ -1,12 +1,10 @@
 
-# EDA Project
-This version uses React, Redux, Express, Passport, and PostgreSQL (a full list of dependencies can be found in `package.json`).
+## TOI_CHARE
 
-We **STRONGLY** recommend following these instructions carefully. It's a lot, and will take some time to set up, but your life will be much easier this way in the long run.
+A user friendly toy sharing application designed to reduce the amount of toy purchasing and holding as well as increasing community networking as users will be sharing with people in their surrounding areas.
 
-## Use the Template for This Repository (Don't Clone)
-
-- Don't Fork or Clone. Instead, click the `Use this Template` button, and make a copy to your personal account.
+## DESCRIPTION
+With a created profile, users may search toys that they may borrow from others, as well as share their own toys for other users to borrow. A user may update the availability of a toy. Contact between users would take place outside of the app.
 
 
 ## Prerequisites
