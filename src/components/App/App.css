@@ -256,6 +256,7 @@ Container
 .container {
   /* padding: 5px; */
   background-image: url('https://i.pinimg.com/564x/48/31/4e/48314eb9dbdd0426c9f67139dbd71b6e.jpg');
+  background-size: cover;
   
 }
 .search_Container {
