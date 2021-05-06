@@ -1,0 +1,11 @@
+.login_background {
+  background-image: url('../pictures/alphabet.jpg');
+  min-height: 500px;
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: 1;
+}

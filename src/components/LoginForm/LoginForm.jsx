@@ -1,7 +1,10 @@
+import './LoginForm.css'
+
 import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import {useSelector} from 'react-redux';
 import ReactPlayer from 'react-player';
+import alphabet from '../pictures/alphabet.jpg';
 
 function LoginForm() {
   const [username, setUsername] = useState('');
@@ -76,7 +79,7 @@ function LoginForm() {
       </div>
     </form> 
 
-
+ 
 
 
 

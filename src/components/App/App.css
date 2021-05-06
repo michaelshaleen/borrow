@@ -9,9 +9,16 @@
   box-sizing: border-box;
   font-family: 'Poppins', sans-serif;
 }
-.login_background {
-  background-image: url('https://i.pinimg.com/564x/2f/f9/fd/2ff9fdd9c5d28d11ba8e628524358e30.jpg');
 
+.welcome{
+  
+}
+
+.underline{
+  margin-left: 15vw;
+  color:rgb(173, 172, 169);
+  font-style: italic;
+  font-size: 10px;
 }
 header
 {
