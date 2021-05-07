@@ -1,5 +1,16 @@
 import React, { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
+import {
+  TextField,
+  MenuItem,
+  FormControl,
+  Select,
+  Paper,
+  Fade,
+  Tooltip,
+  Grid,
+  InputLabel,
+} from '@material-ui/core';
 
 function RegisterForm() {
   const [username, setUsername] = useState('');
@@ -34,7 +45,8 @@ function RegisterForm() {
         <label htmlFor="username"
         style={{color:'white', fontFamily: 'cursive'}}>
           Username:
-          <input
+          <TextField
+            label="GreatParent1000"
             type="text"
             name="username"
             value={username}
@@ -47,7 +59,8 @@ function RegisterForm() {
         <label htmlFor="password"
         style={{color:'white', fontFamily: 'cursive'}}>
           Password:
-          <input
+          <TextField
+            label="Something Unique!"
             type="password"
             name="password"
             value={password}
@@ -60,7 +73,8 @@ function RegisterForm() {
         <label htmlFor="phone"
         style={{color:'white', fontFamily: 'cursive'}}>
           Phone Number:
-          <input
+          <TextField
+            label="867-5309"
             type="tel"
             name="phone"
             value={phone}

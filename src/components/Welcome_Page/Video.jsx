@@ -31,15 +31,3 @@ function Video() {
 }
 
 export default Video;
-{/* 
-  <div className="toggle">
-      <div class="menu">
-        <ul>
-          <li><a href="#/user">Home</a></li>
-          <li><a href="#">News</a></li>
-          <li><a href="#">Destination</a></li>
-          <li><a href="#">Blog</a></li>
-          <li><a href="#/about">Contact</a></li>
-        </ul>
-      </div>
-  </div> */}

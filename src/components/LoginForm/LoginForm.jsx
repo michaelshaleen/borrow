@@ -1,7 +1,25 @@
+import './LoginForm.css'
+import {
+  TextField,
+  MenuItem,
+  FormControl,
+  Select,
+  Paper,
+  Fade,
+  Tooltip,
+  Grid,
+  InputLabel,
+} from '@material-ui/core';
+
 import React, { useState } from 'react';
+import AccountCircle from '@material-ui/icons/AccountCircle';
+import InputAdornment from '@material-ui/core/InputAdornment';
+
 import { useDispatch } from 'react-redux';
 import {useSelector} from 'react-redux';
 import ReactPlayer from 'react-player';
+import alphabet from '../pictures/alphabet.jpg';
+
 
 function LoginForm() {
   const [username, setUsername] = useState('');
@@ -45,11 +63,17 @@ function LoginForm() {
           {errors.loginMessage}
         </h3>
       )}
+     
+      
       <div>
-        <label htmlFor="username"
-        style={{color:'white', fontFamily: 'cursive'}}>
-          Username:
-          <input
+      <label htmlFor="username"
+        >
+           <InputAdornment position="start">
+              <AccountCircle />
+            </InputAdornment>
+          <TextField
+            style={{color: "white"}}
+            label="Username"
             type="text"
             name="username"
             required
@@ -58,11 +82,13 @@ function LoginForm() {
           />
         </label>
       </div>
+
       <div>
         <label htmlFor="password"
         style={{color:'white', fontFamily:'cursive'}}>
-          Password:
-          <input
+          
+          <TextField
+          label="Password"
             type="password"
             name="password"
             required
@@ -76,7 +102,7 @@ function LoginForm() {
       </div>
     </form> 
 
-
+ 
 
 
 

@@ -52,14 +52,17 @@ function UserPage() {
                 <Nav />
              </div>
         
-            <h2>Welcome back, {user.username}! </h2>
+            <u><h2
+              className="welcome">Welcome back, {user.username}! </h2>
+            </u>
             {/* <PersonIcon /> */}
             <div className="overlay"></div>
               <div className="text"> 
         </div>
    
           
-            <h4>These are the toys you've shared!</h4>
+            <div
+              className="underline">*(These are the toys you've shared! )</div>
             
             <table>
               <thead>
