@@ -9,7 +9,8 @@ import PersonIcon from '@material-ui/icons/Person';
 import Nav from '../Nav/Nav';
 import ToiChare from '../LandingPage/LandingPage';
 import '../Nav/Nav.css';
-
+import SearchToys from '../SearchToys/SearchToys';
+import ShareToys from '../ShareToys/ShareToys';
 
 function UserPage() {
   const user = useSelector((store) => store.user);
@@ -92,6 +93,10 @@ function UserPage() {
 
       {/* <LogOutButton /> */}
   </div> 
+  <ShareToys />
+  <SearchToys />
+
+
     </>
   );
 }
