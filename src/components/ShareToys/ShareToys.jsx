@@ -175,14 +175,6 @@ function ShareToys() {
         <label className="custom-file-label" htmlFor="customFile"></label>
           
           <Button 
-          style={{ 
-            borderRadius: 35,
-            backgroundColor: "#ceaf37",
-            padding: "18px 36px",
-            fontSize: "18px"
-        }}
-          variant="contained"
-          // color="green"
           size="small"
           endIcon={ <AddCircleIcon /> }
           onClick={shareToy}>
@@ -190,7 +182,6 @@ function ShareToys() {
           </Button>
 
           <Button 
-            variant="contained"
             color="inherit"
             size="small"
             endIcon={ <CancelIcon /> }

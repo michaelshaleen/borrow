@@ -121,16 +121,14 @@ function SearchToys() {
  
 
     <Button 
-          variant="contained"
           color="default"
           size="small"
           endIcon={ <AddCircleIcon /> }
           onClick={searchBtn}>
-          Share Toy
+          Search Toy
           </Button>
 
           <Button 
-            variant="contained"
             color="inherit"
             size="small"
             endIcon={ <CancelIcon /> }
