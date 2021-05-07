@@ -90,6 +90,8 @@ header .logo
   object-fit: cover;
   opacity: 0.8;
 }
+
+
 .overlay
 {
   position: absolute;
@@ -240,7 +242,16 @@ img {
 }
 
 p.intro {
-  background: rgba(200, 200, 200, 0.1)
+  width: 600px;
+  /* height: 200px; */
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 20px;
+  border-radius: 5px;
+  backdrop-filter: blur(10px);
+  border: 2px solid transparent;
+  background-clip: padding-box;
+  box-shadow: 10px 10px 10px rgba(45, 55, 68, 0.0.3);
+  line-height: 1.5;  
 }
  p.intro::first-letter {
   font-size: 25px; 
