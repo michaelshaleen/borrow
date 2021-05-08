@@ -92,9 +92,9 @@ function UserPage() {
      </div>
 
       {/* <LogOutButton /> */}
-  </div> 
   <ShareToys />
   <SearchToys />
+  </div> 
 
 
     </>

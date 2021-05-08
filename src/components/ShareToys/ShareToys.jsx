@@ -130,7 +130,6 @@ function ShareToys() {
     <div className="container">
             <p><h3>Share New Toys</h3></p>
 
-            <Nav />
             <div>
 
 

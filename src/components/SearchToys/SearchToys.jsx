@@ -91,9 +91,6 @@ function SearchToys() {
 
     <div className="search_Container">
     <p><h3>Search Toys</h3></p>
-
-    <Nav />
-
 <div>
 
     <TextField 
