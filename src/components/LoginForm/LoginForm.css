@@ -38,3 +38,11 @@
   transition: 0.2s;
 }
 
+.login
+{
+  font-size: 2em;
+  font-weight: 300;
+  color: #fff;
+  line-height: 1em;
+  text-transform: uppercase;
+}

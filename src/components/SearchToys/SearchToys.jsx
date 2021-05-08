@@ -91,9 +91,6 @@ function SearchToys() {
 
     <div className="search_Container">
     <p><h3>Search Toys</h3></p>
-
-    <Nav />
-
 <div>
 
     <TextField 
@@ -121,16 +118,14 @@ function SearchToys() {
  
 
     <Button 
-          variant="contained"
           color="default"
           size="small"
           endIcon={ <AddCircleIcon /> }
           onClick={searchBtn}>
-          Share Toy
+          Search Toy
           </Button>
 
           <Button 
-            variant="contained"
             color="inherit"
             size="small"
             endIcon={ <CancelIcon /> }

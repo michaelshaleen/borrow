@@ -4,7 +4,7 @@ import {useSelector, useDispatch} from 'react-redux';
 import Button from '@material-ui/core/Button';
 import DeleteIcon from '@material-ui/icons/Delete';
 import Checkbox from '@material-ui/icons/CheckBox';
-
+import './ToyList.css';
 function ToyList({ toy }) {
   const [available, setAvailable] = useState(true);
   //useState for each .prop(toy.available) to put a body on 
@@ -66,7 +66,6 @@ function ToyList({ toy }) {
       {/* <img src={toy.image} width="100px" height="100px"/> */}
 
       <td><Button 
-      variant="contained"
       color="primary"
       onClick={() =>{ availableBtn(toy.id, toy.available) }}>
         Available
@@ -74,7 +73,6 @@ function ToyList({ toy }) {
 
       <td><Button 
       startIcon={ <DeleteIcon /> }
-      variant="contained"
       color="default"
       onClick={()=>{ deleteBtn(toy.id) }}>
         Delete

@@ -55,7 +55,9 @@ function LoginForm() {
     </body>
     
     <form className="formPanel" onSubmit={login}>
-      <h2 style={{color:'white', fontFamily:'cursive'}}>
+      <h2
+        className="login">
+
         Login
       </h2>
       {errors.loginMessage && (
@@ -68,9 +70,8 @@ function LoginForm() {
       <div>
       <label htmlFor="username"
         >
-           <InputAdornment position="start">
-              <AccountCircle />
-            </InputAdornment>
+          
+          
           <TextField
             style={{color: "white"}}
             label="Username"
@@ -81,6 +82,7 @@ function LoginForm() {
             onChange={(event) => setUsername(event.target.value)}
           />
         </label>
+              {/* <AccountCircle /> */}
       </div>
 
       <div>
