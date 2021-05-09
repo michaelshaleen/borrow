@@ -15,6 +15,8 @@ import Tab from '@material-ui/core/Tab';
 import Box from '@material-ui/core/Box';
 import { height } from '@material-ui/system';
 import MenuIcon from '@material-ui/icons/Menu';
+import { useDispatch } from 'react-redux';
+
 
 
 
@@ -22,6 +24,8 @@ import MenuIcon from '@material-ui/icons/Menu';
 
 function Nav() {
   const user = useSelector((store) => store.user);
+  const dispatch = useDispatch();
+
 
   let loginLinkData = {
     path: '/login',
@@ -51,7 +55,9 @@ function Nav() {
           <li><a href="#/search_toys">Search</a></li>
           <li><a href="#/share_toys">Share</a></li>
           <li><a href="#/about">About</a></li>
-          {/* <li><a href="#">Logout</a></li> */}
+          {/* <Route path="/" exact component={Pages}/> */}
+          <li
+            onClick={() => dispatch({ type: 'LOGOUT' })}><a exact component={LogOutButton}>Leave</a></li>
           {/* <li><LogOutButton /></li> */}
         </ul>
       </div>
