@@ -89,49 +89,47 @@ function SearchToys() {
   return(
     <div className="container">
 
-    <div className="search_Container">
-    <p><h3>Search Toys</h3></p>
-<div>
-
-    <TextField 
-            style={{top: '16px'}}
-            value={toyName}
-            type="text"
-            placeholder="Name"
-            onChange={(event) => setToyName(event.target.value)}
-            />
-    <FormControl className={classes.formControl}>
+        <div className="search_Container">
+            <p><h3>Search Toys</h3></p>
+        <div>
+        <TextField 
+                style={{top: '16px'}}
+                value={toyName}
+                type="text"
+                placeholder="Name"
+                onChange={(event) => setToyName(event.target.value)} />
+        <FormControl className={classes.formControl}>
 
 
-          <InputLabel id="demo-simple-select-label">Ages</InputLabel>
-          <Select
-            labelId="demo-simple-select-label"
-            id="demo-simple-select"
-            value={ageGroup}
-            onChange={(event) => setAgeGroup(event.target.value)}
-            >
-            <MenuItem value="0-3">0-3</MenuItem>
-            <MenuItem value="3-5">3-5</MenuItem>
-            <MenuItem value="5-10">5-10</MenuItem>
-          </Select>
-        </FormControl>
- 
+                    <InputLabel id="demo-simple-select-label">Ages</InputLabel>
+                    <Select
+                      labelId="demo-simple-select-label"
+                      id="demo-simple-select"
+                      value={ageGroup}
+                      onChange={(event) => setAgeGroup(event.target.value)}
+                      >
+                      <MenuItem value="0-3">0-3</MenuItem>
+                      <MenuItem value="3-5">3-5</MenuItem>
+                      <MenuItem value="5-10">5-10</MenuItem>
+                    </Select>
+                  </FormControl>
+          
 
-    <Button 
-          color="default"
-          size="small"
-          endIcon={ <AddCircleIcon /> }
-          onClick={searchBtn}>
-          Search Toy
-          </Button>
+              <Button 
+                    color="default"
+                    size="small"
+                    endIcon={ <AddCircleIcon /> }
+                    onClick={searchBtn}>
+                    Search Toy
+                    </Button>
 
-          <Button 
-            color="inherit"
-            size="small"
-            endIcon={ <CancelIcon /> }
-            onClick={cancelBtn}>
-            Cancel
-            </Button>
+                    <Button 
+                      color="inherit"
+                      size="small"
+                      endIcon={ <CancelIcon /> }
+                      onClick={cancelBtn}>
+                      Cancel
+                      </Button>
               </div>
 
  

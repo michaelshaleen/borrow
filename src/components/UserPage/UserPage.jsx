@@ -43,71 +43,52 @@ function UserPage() {
   return (
     <>
     
-    <div className="userBody">
-       <div className="container">
-         <div className="image_back">
-           {/* <image src="https://i.pinimg.com/564x/48/31/4e/48314eb9dbdd0426c9f67139dbd71b6e.jpg"> */}
-
-           {/* </image> */}
+  <div className="outer-wrapper">
+    <div className="wrapper">
+      <div className="slide one">
+         <div className="userBody">
+           <div className="container">
+            <div className="image_back">
          </div>
             <div>
                 <Nav />
              </div>
-        
             <u><h2
               className="welcome">Welcome back, {user.username}! </h2>
             </u>
-            {/* <PersonIcon /> */}
             <div className="overlay"></div>
-              <div className="text"> 
-        </div>
-   
-          
-            <div
-              className="underline">*(These are the toys you've shared! )</div>
-            
-            <table>
-              <thead>
-              <tr><u>
-
-                <td>Description </td>
-                <td>Age</td>
-                <td>Availability</td>
-              </u>
-              </tr>
-              </thead>
+              {/* <div className="text"> 
+               </div> */}
+            <div className="underline">
+              *(These are the toys you've shared! )
+            </div>
+              <table>
+                <thead>
+                  <tr><u>
+                  <td>Description </td>
+                  <td>Age</td>
+                  <td>Availability</td>
+                  </u></tr>
+                </thead>
               <tbody>
                   { toys.map(toy => {
                     return <ToyList key={toy.id} toy={toy}/>              
                   })}
-
               </tbody>
             </table>
-            
-
-
-
             <footer><LogOutButton /> </footer>
-
-
-     </div>
-
-      
-  </div> 
-
-
-  <div className="outer-wrapper">
-    <div className="wrapper">
-      <div className="slide one">
-           <ShareToys />
-      </div>
-      <div className="slide two">
-        <SearchToys />
-      </div>
-      <div className="slide three"></div>
-      <div className="slide four"></div>
-    </div>
+      </div>     
+    </div> 
   </div>
+          <div className="slide two">
+            <SearchToys />
+          </div>
+          <div className="slide three">
+              <ShareToys />
+          </div>
+          <div className="slide four"></div>
+        </div>
+      </div>
 
 
 
