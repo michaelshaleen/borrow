@@ -49,4 +49,9 @@ router.post('/logout', (req, res) => {
   res.sendStatus(200);
 });
 
+
+router.put('/edit', userStrategy.authenticate('local'), (req, res) => {
+  console.log(req.body, "body")
+  res.sendStatus(200);
+})
 module.exports = router;

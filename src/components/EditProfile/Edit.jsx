@@ -10,16 +10,42 @@ import {
   Grid,
   InputLabel,
 } from '@material-ui/core';
+import {useSelector, useDispatch} from 'react-redux';
+
 
 
 function Edit() {
+  const dispatch = useDispatch();
+
 
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
   const [phone, setPhone] = useState('');
+
+
+
+
+
+  const editUser = (event) => {
+    console.log("edit")
+    event.preventDefault();
+
+    dispatch({
+      type: 'EDIT',
+      payload: {
+        
+        username: username,
+        password: password,
+        phone: phone
+      },
+    });
+  };
+
+
+
   return (
-    <div>Edit
-      <form className="formPanel" >
+    <div>
+      <form className="formPanel" onSubmit={editUser}>
       <h2 style={{color:'white', fontFamily:'cursive'}}>Register User</h2>
      
     
@@ -39,7 +65,7 @@ function Edit() {
       </div>
       <div>
         <label htmlFor="password"
-        style={{color:'white', fontFamily: 'cursive'}}>
+        style={{color:'black', fontFamily: 'cursive'}}>
           Password:
           <TextField
             label="Something Unique!"
@@ -53,7 +79,7 @@ function Edit() {
       </div>
       <div>
         <label htmlFor="phone"
-        style={{color:'white', fontFamily: 'cursive'}}>
+        style={{color:'black', fontFamily: 'cursive'}}>
           Phone Number:
           <TextField
             label="867-5309"
@@ -66,7 +92,7 @@ function Edit() {
         </label>
       </div>
       <div>
-        <input className="btn" type="submit" name="submit" value="Register" />
+        <input className="btn" type="submit" name="submit" value="Submit Change" />
       </div>
     </form>
       
