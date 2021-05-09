@@ -16,6 +16,7 @@ import ProtectedRoute from '../ProtectedRoute/ProtectedRoute';
 import AboutPage from '../AboutPage/AboutPage';
 import LandingPage from '../LandingPage/LandingPage';
 import LoginPage from '../LoginPage/LoginPage';
+import Edit from '../EditProfile/Edit';
 import RegisterPage from '../RegisterPage/RegisterPage';
 import SearchToys from '../SearchToys/SearchToys';
 import ShareToys from '../ShareToys/ShareToys';
@@ -65,6 +66,10 @@ function App() {
           <ProtectedRoute exact path="/search_toys">
             <SearchToys />
           </ProtectedRoute>
+          <ProtectedRoute exact path="/edit">
+            <Edit />
+          </ProtectedRoute>
+
          
           
 
