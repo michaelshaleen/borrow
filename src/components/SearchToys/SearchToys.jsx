@@ -152,13 +152,13 @@ function SearchToys() {
               )}
               </tbody>
       </table>
-      {/* if searchedToys === null */}
+      
 
 
 
 
 
-      <footer><LogOutButton /> </footer>
+      
 </div>
               </div>
   )

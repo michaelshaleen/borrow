@@ -12,7 +12,7 @@ function DisplayToys( { toy } ){
          <td>{toy.ages}</td>
          <td>{toy.available ? <span> available </span>:<span> unavailable </span> }</td>
          <td>Call Bradley at <CallIcon /> { toy.phone}</td>
-         {/* <td>{toy.</td> */}
+         
        </tr>
 
 

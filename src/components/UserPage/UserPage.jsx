@@ -1,4 +1,5 @@
 import React from 'react';
+import './User.css';
 import LogOutButton from '../LogOutButton/LogOutButton';
 import {useSelector, useDispatch} from 'react-redux';
 import { useEffect, useState} from 'react';
@@ -91,10 +92,23 @@ function UserPage() {
 
      </div>
 
-      {/* <LogOutButton /> */}
-  <ShareToys />
-  <SearchToys />
+      
   </div> 
+
+
+  <div className="outer-wrapper">
+    <div className="wrapper">
+      <div className="slide one">
+           <ShareToys />
+      </div>
+      <div className="slide two">
+        <SearchToys />
+      </div>
+      <div className="slide three"></div>
+      <div className="slide four"></div>
+    </div>
+  </div>
+
 
 
     </>
