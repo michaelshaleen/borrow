@@ -56,24 +56,6 @@ router.post('/file', rejectUnauthenticated, (req, res) => {
     console.log("file success")
     
   })
-  //
-
-  // const sqlText = `
-  // INSERT INTO 
-  // VALUES ($1)`;
-
-  // const paramsText = uploadedFile.image;
-
-  // pool.query(sqlText, paramsText)
-  // .then((result) => {
-  //   console.log(result, "file results")
-  //   res.sendStatus(201);
-
-  // })
-  // .catch((error) => {
-  //   console.log("error post upload", error)
-  //   res.sendStatus(500);
-  // })
 })
 
 
@@ -144,7 +126,7 @@ router.put('/:toyId', (req, res) => {
 
   let queryText = '';
 
-  const queryParams = id;
+  const queryParams = id; 
 
     if(available == false){
      queryText = `

@@ -3,6 +3,7 @@
 .slide{
   width: 100vw;
   height: 100vh;
+  
 }
 
 .wrapper{
@@ -14,10 +15,11 @@
 }
 
 .one{
-  background-color: bisque;
+  background-image: image('../public/background.jpg');
 }
 .two{
   background-color: rgb(22, 30, 102);
+  /* background: url('../public/background.jpg'); */
 }
 .three{
   background-color: rgb(65, 40, 10);
@@ -35,8 +37,22 @@
   overflow-x: hidden;
   position: absolute;
 }
-
+/* 
 ::-webkit-scrollbar {
   display: none;
 
+} */
+
+body::-webkit-scrollbar {
+  width: 12px;               /* width of the entire scrollbar */
+}
+
+body::-webkit-scrollbar-track {
+  background: orange;        /* color of the tracking area */
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: blue;    /* color of the scroll thumb */
+  border-radius: 20px;       /* roundness of the scroll thumb */
+  border: 3px solid orange;  /* creates padding around scroll thumb */
 }

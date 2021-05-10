@@ -11,29 +11,30 @@ import {
   InputLabel,
 } from '@material-ui/core';
 import {useSelector, useDispatch} from 'react-redux';
+import Nav from '../Nav/Nav';
 
 
 
 function Edit() {
+  const user = useSelector((store) => store.user.id);
+
   const dispatch = useDispatch();
 
 
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
   const [phone, setPhone] = useState('');
+  const [editUser, setEditUser] = useState(0);
 
 
-
-
-
-  const editUser = (event) => {
-    console.log("edit")
+  const edit = (event) => {
+  
     event.preventDefault();
 
     dispatch({
       type: 'EDIT',
       payload: {
-        
+        id: user,  
         username: username,
         password: password,
         phone: phone
@@ -43,9 +44,11 @@ function Edit() {
 
 
 
-  return (
+  return (<>
+  <Nav />
+  <p>{user} User Id</p>
     <div>
-      <form className="formPanel" onSubmit={editUser}>
+      <form className="formPanel" onSubmit={edit}>
       <h2 style={{color:'white', fontFamily:'cursive'}}>Register User</h2>
      
     
@@ -97,7 +100,7 @@ function Edit() {
     </form>
       
     </div>
-  )
+  </>)
 }
 
 export default Edit;

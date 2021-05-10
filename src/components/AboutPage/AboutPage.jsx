@@ -2,6 +2,7 @@ import React from 'react';
 import Nav from '../Nav/Nav';
 import ToiChare from '../LandingPage/LandingPage';
 import LogOutButton from '../LogOutButton/LogOutButton';
+import './About.css';
 
 // This is one of our simplest components
 // It doesn't have local state,
@@ -10,10 +11,10 @@ import LogOutButton from '../LogOutButton/LogOutButton';
 
 function AboutPage() {
   return (
-    <div className="container">
+    <div className="container aboutInfo">
       {/* <ToiChare /> */}
       <Nav />
-      <div>
+      <div >
         <p>If you have any questions or need assistance
           please use the following contact methods
         </p>

@@ -50,8 +50,35 @@ router.post('/logout', (req, res) => {
 });
 
 
-router.put('/edit', userStrategy.authenticate('local'), (req, res) => {
-  console.log(req.body, "body")
-  res.sendStatus(200);
-})
+router.put('/update', rejectUnauthenticated, async (req, res) => {
+const updatedUser = req.body;
+console.log(updatedUser, "user")
+
+const queryParams = [
+  updatedUser.phone,
+  updatedUser.username,
+  updatedUser.password,
+  updatedUser.id,
+];
+
+  const text = `
+  UPDATE "user"
+  SET "phone" = $1, "username" = $2, "password" = $3
+  WHERE "id" = $4;`
+
+  pool.query(text, [queryParams])
+  .then(dbRes => {
+    console.log("updated user", dbRes.rows)
+    res.send(200)
+  })
+  .catch(error => {
+    console.log(error, "err router.put")
+    res.sendStatus(500)
+  })
+});
+
+
+
+
+
 module.exports = router;

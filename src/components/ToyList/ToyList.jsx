@@ -58,9 +58,10 @@ function ToyList({ toy }) {
 
   return(
     <>
+    
     <tr>
       <td>{toy.name} </td>
-      <td> {toy.ages} </td>
+      <td>Ages {toy.ages} </td>
       <td>{toy.available ? <span> Available </span>:<span> Unavailable </span>}</td>
       {/* <td>{toy.image}</td> */}
       {/* <img src={toy.image} width="100px" height="100px"/> */}

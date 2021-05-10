@@ -5,6 +5,7 @@ import DisplayToys from '../DisplayToys/DisplayToys';
 import Button from '@material-ui/core/Button';
 import Nav from '../Nav/Nav';
 import React from 'react';
+import './Search.css';
 
 
 
