@@ -50,15 +50,15 @@ router.post('/logout', (req, res) => {
 });
 
 
-router.put('/update', rejectUnauthenticated, async (req, res) => {
-const updatedUser = req.body;
-console.log(updatedUser, "user")
-
+router.put('/update', rejectUnauthenticated, (req, res) => {
+  const updatedUser = req.body;
+  console.log(updatedUser, "BODY");
+ 
 const queryParams = [
-  updatedUser.phone,
-  updatedUser.username,
-  updatedUser.password,
-  updatedUser.id,
+  updatedUser.newPhone,
+  updatedUser.newUserName,
+  updatedUser.newPassword,
+  updatedUser.userId,
 ];
 
   const text = `
@@ -66,7 +66,7 @@ const queryParams = [
   SET "phone" = $1, "username" = $2, "password" = $3
   WHERE "id" = $4;`
 
-  pool.query(text, [queryParams])
+  pool.query(text, queryParams)
   .then(dbRes => {
     console.log("updated user", dbRes.rows)
     res.send(200)

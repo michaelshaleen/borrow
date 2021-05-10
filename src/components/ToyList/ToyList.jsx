@@ -58,6 +58,8 @@ function ToyList({ toy }) {
 
   return(
     <>
+    <table className="table">
+
     
     <tr>
       <td>{toy.name} </td>
@@ -80,6 +82,7 @@ function ToyList({ toy }) {
       </Button></td> 
 
     </tr>
+        </table>
 
     </>
   )

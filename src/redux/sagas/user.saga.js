@@ -25,11 +25,25 @@ function* fetchUser() {
 }
 
 function* editUser(action) {
-  // const editUserId = action.payload.id;
-  // const editUser = action.payload;
-  // console.log(editUser)
+  const newUser = action.payload;
+  console.log(newUser);
+  const userId = newUser.id;
+  const newUserName = newUser.username;
+  const newPassword = newUser.password;
+  const newPhone = newUser.phone;
+  
   try {
-    const response = yield axios.put('/api/user/update', action.payload);
+    // const config = {
+    //   headers: { 'Content-Type': 'application/json' },
+    //   withCredentials: true,
+    // };
+    const response = yield axios.put(
+      '/api/user/update', { 
+        userId,
+        newUserName, 
+        newPassword, 
+        newPhone 
+      });
     yield put({ 
       type: 'FETCH_USER', payload: response.data
     });

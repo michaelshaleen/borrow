@@ -158,8 +158,8 @@ function SearchToys() {
 
 
       
-</div>
-              </div>
+        </div>
+    </div>
   )
 }
 
