@@ -10,16 +10,45 @@ import {
   Grid,
   InputLabel,
 } from '@material-ui/core';
+import {useSelector, useDispatch} from 'react-redux';
+import Nav from '../Nav/Nav';
+
 
 
 function Edit() {
+  const user = useSelector((store) => store.user.id);
+
+  const dispatch = useDispatch();
+
 
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
   const [phone, setPhone] = useState('');
-  return (
-    <div>Edit
-      <form className="formPanel" >
+  const [editUser, setEditUser] = useState(0);
+
+
+  const edit = (event) => {
+  
+    event.preventDefault();
+
+    dispatch({
+      type: 'EDIT',
+      payload: {
+        id: user,  
+        username: username,
+        password: password,
+        phone: phone
+      },
+    });
+  };
+
+
+
+  return (<>
+  <Nav />
+  <p>{user} User Id</p>
+    <div>
+      <form className="formPanel" onSubmit={edit}>
       <h2 style={{color:'white', fontFamily:'cursive'}}>Register User</h2>
      
     
@@ -39,7 +68,7 @@ function Edit() {
       </div>
       <div>
         <label htmlFor="password"
-        style={{color:'white', fontFamily: 'cursive'}}>
+        style={{color:'black', fontFamily: 'cursive'}}>
           Password:
           <TextField
             label="Something Unique!"
@@ -53,7 +82,7 @@ function Edit() {
       </div>
       <div>
         <label htmlFor="phone"
-        style={{color:'white', fontFamily: 'cursive'}}>
+        style={{color:'black', fontFamily: 'cursive'}}>
           Phone Number:
           <TextField
             label="867-5309"
@@ -66,12 +95,12 @@ function Edit() {
         </label>
       </div>
       <div>
-        <input className="btn" type="submit" name="submit" value="Register" />
+        <input className="btn" type="submit" name="submit" value="Submit Change" />
       </div>
     </form>
       
     </div>
-  )
+  </>)
 }
 
 export default Edit;
