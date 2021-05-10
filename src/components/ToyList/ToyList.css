@@ -12,6 +12,17 @@ body::-webkit-scrollbar-thumb {
   border: 3px solid orange;  /* creates padding around scroll thumb */
 }
 
-.table tr td{
-  border: thin;
+.table {
+  width: 75vw;
+  margin: auto;
+ 
 }
+.table tr td {
+  color: #fff;
+  border-collapse: collapse;
+  border: 1px solid white;
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+}
+tr:nth-child(even) {background-color: #181b2f}
+tr:nth-child(odd) {background-color: coral;}
