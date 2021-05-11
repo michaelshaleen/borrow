@@ -47,13 +47,8 @@ function UserPage() {
     <>
 
     
-  <div className="outer-wrapper">
-    <div className="wrapper">
-      <div className="slide one">
-         <div className="userBody">
-           <div className="container">
-            <div className="image_back">
-         </div>
+  
+         
             <div>
                 <Nav />
   
@@ -88,18 +83,7 @@ function UserPage() {
               </tbody>
             </table>
             <footer><LogOutButton /> </footer>
-      </div>     
-    </div> 
-  </div>
-          <div className="slide two">
-            <SearchToys />
-          </div>
-          <div className="slide three">
-              <ShareToys />
-          </div>
-          <div className="slide four"></div>
-        </div>
-      </div>
+ 
 
 
 

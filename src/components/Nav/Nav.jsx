@@ -55,6 +55,8 @@ function Nav() {
           {/* <li><a href="#/search_toys">Search</a></li>
           <li><a href="#/share_toys">Share</a></li> */}
           <li><a href="#/about">About</a></li>
+          <li><a href="#/search_toys">Toys</a></li>
+
           <li><a href="#/edit">Edit My Profile</a></li>
           {/* <Route path="/" exact component={Pages}/> */}
           <li

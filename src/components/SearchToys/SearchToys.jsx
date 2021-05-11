@@ -6,7 +6,7 @@ import Button from '@material-ui/core/Button';
 import Nav from '../Nav/Nav';
 import React from 'react';
 import './Search.css';
-
+import ShareToys from '../ShareToys/ShareToys';
 
 
 import AddCircleIcon from '@material-ui/icons/AddCircle';
@@ -88,6 +88,15 @@ function SearchToys() {
     };
 
   return(
+    <>
+    <div className="outer-wrapper">
+    <div className="wrapper">
+      <div className="slide one">
+          <div className="userBody">
+              <div className="container">
+                <div className="image_back">
+                  <Nav />
+
     <div className="container">
 
         <div className="search_Container">
@@ -146,21 +155,29 @@ function SearchToys() {
         </thead>
         <tbody>
                 {searchedToys.map(toy => {
-                return <DisplayToys key={toy.id} toy={toy}/>  
-              }
-              )}
+                  return <DisplayToys key={toy.id} toy={toy}/>  
+                }
+                )}
               </tbody>
       </table>
       
 
+                </div>
+              </div>
+          </div>
+      </div>
+    </div>
+  </div>
 
 
 
 
-      
+      <div className="slide two">
+             <ShareToys />
+          </div>
         </div>
     </div>
-  )
+ </>)
 }
 
 export default SearchToys;

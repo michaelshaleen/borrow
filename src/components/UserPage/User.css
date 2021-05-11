@@ -1,4 +1,7 @@
+body {
+  background-image: image('../public/background.jpg');
 
+}
 
 .slide{
   width: 100vw;
