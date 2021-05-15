@@ -1,6 +1,5 @@
 body {
-  background-image: image('../public/background.jpg');
-
+background-color: black;
 }
 
 .slide{
@@ -8,7 +7,12 @@ body {
   height: 100vh;
   
 }
-
+h3{
+  color: #fff;
+}
+h5{
+  color: #fff;
+}
 .wrapper{
   display: flex;
   flex-direction: row;
@@ -47,15 +51,19 @@ body {
 } */
 
 body::-webkit-scrollbar {
-  width: 12px;               /* width of the entire scrollbar */
+  display: none;               /* width of the entire scrollbar */
 }
 
-body::-webkit-scrollbar-track {
-  background: orange;        /* color of the tracking area */
-}
-
+/* body::-webkit-scrollbar-track {
+  background: orange;       
+} */
+/* color of the tracking area */
+/* 
 body::-webkit-scrollbar-thumb {
-  background-color: blue;    /* color of the scroll thumb */
-  border-radius: 20px;       /* roundness of the scroll thumb */
-  border: 3px solid orange;  /* creates padding around scroll thumb */
-}
+  background-color: blue;   
+  border-radius: 20px;       
+  border: 3px solid orange;  
+} */
+/* color of the scroll thumb */
+/* roundness of the scroll thumb */
+/* creates padding around scroll thumb */

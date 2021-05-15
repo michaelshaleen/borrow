@@ -59,8 +59,6 @@ function ToyList({ toy }) {
   return(
     <>
     <table className="table">
-
-    
     <tr>
       <td>{toy.name} </td>
       <td>Ages {toy.ages} </td>
