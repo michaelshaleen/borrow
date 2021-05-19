@@ -18,7 +18,7 @@ body::-webkit-scrollbar-thumb {
  
 }
 .table tr td {
-  color: #fff;
+  color: black;
   border-collapse: collapse;
   border: 1px solid white;
   text-align: center;

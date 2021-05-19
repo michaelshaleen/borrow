@@ -45,10 +45,6 @@ function UserPage() {
 
   return (
     <>
-
-    
-  
-         
             <div>
                 <Nav />
   
@@ -58,7 +54,7 @@ function UserPage() {
 
                 <div class="w3-container w3-center">
                   <h3>Home Page</h3>
-                  <img src={Profile} alt="Avatar" style={{width: 100, height: 100}}  />
+                  {/* <img src={Profile} alt="Avatar" style={{width: 100, height: 100}}  /> */}
                   <h5>{user.username}</h5>
                 </div>
 
@@ -69,13 +65,6 @@ function UserPage() {
               *(These are the toys you've shared! )
             </div>
               <table>
-                {/* <thead>
-                  <tr><u>
-                  <td>Description </td>
-                  <td>Age</td>
-                  <td>Availability</td>
-                  </u></tr>
-                </thead> */}
               <tbody>
                   { toys.map(toy => {
                     return <ToyList key={toy.id} toy={toy}/>              
@@ -83,10 +72,6 @@ function UserPage() {
               </tbody>
             </table>
             <footer><LogOutButton /> </footer>
- 
-
-
-
     </>
   );
 }

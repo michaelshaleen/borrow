@@ -65,9 +65,6 @@ function Nav() {
         </ul>
       </div>
   </div>
-
-    
-
       </div>
 </nav> 
 </div>

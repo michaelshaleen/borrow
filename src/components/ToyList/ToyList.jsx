@@ -49,12 +49,7 @@ function ToyList({ toy }) {
       swal("okay, great!");
   }
 });
-
-   
   }
-
-
-
 
   return(
     <>

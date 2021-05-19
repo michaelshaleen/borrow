@@ -46,6 +46,7 @@ header .logo
   background-size: 30px;
   background-position: center;
   cursor: pointer;
+  color: black;
 }
 .toggle:hover
 {
@@ -267,10 +268,6 @@ body.landing {
 Container
 -------------------------------------------------------------------------------- */
 
-.container {
- 
-  
-}
 
 .userBody{
   background-image: url('../pictures/user_profile.jpg');
