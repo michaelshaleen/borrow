@@ -18,11 +18,15 @@ body::-webkit-scrollbar-thumb {
  
 }
 .table tr td {
-  color: black;
+  color: rgb(245, 217, 217);
   border-collapse: collapse;
   border: 1px solid white;
   text-align: center;
   font-family: Arial, Helvetica, sans-serif;
+}
+
+.table tr td Button{
+  color:rgb(245, 217, 217);
 }
 /* tr:nth-child(even) {background-color: #181b2f}
 tr:nth-child(odd) {background-color: coral;} */

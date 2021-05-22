@@ -1,5 +1,5 @@
 body {
-background-color: rgba(243, 239, 222, 0.904);
+background-color: #0b0b0b
 }
 
 .slide{
@@ -8,10 +8,10 @@ background-color: rgba(243, 239, 222, 0.904);
   
 }
 h3{
-  color: black;
+  color: #fff;
 }
 h5{
-  color: black;
+  color: #fff;
 }
 .wrapper{
   display: flex;
