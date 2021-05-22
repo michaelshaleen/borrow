@@ -40,7 +40,7 @@ function Nav() {
 
   return (
     <>
-    <div>
+    <div className="nav-container">
 
     <nav className="nav">
     {/* <div className="nav"> */}
@@ -50,17 +50,14 @@ function Nav() {
       <div class="menu">
         <ul>
           {/* <li><a href="#/user">Home</a></li> */}
-          <li><a href="#/landing">Welcome Page</a></li>
-          <li><a href="#/user">My Profile</a></li>
-          {/* <li><a href="#/search_toys">Search</a></li>
-          <li><a href="#/share_toys">Share</a></li> */}
-          <li><a href="#/about">About</a></li>
-          <li><a href="#/search_toys">Toys</a></li>
-
-          <li><a href="#/edit">Edit My Profile</a></li>
+          <li><a href="#/landing" className="link">Welcome Page</a></li>
+          <li><a href="#/user" className="link">My Profile</a></li>
+          <li><a href="#/about" className="link">About</a></li>
+          <li><a href="#/search_toys" className="link">Toys</a></li>
+          <li><a href="#/edit" className="link">Edit My Profile</a></li>
           {/* <Route path="/" exact component={Pages}/> */}
           <li
-            onClick={() => dispatch({ type: 'LOGOUT' })}><a exact component={LogOutButton}>Leave</a></li>
+            onClick={() => dispatch({ type: 'LOGOUT' })}><a className="link" exact component={LogOutButton}>Leave</a></li>
           {/* <li><LogOutButton /></li> */}
         </ul>
       </div>
@@ -80,3 +77,20 @@ function Nav() {
 export default Nav;
 
 
+
+
+
+
+
+
+// <div className="nav-container">
+// <li><a href="#/landing" className="link">Welcome Page</a></li>
+// <li><a href="#/search_toys" className="link">Toys</a></li>
+// <li><a href="#/user" className="link">My Profile</a></li>
+// <li><a href="#/edit" className="link">Edit My Profile</a></li>
+// <li><a href="#/about" className="link">About Us</a></li>
+// <li><a 
+//       onClick={() => dispatch({ type: 'LOGOUT' })}
+//         className="link">Log Out</a></li>
+
+// </div>
