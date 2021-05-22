@@ -8,10 +8,10 @@ background-color: #0b0b0b
   
 }
 h3{
-  color: #fff;
+  color: rgb(245, 217, 217);
 }
 h5{
-  color: #fff;
+  color: rgb(245, 217, 217);
 }
 .wrapper{
   display: flex;

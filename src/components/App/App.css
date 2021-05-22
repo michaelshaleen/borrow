@@ -2,6 +2,13 @@
 
 
 @import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap');
+*
+{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 
 .underline{
   margin-left: 15vw;
@@ -262,7 +269,7 @@ Container
 
 
 .userBody{
-  background-image: url('../pictures/user_profile.jpg');
+  background: #0b0b0b;
   background-size: cover;
   height:100vh;
 }
