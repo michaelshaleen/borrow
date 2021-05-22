@@ -4,6 +4,7 @@ import Button from '@material-ui/core/Button';
 import axios from 'axios';
 import Nav from '../Nav/Nav';
 import React from 'react';
+import './Share.css';
 
 
 // const express = require('express');
