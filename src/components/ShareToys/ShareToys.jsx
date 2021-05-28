@@ -128,13 +128,10 @@ function ShareToys() {
 
 
   return(
-    <div className="container">
-            <p><h3>Share New Toys</h3></p>
+    <div >
+            <h3 className="share">Share New Toys</h3>
 
-            <div>
-
-
-
+            <div className="share">
           <TextField 
             style={{top: '16px'}}
             value={toyName}

@@ -170,7 +170,7 @@ function SearchToys() {
 
 
 
-      <div className="slide two">
+      <div>
              <ShareToys />
           </div>
         </div>
