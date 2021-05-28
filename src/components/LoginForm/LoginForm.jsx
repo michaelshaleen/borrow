@@ -46,8 +46,53 @@ function LoginForm() {
   return (
     <>
 
+<form className="formPanel" onSubmit={login}>
 
-    <body className="landing">
+
+    <div className="login-box">
+      <h2>Login</h2>
+      {errors.loginMessage && (
+        <h3 className="alert" role="alert">
+          {errors.loginMessage}
+        </h3>
+      )}
+      <div className="textbox">
+        <i className="fas fa-user"></i>
+        <i class='fa fa-space-shuttle' ></i>
+        <label htmlFor="username"
+        >
+           <TextField
+            style={{color: "white"}}
+            label="Username"
+            type="text"
+            name="username"
+            required
+            value={username}
+            onChange={(event) => setUsername(event.target.value)}
+          />
+        </label>
+      </div>
+      <div className="textbox">
+      <i className="fas fa-lock"></i>
+      <label htmlFor="password"
+        style={{color:'white', fontFamily:'cursive'}}>
+          
+          <TextField
+          label="Password"
+            type="password"
+            name="password"
+            required
+            value={password}
+            onChange={(event) => setPassword(event.target.value)}
+          />
+        </label>
+      </div>
+      <input className="btn" type="submit" name="submit" value="Log In" />
+    </div>
+</form> 
+
+
+    {/* <body className="landing">
 
 <div class="text">
   
@@ -82,7 +127,7 @@ function LoginForm() {
             onChange={(event) => setUsername(event.target.value)}
           />
         </label>
-              {/* <AccountCircle /> */}
+              {/* <AccountCircle />
       </div>
 
       <div>
@@ -102,7 +147,7 @@ function LoginForm() {
       <div>
         <input className="btn" type="submit" name="submit" value="Log In" />
       </div>
-    </form> 
+    </form>  */}
 
  
 
