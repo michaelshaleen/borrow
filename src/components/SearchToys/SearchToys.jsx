@@ -7,8 +7,6 @@ import Nav from '../Nav/Nav';
 import React from 'react';
 import './Search.css';
 import ShareToys from '../ShareToys/ShareToys';
-
-
 import AddCircleIcon from '@material-ui/icons/AddCircle';
 import CancelIcon from '@material-ui/icons/Cancel';
 import TextField from '@material-ui/core/TextField';
@@ -99,7 +97,7 @@ function SearchToys() {
 
     <div className="container">
 
-        <div className="search_Container">
+        <div>
             <p><h3>Search Toys</h3></p>
         <div>
         <TextField 
@@ -131,7 +129,7 @@ function SearchToys() {
                     endIcon={ <AddCircleIcon /> }
                     onClick={searchBtn}>
                     Search Toy
-                    </Button>
+              </Button>
 
                     <Button 
                       color="inherit"
@@ -172,7 +170,7 @@ function SearchToys() {
 
 
 
-      <div className="slide two">
+      <div>
              <ShareToys />
           </div>
         </div>

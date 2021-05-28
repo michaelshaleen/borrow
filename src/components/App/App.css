@@ -269,7 +269,7 @@ Container
 
 
 .userBody{
-  background-image: url('../pictures/user_profile.jpg');
+  background: #0b0b0b;
   background-size: cover;
   height:100vh;
 }

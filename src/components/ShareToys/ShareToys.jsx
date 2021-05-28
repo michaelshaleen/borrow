@@ -4,6 +4,7 @@ import Button from '@material-ui/core/Button';
 import axios from 'axios';
 import Nav from '../Nav/Nav';
 import React from 'react';
+import './Share.css';
 
 
 // const express = require('express');
@@ -127,13 +128,10 @@ function ShareToys() {
 
 
   return(
-    <div className="container">
-            <p><h3>Share New Toys</h3></p>
+    <div >
+            <h3 className="share">Share New Toys</h3>
 
-            <div>
-
-
-
+            <div className="share">
           <TextField 
             style={{top: '16px'}}
             value={toyName}

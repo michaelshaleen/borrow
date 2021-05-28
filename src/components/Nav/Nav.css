@@ -12,11 +12,11 @@
   position: relative;
   display: flex;
   left: 540px;
-  width: 10px;
+  width: 100px;
   height: 10px;
   background: url(https://i.ibb.co/HrfVRcx/menu.png);
   background-repeat: no-repeat;
-  background-size: 50px;
+  background-size: 500px;
   background-position: center;
   cursor: pointer;
 }
@@ -25,11 +25,11 @@
   background: url(https://i.ibb.co/rt3HybH/close.png);
   background-repeat: no-repeat;
   background-size: 5px;
-  background-position: center;
+  /* background-position: center; */
   cursor: pointer;
 }
 .toggle:hover .menu {
-  display: inline-block;
+  display: inline-flex;
 }
 
 

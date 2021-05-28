@@ -1,4 +1,10 @@
 .aboutInfo {
-  background-color: rgb(218, 159, 159);
-   
+background: #0b0b0b;   
+}
+
+p{
+  color: rgb(219, 214, 214);
+}
+.contact{
+  color: rgb(219, 214, 214);
 }

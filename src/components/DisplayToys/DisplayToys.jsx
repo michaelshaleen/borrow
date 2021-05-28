@@ -1,5 +1,5 @@
 import CallIcon from '@material-ui/icons/Call';
-
+import './Display.css';
 
 
 function DisplayToys( { toy } ){
