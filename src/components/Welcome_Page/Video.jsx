@@ -1,6 +1,16 @@
 import LinkedInIcon from '@material-ui/icons/LinkedIn';
+import PersonIcon from '@material-ui/icons/Person';
+import './Video.css';
 
 function Video() {
+
+
+  const linkedIn = () => {
+    window.open("https://www.linkedin.com/in/michael-s-57a181188/", "_blank");
+  }
+  const personalContact = () => {
+    window.open("www.google.com", "_blank");
+  }
 
 
   return(
@@ -16,12 +26,11 @@ function Video() {
         <a href="#login">Get Started!</a>
     </div>
 
-    <ul className="social">
+    <ul className="social"> 
+      <li onClick={linkedIn}><LinkedInIcon /></li> 
+      <li onClick={personalContact}><PersonIcon /></li>
       <li><a href="#"><img src="https://i.ibb.co/x7P24fL/facebook.png"/></a></li>
       <li><a href="#"><img src="https://i.ibb.co/Wnxq2Nq/twitter.png"/></a></li>
-      <li><a href="https://www.instagram.com/the_sabertoothwallaby/"><img src="https://i.ibb.co/ySwtH4B/instagram.png"/></a></li>
-      {/* <li><a href="https://www.linkedin.com/in/michael-s-57a181188/"> <LinkedInIcon /></a> </li> */}
-          {/* <li style={'size: 10px'}><a href="#"><img src={process.env.PUBLIC_URL + '/linkedIn.png'}/></a></li> */}
     </ul>
     
 </section>

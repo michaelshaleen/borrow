@@ -1,28 +1,25 @@
+.container{
+  background-color: #363535
 
+}
 .wrapper{
   display: flex;
   flex-direction: row;
   width: 400vw;
   transform: rotate(90deg) translateY(-100vh);
   transform-origin: top left;
+  background-color: #363535
+
 }
 
 .slide{
-  background: #0b0b0b;
+  background-color: #363535
 }
 .one{
-  /* background-image: image('../public/background.jpg'); */
-  background: #0b0b0b;
+  background-color: #363535
 }
 .two{
-  background: #0b0b0b;
-  /* background: url('../public/background.jpg'); */
-}
-.three{
-  background: #0b0b0b;
-}
-.four{
-  background-color: rgb(45, 168, 152);
+  background-color: #363535
 }
 
 .outer-wrapper{
@@ -33,6 +30,7 @@
   overflow-y: scroll;
   overflow-x: hidden;
   position: absolute;
+
 }
 
 Button{

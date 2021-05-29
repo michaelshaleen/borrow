@@ -132,7 +132,9 @@ function ShareToys() {
             <h3 className="share">Share New Toys</h3>
 
             <div className="share">
+              
           <TextField 
+            className="input"
             style={{top: '16px'}}
             value={toyName}
             type="text"
@@ -141,8 +143,12 @@ function ShareToys() {
             />
              
         <FormControl className={classes.formControl}>
-          <InputLabel id="demo-simple-select-label">Ages</InputLabel>
+          <InputLabel 
+            id="demo-simple-select-label">Ages</InputLabel>
+            <p>Ages</p>
           <Select
+            
+            className="input"
             labelId="demo-simple-select-label"
             id="demo-simple-select"
             value={ageGroup}
@@ -155,8 +161,11 @@ function ShareToys() {
         </FormControl>
 
         <FormControl className={classes.formControl}>
-            <InputLabel id="demo-simple-select-label">Available</InputLabel>
+            <InputLabel 
+              id="demo-simple-select-label">Available</InputLabel>
+              <p>Availability</p>
               <Select
+                className="input"   
                 labelId="demo-simple-select-label"
                 id="demo-simple-select"
                 value={available}
@@ -172,6 +181,7 @@ function ShareToys() {
         <label className="custom-file-label" htmlFor="customFile"></label>
           
           <Button 
+          className="input"
           size="small"
           endIcon={ <AddCircleIcon /> }
           onClick={shareToy}>
