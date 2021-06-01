@@ -159,26 +159,7 @@ header .logo
   justify-content: center;
   align-items: center;
 }
-.social li
-{
-  list-style: none;
-}
-.social li a
-{
-  display: inline-block;
-  margin-right: 20px;
-  filter: invert(1);
-  transform: scale(0.5);
-  transition: 0.5s;
-}
-.social li a:hover
-{
-  transform: scale(0.5) translateY(-15px);
-}
-.social li:hover
-{
-  background: yellowgreen;
-}
+
 .menu
 {
   position: absolute;
@@ -244,18 +225,7 @@ img {
   max-width: 100%;
 }
 
-p.intro {
-  width: 600px;
-  /* height: 200px; */
-  background-color: rgba(255, 255, 255, 0.1);
-  padding: 10px;
-  border-radius: 5px;
-  backdrop-filter: blur(5px);
-  border: 2px solid transparent;
-  background-clip: padding-box;
-  box-shadow: 10px 10px 10px rgba(45, 55, 68, 0.0.3);
-  line-height: 1.5;  
-}
+
  p.intro::first-letter {
   font-size: 25px; 
 
