@@ -134,17 +134,16 @@ function ShareToys() {
             <div className="share">
               
           <TextField 
-            className="input"
+            // className="input"
             style={{top: '16px'}}
             value={toyName}
-            type="text"
+            type="input"
             placeholder="Name"
             onChange={(event) => setToyName(event.target.value)}
             />
              
         <FormControl className={classes.formControl}>
-          <InputLabel 
-            id="demo-simple-select-label">Ages</InputLabel>
+          <InputLabel>Ages</InputLabel>
             <p>Ages</p>
           <Select
             
@@ -154,6 +153,7 @@ function ShareToys() {
             value={ageGroup}
             onChange={(event) => setAgeGroup(event.target.value)}
             >
+
             <MenuItem value="0-3">0-3</MenuItem>
             <MenuItem value="3-5">3-5</MenuItem>
             <MenuItem value="5-10">5-10</MenuItem>
