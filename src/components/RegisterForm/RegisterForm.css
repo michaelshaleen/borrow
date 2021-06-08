@@ -30,16 +30,10 @@ body{
   font-size: 20px;
   padding: 8px 0;
   margin: 8px 0;
-  border-bottom: 6px solid #4caf50;
   
 }
 
-.textbox i {
-  width: 26px;
-  float: left;
-  text-align: center;
-  
-}
+
 .textbox input {
   border: none;
   outline: none;
@@ -53,7 +47,7 @@ body{
 }
 
 .btn {
-  width: 100%;
+  width: 80%;
   background: none;
   border: 2px solid #4caf50;
   color: white;
