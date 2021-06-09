@@ -12,9 +12,10 @@ import {
 } from '@material-ui/core';
 
 import React, { useState } from 'react';
-import AccountCircle from '@material-ui/icons/AccountCircle';
-import InputAdornment from '@material-ui/core/InputAdornment';
-
+import AccountCircleIcon from '@material-ui/icons/AccountCircle';
+import EnhancedEncryptionIcon from '@material-ui/icons/EnhancedEncryption';
+import VisibilityIcon from '@material-ui/icons/Visibility';
+import VisibilityOffIcon from '@material-ui/icons/VisibilityOff';
 import { useDispatch } from 'react-redux';
 import {useSelector} from 'react-redux';
 import ReactPlayer from 'react-player';
@@ -24,6 +25,7 @@ import alphabet from '../pictures/alphabet.jpg';
 function LoginForm() {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
+  const [visible, setVisible] = useState(true);
   const errors = useSelector(store => store.errors);
   const dispatch = useDispatch();
 
@@ -43,25 +45,26 @@ function LoginForm() {
     }
   }; // end login
 
+
+  const changeIcon = () => {    
+    console.log("changed")
+  }
+
   return (
     <>
 
 <form className="formPanel" onSubmit={login}>
-
-
     <div className="login-box">
-      <h2>Login</h2>
+      <h4>Login</h4>
       {errors.loginMessage && (
         <h3 className="alert" role="alert">
           {errors.loginMessage}
         </h3>
       )}
       <div className="textbox">
-        <i className="fas fa-user"></i>
-        <i class='fa fa-space-shuttle' ></i>
-        <label htmlFor="username"
-        >
-           <TextField
+        <i><AccountCircleIcon /></i>
+        <label htmlFor="username">
+          <TextField
             style={{color: "white"}}
             label="Username"
             type="text"
@@ -73,18 +76,18 @@ function LoginForm() {
         </label>
       </div>
       <div className="textbox">
-      <i className="fas fa-lock"></i>
+        <i><EnhancedEncryptionIcon /></i>
       <label htmlFor="password"
-        style={{color:'white', fontFamily:'cursive'}}>
-          
-          <TextField
-          label="Password"
-            type="password"
-            name="password"
-            required
-            value={password}
-            onChange={(event) => setPassword(event.target.value)}
-          />
+        style={{color:'white', fontFamily:'cursive'}}>      
+            <TextField
+              id="myInput"
+              label="Password"
+              type="password"
+              name="password"
+              required
+              value={password}
+              onChange={(event) => setPassword(event.target.value)}
+              />
         </label>
       </div>
       <input className="btn" type="submit" name="submit" value="Log In" />

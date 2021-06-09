@@ -32,7 +32,8 @@ function Video() {
 
     <ul className="social"> 
       <li onClick={linkedIn}><LinkedInIcon /></li> 
-      <li onClick={personalContact}><PersonIcon /></li>
+      {/* link personal website */}
+      {/* <li onClick={personalContact}><PersonIcon /></li> */}
       <li onClick={twitterPage}><TwitterIcon /></li>
     </ul>
     
