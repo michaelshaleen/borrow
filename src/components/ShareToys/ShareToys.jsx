@@ -143,37 +143,49 @@ function ShareToys() {
             />
              
         <FormControl className={classes.formControl}>
-          <InputLabel>Ages</InputLabel>
+          {/* <InputLabel>Ages</InputLabel>
             <p>Ages</p>
           <Select
-            
             className="input"
             labelId="demo-simple-select-label"
             id="demo-simple-select"
             value={ageGroup}
             onChange={(event) => setAgeGroup(event.target.value)}
             >
-
+            <MenuItem value="#"></MenuItem>
             <MenuItem value="0-3">0-3</MenuItem>
             <MenuItem value="3-5">3-5</MenuItem>
             <MenuItem value="5-10">5-10</MenuItem>
-          </Select>
-        </FormControl>
+          </Select> */}
 
+
+
+        <InputLabel id="demo-simple-select-helper-label">Age</InputLabel>
+        <Select
+          labelId="demo-simple-select-label"
+          id="demo-simple-select"
+          value={ageGroup}
+          onChange={(event) => setAgeGroup(event.target.value)}
+          >
+          <MenuItem value="">
+            <em>None</em>
+          </MenuItem>
+          <MenuItem value="0-3">0-3</MenuItem>
+            <MenuItem value="3-5">3-5</MenuItem>
+            <MenuItem value="5-10">5-10</MenuItem>
+        </Select>
+          </FormControl>
         <FormControl className={classes.formControl}>
-            <InputLabel 
-              id="demo-simple-select-label">Available</InputLabel>
-              <p>Availability</p>
-              <Select
-                className="input"   
-                labelId="demo-simple-select-label"
-                id="demo-simple-select"
-                value={available}
-                onChange={(event) => setAvailable(event.target.value)}
-                >
-                  <MenuItem value="true">Available Now</MenuItem>
-                <MenuItem value="false">Not Available</MenuItem>
-              </Select>
+        <InputLabel 
+              id="demo-simple-select-label">Available</InputLabel>            <Select
+              labelId="demo-simple-select-label"
+              id="demo-simple-select"
+              value={available}
+              onChange={(event) => setAvailable(event.target.value)}
+              >
+              <MenuItem value="true">Available Now</MenuItem>
+              <MenuItem value="false">Not Available</MenuItem>
+            </Select>
         </FormControl>
 
 
@@ -189,7 +201,6 @@ function ShareToys() {
           </Button>
 
           <Button 
-            color="inherit"
             size="small"
             endIcon={ <CancelIcon /> }
             onClick={cancelBtn}>
