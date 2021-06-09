@@ -4,7 +4,7 @@ import ToiChare from '../LandingPage/LandingPage';
 import LogOutButton from '../LogOutButton/LogOutButton';
 import './About.css';
 import pic from '../pictures/sharkKid.jpg';
-
+import alphabet from '../pictures/alphabet.jpg';
 // This is one of our simplest components
 // It doesn't have local state,
 // It doesn't dispatch any redux actions or display any part of redux state
@@ -38,10 +38,13 @@ function AboutPage() {
       <div className="outer-wrapper">
       <div className="wrapper">
           <div className="slide one">
-            <img src={pic} />
-            <img src={pic} />
               <div className="userBody">
                   <div className="container">
+            <img src={pic} />
+              <img src={alphabet} />
+            <div className="slide two">
+            </div>
+
                   </div>
               </div>
           </div>
