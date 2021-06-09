@@ -38,9 +38,6 @@ function RegisterForm() {
   }; // end registerUser
 
   return (
-
-
-
     <>
     <form className="formPanel" onSubmit={registerUser}>
     <div className="login-box">

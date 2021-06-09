@@ -32,6 +32,7 @@ function AboutPage() {
       <p>Our next focus is to include our beloved pet owners in ToiChare! With options to use features for pets,
         children, or both we will be able to help more people and do our part in making the planet
         a more enjoyable place!
+        (Scroll for our Gallery)
       </p>
 
 

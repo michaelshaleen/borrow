@@ -12,6 +12,10 @@ import {
 } from '@material-ui/core';
 import {useSelector, useDispatch} from 'react-redux';
 import Nav from '../Nav/Nav';
+import AccountCircleIcon from '@material-ui/icons/AccountCircle';
+import PhoneAndroidIcon from '@material-ui/icons/PhoneAndroid';
+import EnhancedEncryptionIcon from '@material-ui/icons/EnhancedEncryption';
+
 
 
 
@@ -49,15 +53,13 @@ function Edit() {
   <p>{user} User Id</p>
     <div>
       <form className="formPanel" onSubmit={edit}>
-      <h2 style={{color:'white', fontFamily:'cursive'}}>Register User</h2>
-     
-    
+      <h2>Edit User</h2>
       <div>
-        <label htmlFor="username"
-        style={{color:'white', fontFamily: 'cursive'}}>
-          Username:
+      <i><AccountCircleIcon /></i>
+
+        <label htmlFor="username">
           <TextField
-            label="GreatParent1000"
+            label="username"
             type="text"
             name="username"
             value={username}
@@ -67,11 +69,10 @@ function Edit() {
         </label>
       </div>
       <div>
-        <label htmlFor="password"
-        style={{color:'black', fontFamily: 'cursive'}}>
-          Password:
+      <i><EnhancedEncryptionIcon /></i>
+        <label htmlFor="password">
           <TextField
-            label="Something Unique!"
+            label="password"
             type="password"
             name="password"
             value={password}
@@ -81,9 +82,8 @@ function Edit() {
         </label>
       </div>
       <div>
-        <label htmlFor="phone"
-        style={{color:'black', fontFamily: 'cursive'}}>
-          Phone Number:
+      <i><PhoneAndroidIcon /></i>
+        <label htmlFor="phone">
           <TextField
             label="867-5309"
             type="tel"

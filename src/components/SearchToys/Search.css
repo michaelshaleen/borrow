@@ -2,7 +2,7 @@
   background-color: #363535
 
 }
-.wrapper{
+/* .wrapper{
   display: flex;
   flex-direction: row;
   width: 400vw;
@@ -10,7 +10,7 @@
   transform-origin: top left;
   background-color: #363535
 
-}
+} */
 
 .slide{
   background-color: #363535
