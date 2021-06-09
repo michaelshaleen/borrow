@@ -3,6 +3,7 @@ import Nav from '../Nav/Nav';
 import ToiChare from '../LandingPage/LandingPage';
 import LogOutButton from '../LogOutButton/LogOutButton';
 import './About.css';
+import pic from '../pictures/sharkKid.jpg';
 
 // This is one of our simplest components
 // It doesn't have local state,
@@ -34,6 +35,19 @@ function AboutPage() {
         a more enjoyable place!
         (Scroll for our Gallery)
       </p>
+      <div className="outer-wrapper">
+      <div className="wrapper">
+          <div className="slide one">
+            <img src={pic} />
+            <img src={pic} />
+              <div className="userBody">
+                  <div className="container">
+                  </div>
+              </div>
+          </div>
+        </div>
+      </div>
+
 
 
       <footer><LogOutButton /> </footer>
