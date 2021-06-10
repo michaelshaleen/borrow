@@ -59,6 +59,8 @@ ul li a:hover:before {
 .text-nav {
   position: relative;
   z-index: 10;
+  border-bottom: 1px solid #e235d9;
+
 }
 
 /* 
