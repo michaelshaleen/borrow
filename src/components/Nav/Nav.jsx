@@ -40,14 +40,7 @@ function Nav() {
 
   return (
     <>
-
-
-    <div>
-
-    <nav>
-    {/* <div className="nav"> */}
-    <div className="text">
-    <div>
+    <div className="text-nav">
       <ul>
       <li><a href="#/landing">Welcome Page</a></li>
       <li><a href="#/user">My Profile</a></li>
@@ -65,23 +58,28 @@ function Nav() {
 
       </ul>
     </div>
-
     <div>
-      <div>
+
+    {/* <nav className="nav">
+    {/* <div className="nav"> 
+    <div className="text">
+
+    <div className="toggle">
+      <div class="menu">
         <ul>
-          {/* <li><a href="#/user">Home</a></li> */}
+          {/* <li><a href="#/user">Home</a></li>
           <li><a href="#/landing">Welcome Page</a></li>
           <li><a href="#/user">My Profile</a></li>
           {/* <li><a href="#/search_toys">Search</a></li>
-          <li><a href="#/share_toys">Share</a></li> */}
+          <li><a href="#/share_toys">Share</a></li> 
           <li><a href="#/about">About</a></li>
           <li><a href="#/search_toys">Toys</a></li>
 
           <li><a href="#/edit">Edit My Profile</a></li>
-          {/* <Route path="/" exact component={Pages}/> */}
+          {/* <Route path="/" exact component={Pages}/>
           <li
             onClick={() => dispatch({ type: 'LOGOUT' })}><a exact component={LogOutButton}>Leave</a></li>
-          {/* <li><LogOutButton /></li> */}
+          {/* <li><LogOutButton /></li> 
         </ul>
       </div>
   </div>
@@ -90,6 +88,7 @@ function Nav() {
 
       </div>
 </nav> 
+       */}
 </div>
 
  

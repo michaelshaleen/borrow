@@ -286,6 +286,7 @@ Button
 .btn_asLink {
   padding: 0;
   border-width: 0;
+  /* border-bottom: 1px solid #444; */
   border-radius: 0;
   background: none;
   font: inherit;
@@ -293,7 +294,6 @@ Button
 }
 
 .btn_asLink:hover {
-  border-width: 10%;
   background-color: transparent;
   border-bottom: 1px solid #fff;
   border-color: #fff;
