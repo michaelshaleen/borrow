@@ -45,9 +45,8 @@ function UserPage() {
 
   return (
     <>
-      <div>
-        <Nav />
-      </div>
+    <Nav />
+      
             <div class="w3-card-4 w3-dark-grey">
 
                 <div class="w3-container w3-center">

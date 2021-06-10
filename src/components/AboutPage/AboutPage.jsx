@@ -3,7 +3,8 @@ import Nav from '../Nav/Nav';
 import ToiChare from '../LandingPage/LandingPage';
 import LogOutButton from '../LogOutButton/LogOutButton';
 import './About.css';
-
+import pic from '../pictures/sharkKid.jpg';
+import alphabet from '../pictures/alphabet.jpg';
 // This is one of our simplest components
 // It doesn't have local state,
 // It doesn't dispatch any redux actions or display any part of redux state
@@ -34,6 +35,22 @@ function AboutPage() {
         a more enjoyable place!
         (Scroll for our Gallery)
       </p>
+      <div className="outer-wrapper">
+      <div className="wrapper">
+          <div className="slide one">
+              <div className="userBody">
+                  <div className="container">
+            <img src={pic} />
+            <div className="slide two">
+              <p>Hello</p>
+            </div>
+
+                  </div>
+              </div>
+          </div>
+        </div>
+      </div>
+
 
 
       <footer><LogOutButton /> </footer>

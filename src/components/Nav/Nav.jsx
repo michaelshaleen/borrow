@@ -40,14 +40,34 @@ function Nav() {
 
   return (
     <>
+
+
     <div>
 
-    <nav className="nav">
+    <nav>
     {/* <div className="nav"> */}
     <div className="text">
+    <div>
+      <ul>
+      <li><a href="#/landing">Welcome Page</a></li>
+      <li><a href="#/user">My Profile</a></li>
 
-    <div className="toggle">
-      <div class="menu">
+        <li><a href="#/about">About</a></li>
+        <li><a href="#/search_toys">Toys</a></li>
+        <li><a href="#/edit">Edit My Profile</a></li>
+        <li><a href="#">Our Team</a></li>
+        <li
+            onClick={() => 
+            dispatch({ type: 'LOGOUT' })}>
+              <a exact component={LogOutButton}>Leave
+              </a>
+        </li>
+
+      </ul>
+    </div>
+
+    <div>
+      <div>
         <ul>
           {/* <li><a href="#/user">Home</a></li> */}
           <li><a href="#/landing">Welcome Page</a></li>
