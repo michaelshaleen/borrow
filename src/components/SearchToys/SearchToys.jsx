@@ -87,11 +87,11 @@ function SearchToys() {
 
   return(
     <>
-    <div className="outer-wrapper">
-      <div className="wrapper">
-          <div className="slide one">
-              <div className="userBody">
-                  <div className="container">
+    <div>
+      <div>
+          <div>
+              <div>
+                  <div>
                       <div className="image_back">
                         <Nav />
                       <div className="container">
@@ -99,11 +99,14 @@ function SearchToys() {
                   <p><h3>Search Toys</h3></p>
               <div>
               <TextField 
-                style={{top: '16px'}}
-                value={toyName}
-                type="text"
-                placeholder="Name"
-                onChange={(event) => setToyName(event.target.value)} />
+                      style={{top: '16px'}}
+                      value={toyName}
+                      type="text"
+                      placeholder="Name"
+                      onChange={(event) => setToyName(event.target.value)} />
+
+
+
               <FormControl className={classes.formControl}>
                     <InputLabel id="demo-simple-select-label">Ages</InputLabel>
                     <Select 
@@ -132,29 +135,30 @@ function SearchToys() {
               </Button>
           </div>
           <table>
-            <thead>
+          <thead>
               <tr>
                 <th>Description </th>
                 <th>Age </th>
                 <th>Available </th>
                 <th>Owner's Phone</th>
               </tr>
-            </thead>
-            <tbody>
-              {searchedToys.map(toy => {
-                return <DisplayToys key={toy.id} toy={toy}/>  
-                })}
-            </tbody>
-         </table>
+              </thead>
+              <tbody>
+                      {searchedToys.map(toy => {
+                        return <DisplayToys key={toy.id} toy={toy}/>  
+                      }
+                      )}
+                    </tbody>
+            </table>
                       </div>
                     </div>
                 </div>
           </div>
         </div>
       </div>
-          <div>
+          <footer>
                 <ShareToys />
-             </div>
+             </footer>
           </div>
     </div>
  </>)

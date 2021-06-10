@@ -41,8 +41,8 @@ function AboutPage() {
               <div className="userBody">
                   <div className="container">
             <img src={pic} />
-              <img src={alphabet} />
             <div className="slide two">
+              <p>Hello</p>
             </div>
 
                   </div>
