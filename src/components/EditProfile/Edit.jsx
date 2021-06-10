@@ -15,7 +15,7 @@ import Nav from '../Nav/Nav';
 import AccountCircleIcon from '@material-ui/icons/AccountCircle';
 import PhoneAndroidIcon from '@material-ui/icons/PhoneAndroid';
 import EnhancedEncryptionIcon from '@material-ui/icons/EnhancedEncryption';
-
+import './Edit.css';
 function Edit() {
   const user = useSelector((store) => store.user.id);
   const dispatch = useDispatch();
@@ -81,9 +81,19 @@ function Edit() {
                   />
                 </label>
           </div>
-            <div>
-              <input className="btn edit" type="submit" name="submit" value="Submit Change" />
-            </div>
+            
+
+
+    <button
+      className="neon"
+      type="submit"
+      >
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      Submit 
+    </button>
         </form>
     </div>
   </>)
