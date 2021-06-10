@@ -39,7 +39,9 @@ ul:hover li a {
 ul li a:hover  {
   transform: scale(1.25);
   opacity: 1;
-  filter: blur(0);
+  filter: blur(0); 
+  color: #008183;
+
 }
 
 ul li a::before {
@@ -49,7 +51,6 @@ ul li a::before {
   left: 0;
   width: 100%;
   height: 100%;
-  background: #008183;
   transition: transform 0.5s;
   transform-origin: right;
   transform: scaleX(0);
