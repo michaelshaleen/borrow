@@ -9,12 +9,11 @@
   font-size: 12px;
   overflow: hidden;
   transition: .5s;
-  background-color: none;
-
+  background-color: black;
 }
 
 .neon:hover {
-  color: #255784;
+  color: #0b0b0b;
   background: #2196f3;
   box-shadow: 0 0 10px #2196f3,
     0 0 40px #2196f3,

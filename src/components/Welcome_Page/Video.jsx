@@ -22,7 +22,6 @@ function Video() {
   <section className="showcase">
   
     <video src={process.env.PUBLIC_URL + '/kids_playing.mp4'} muted loop autoPlay> </video>
-    {/* <div className="overlay"></div> */}
      <div className="text">
        <h3>Exploring ToiChare</h3>
         {/* <p className="intro">Welcome to ToiChare, please Log in 

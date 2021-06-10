@@ -55,9 +55,7 @@ function UserPage() {
                   <h5>{user.username}</h5>
                 </div>
 
-            </div>
-            <div className="overlay"></div>
-              
+            </div>              
             <div className="underline">
               *(These are the toys you've shared! )
             </div>
