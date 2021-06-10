@@ -7,14 +7,6 @@ function LogOutButton(props) {
   const dispatch = useDispatch();
   return (
     <>
-
-    {/* <div className="toggle">
-      <div class="menu">
-        <ul>     
-          <li><a href="#">Logout</a></li>
-        </ul>
-      </div>
-  </div> */}
     <button    
       // This button shows up in multiple locations and is styled differently
       // because it's styled differently depending on where it is used, the className

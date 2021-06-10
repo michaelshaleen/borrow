@@ -88,11 +88,11 @@ function Edit() {
       className="neon"
       type="submit"
       >
-      <span></span>
-      <span></span>
-      <span></span>
-      <span></span>
       Submit 
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
     </button>
         </form>
     </div>
