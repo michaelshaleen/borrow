@@ -95,7 +95,7 @@ function Edit() {
         </label>
       </div>
       <div>
-        <input className="btn" type="submit" name="submit" value="Submit Change" />
+        <input className="btn edit" type="submit" name="submit" value="Submit Change" />
       </div>
     </form>
       

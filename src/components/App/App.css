@@ -262,7 +262,21 @@ Button
   margin-top: 10px;
   color: #111;
 }
-
+.edit{
+  width: 50%;
+  background: none;
+  color: white;
+  padding: 5px;
+  font-size: 18px;
+  cursor: pointer;
+  margin: 12px 0;
+  border: none;
+  border: none;
+}
+.edit:hover {
+  border-bottom: 1px solid #008183;
+  transform-origin: right;
+}
 .btn_sizeMin {
   min-height: 50px;
   min-width: 100px;
@@ -276,10 +290,6 @@ Button
 .btn_sizeFull {
   display: block;
   width: 100%;
-}
-
-.btn:hover {
-    letter-spacing: 6px;
 }
 
 /* This line makes the "Register" and "Login" buttons look like links */
