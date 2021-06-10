@@ -12,19 +12,18 @@ import CancelIcon from '@material-ui/icons/Cancel';
 import TextField from '@material-ui/core/TextField';
 import swal from 'sweetalert';
 import { makeStyles } from '@material-ui/styles';
-import ToiChare from '../LandingPage/LandingPage';
 import InputLabel from '@material-ui/core/InputLabel';
 import MenuItem from '@material-ui/core/MenuItem';
 import FormHelperText from '@material-ui/core/FormHelperText';
 import FormControl from '@material-ui/core/FormControl';
 import Select from '@material-ui/core/Select';
-import LogOutButton from '../LogOutButton/LogOutButton';
  
 
 function SearchToys() {
-  const dispatch = useDispatch();
+  const dispatch = useDispatch(); 
+  const [toyName, setToyName] = useState('');
+  const [ageGroup, setAgeGroup] = useState('');
   const searchedToys = useSelector((store) => store.searchedToy)
-  console.log(searchedToys, "toys heeree")
   const user = useSelector((store) => store.user);
 
   if(searchedToys.length == 0){
@@ -34,9 +33,6 @@ function SearchToys() {
     console.log("more than zero")
   }
 
-  
-  const [toyName, setToyName] = useState('');
-  const [ageGroup, setAgeGroup] = useState('');
 
   const searchBtn = (action) => {
     if(!toyName || !ageGroup){
@@ -87,80 +83,77 @@ function SearchToys() {
 
   return(
     <>
-    <div>
-      <div>
+        <div>
           <div>
               <div>
                   <div>
-                      <div className="image_back">
-                        <Nav />
-                      <div className="container">
-              <div>
-                  <p><h3>Search Toys</h3></p>
-              <div>
-              <TextField 
-                      style={{top: '16px'}}
-                      value={toyName}
-                      type="text"
-                      placeholder="Name"
-                      onChange={(event) => setToyName(event.target.value)} />
-
-
-
-              <FormControl className={classes.formControl}>
-                    <InputLabel id="demo-simple-select-label">Ages</InputLabel>
-                    <Select 
-                      labelId="demo-simple-select-label"
-                      id="demo-simple-select"
-                      value={ageGroup}
-                      onChange={(event) => setAgeGroup(event.target.value)}>
-                        <MenuItem value="0-3">0-3</MenuItem>
-                        <MenuItem value="3-5">3-5</MenuItem>
-                        <MenuItem value="5-10">5-10</MenuItem>
-                    </Select>
-              </FormControl>
-              <Button
-                color="default"
-                size="small"
-                endIcon={ <AddCircleIcon /> }
-                onClick={searchBtn}>
-                  Search Toy
-              </Button>
-              <Button
-                color="inherit"
-                size="small"
-                endIcon={ <CancelIcon /> }
-                onClick={cancelBtn}>
-                  Cancel
-              </Button>
-          </div>
-          <table>
-          <thead>
-              <tr>
-                <th>Description </th>
-                <th>Age </th>
-                <th>Available </th>
-                <th>Owner's Phone</th>
-              </tr>
-              </thead>
-              <tbody>
-                      {searchedToys.map(toy => {
-                        return <DisplayToys key={toy.id} toy={toy}/>  
-                      }
-                      )}
-                    </tbody>
-            </table>
-                      </div>
+                      <div>
+                          <div className="image_back">
+                            <Nav />
+                          <div className="container">
+                  <div>
+                      <p><h3>Search Toys</h3></p>
+                  <div>
+                  <TextField 
+                          style={{top: '16px'}}
+                          value={toyName}
+                          type="text"
+                          placeholder="Name"
+                          onChange={(event) => setToyName(event.target.value)} />
+                  <FormControl className={classes.formControl}>
+                        <InputLabel id="demo-simple-select-label">Ages</InputLabel>
+                        <Select 
+                          labelId="demo-simple-select-label"
+                          id="demo-simple-select"
+                          value={ageGroup}
+                          onChange={(event) => setAgeGroup(event.target.value)}>
+                            <MenuItem value="0-3">0-3</MenuItem>
+                            <MenuItem value="3-5">3-5</MenuItem>
+                            <MenuItem value="5-10">5-10</MenuItem>
+                        </Select>
+                  </FormControl>
+                  <Button
+                    color="default"
+                    size="small"
+                    endIcon={ <AddCircleIcon /> }
+                    onClick={searchBtn}>
+                      Search Toy
+                  </Button>
+                  <Button
+                    color="inherit"
+                    size="small"
+                    endIcon={ <CancelIcon /> }
+                    onClick={cancelBtn}>
+                      Cancel
+                  </Button>
+              </div>
+              <table>
+              <thead>
+                  <tr>
+                    <th>Description </th>
+                    <th>Age </th>
+                    <th>Available </th>
+                    <th>Owner's Phone</th>
+                  </tr>
+                  </thead>
+                  <tbody>
+                          {searchedToys.map(toy => {
+                            return <DisplayToys key={toy.id} toy={toy}/>  
+                          }
+                          )}
+                        </tbody>
+                </table>
+                          </div>
+                        </div>
                     </div>
-                </div>
+              </div>
+            </div>
           </div>
+              <footer>
+                    <ShareToys />
+                </footer>
+              </div>
         </div>
-      </div>
-          <footer>
-                <ShareToys />
-             </footer>
-          </div>
-    </div>
  </>)
 }
 

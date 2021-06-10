@@ -1,28 +1,16 @@
-.container{
-  background-color: #363535
-
-}
-/* .wrapper{
-  display: flex;
-  flex-direction: row;
-  width: 400vw;
-  transform: rotate(90deg) translateY(-100vh);
-  transform-origin: top left;
-  background-color: #363535
-
-} */
-
-.slide{
+.container {
   background-color: #363535
 }
-.one{
+.slide {
   background-color: #363535
 }
-.two{
+.one {
   background-color: #363535
 }
-
-.outer-wrapper{
+.two {
+  background-color: #363535
+}
+.outer-wrapper {
   width: 100vh;
   height: 100vw;
   transform: rotate(-90deg) translateX(-100vh);
@@ -30,18 +18,14 @@
   overflow-y: scroll;
   overflow-x: hidden;
   position: absolute;
-
 }
 
-Button{
+Button {
   background: #fff;
 }
-
-table tr th{
+table tr th {
   color: #fff;
-
 }
-
 .MuiOutlinedInput-notchedOutline {
   border-color: white;
 }

@@ -18,7 +18,6 @@ import ShareToys from '../ShareToys/ShareToys';
 import UserPage from '../UserPage/UserPage';
 import ToyList from '../ToyList/ToyList';
 import Video from '../Welcome_Page/Video';
-
 import './App.css';
 
 function App() {
@@ -31,16 +30,13 @@ function App() {
   return (
     <Router>
       <div>
-        {/* <Nav /> */}
         <Switch>
           {/* Visiting localhost:3000 will redirect to localhost:3000/home */}
           <Redirect exact from="/" to="/landing" />
-
           {/* Visiting localhost:3000/about will show the about page. */}
           <Route exact path="/about" >
             <AboutPage />
           </Route>
-
           <Route exact path="/landing">
             <Video />
           </Route>
@@ -64,10 +60,6 @@ function App() {
           <ProtectedRoute exact path="/edit">
             <Edit />
           </ProtectedRoute>
-
-         
-          
-
           {/* When a value is supplied for the authRedirect prop the user will
             be redirected to the path supplied when logged in, otherwise they will
             be taken to the component and path supplied. */}
@@ -92,20 +84,11 @@ function App() {
           <Route exact path="/landing">
             <Video />
           </Route>
-
-            
-            {/* // with authRedirect:
-            // - if logged in, redirects to "/user"
-            // - else shows LandingPage at "/home"
-            // authRedirect="/user" */}
-          
-
           {/* If none of the other routes matched, we will show a 404. */}
           <Route>
             <h1>404</h1>
           </Route>
         </Switch>
-        {/* <Footer /> */}
       </div>
     </Router>
   );

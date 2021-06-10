@@ -1,10 +1,6 @@
 import React from 'react';
 import { useDispatch } from 'react-redux';
 import ExitToAppIcon from '@material-ui/icons/ExitToApp';
-import Button from '@material-ui/core/Button';
-import Tabs from '@material-ui/core/Tabs';
-import Tab from '@material-ui/core/Tab';
-
 
 
 function LogOutButton(props) {
@@ -24,12 +20,10 @@ function LogOutButton(props) {
       // because it's styled differently depending on where it is used, the className
       // is passed to it from it's parents through React props
       className={props.className}
-      onClick={() => dispatch({ type: 'LOGOUT' })}
-      >
-        
-  <div fullWidth 
-  label="LogOut" icon={<ExitToAppIcon/> } />
-    
+      onClick={() => dispatch({ type: 'LOGOUT' })}>    
+        <div 
+          fullWidth 
+          label="LogOut" icon={<ExitToAppIcon/> }/>
     </button>
     </>
   );

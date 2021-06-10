@@ -20,10 +20,8 @@ function RegisterForm() {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
   const [phone, setPhone] = useState('');
-
   const errors = useSelector((store) => store.errors);
   const dispatch = useDispatch();
-
   const registerUser = (event) => {
     event.preventDefault();
 
@@ -39,66 +37,69 @@ function RegisterForm() {
 
   return (
     <>
-    <form className="formPanel" onSubmit={registerUser}>
-    <div className="login-box">
-      <h4>Register</h4>
-      {errors.loginMessage && (
-        <h3 className="alert" role="alert">
-          {errors.loginMessage}
-        </h3>
-      )}
-      <div className="textbox">
-        <i><AccountCircleIcon /></i>
-        <label htmlFor="username">
-          <TextField
-            style={{color: "white"}}
-            label="Username"
-            type="text"
-            name="username"
-            required
-            value={username}
-            onChange={(event) => setUsername(event.target.value)}
-          />
-        </label>
-      </div>
-      <div className="textbox">
-        <i><EnhancedEncryptionIcon /></i>
-      <label htmlFor="password"
-              style={{color:'white',
-              fontFamily:'cursive'}}>      
-            <TextField
-              id="myInput"
-              label="Password"
-              type="password"
-              name="password"
-              required
-              value={password}
-              onChange={(event) => setPassword(event.target.value)}
-              />
-        </label>
-        <div>
-          <i><PhoneAndroidIcon /></i>
-        <label 
-          htmlFor="phone"
-          style={{color:'white', fontFamily: 'cursive'}}>
-            <TextField
-              label="867-5309"
-              type="tel"
-              name="phone"
-              value={phone}
-              required
-              onChange={(event) => setPhone(event.target.value)}
-            />
-          </label>
-        </div>
-      </div>
-      <input className="btn" type="submit" name="submit" value="Register" />
-    </div>
-</form> 
-
-
-
+        <form className="formPanel" onSubmit={registerUser}>
+          <div className="login-box">
+            <h4>Register</h4>
+            {errors.loginMessage && (
+              <h3 className="alert" role="alert">
+                {errors.loginMessage}
+              </h3>
+            )}
+            <div className="textbox">
+              <i><AccountCircleIcon /></i>
+              <label htmlFor="username">
+                <TextField
+                  style={{color: "white"}}
+                  label="Username"
+                  type="text"
+                  name="username"
+                  required
+                  value={username}
+                  onChange={(event) => setUsername(event.target.value)}
+                />
+              </label>
+            </div>
+            <div className="textbox">
+              <i><EnhancedEncryptionIcon /></i>
+            <label htmlFor="password"
+                    style={{color:'white',
+                    fontFamily:'cursive'}}>      
+                  <TextField
+                    id="myInput"
+                    label="Password"
+                    type="password"
+                    name="password"
+                    required
+                    value={password}
+                    onChange={(event) => setPassword(event.target.value)}
+                    />
+              </label>
+              <div>
+                <i><PhoneAndroidIcon /></i>
+              <label 
+                htmlFor="phone"
+                style={{color:'white', fontFamily: 'cursive'}}>
+                  <TextField
+                    label="867-5309"
+                    type="tel"
+                    name="phone"
+                    value={phone}
+                    required
+                    onChange={(event) => setPhone(event.target.value)}
+                  />
+                </label>
+              </div>
+            </div>
+            <input className="btn" type="submit" name="submit" value="Register" />
+          </div>
+       </form> 
     </>
+    );
+  }
+  
+  export default RegisterForm;
+
+
     // <form className="formPanel" onSubmit={registerUser}>
     //   <h2 style={{color:'white'}}>Register User</h2>
     //   {errors.registrationMessage && (
@@ -152,10 +153,6 @@ function RegisterForm() {
     //     <input className="btn" type="submit" name="submit" value="Register" />
     //   </div>
     // </form>
-  );
-}
-
-export default RegisterForm;
 
 
 

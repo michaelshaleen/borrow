@@ -5,15 +5,9 @@ function ToiChare() {
 
   return(
     <>
-
-    <Link to="/landing">
-    <h2 className="nav-title">Logout</h2>
-  </Link>
-
-
-
-
-
+        <Link to="/landing">
+          <h2 className="nav-title">Logout</h2>
+        </Link>
 </>
   )
 }

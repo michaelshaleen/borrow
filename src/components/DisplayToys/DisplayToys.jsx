@@ -10,32 +10,27 @@ function DisplayToys( { toy } ){
 
   return(
     <>
-<tr>
-         <td>{toy.name} </td>
-         <td>{toy.ages}</td>
-         <td>{toy.available ? <span> available </span>:<span> unavailable </span> }</td>
-         <td>
-           <CallIcon 
-              onClick={() => setModalIsOpen(true)}
-            /> 
+      <tr>
+        <td>{toy.name} </td>
+        <td>{toy.ages}</td>
+        <td>{toy.available ? <span> available </span>:<span> unavailable </span> }</td>
+        <td>
+          <CallIcon 
+              onClick={() => setModalIsOpen(true)}/> 
           <MessageIcon 
             onClick={() => setModalIsOpen(true)}/>
         </td>
-         
-       </tr>
+      </tr>
        <Modal
           isOpen={modalIsOpen}
-          onRequestClose={() => setModalIsOpen(false)}
-          >
-         <h2>{toy.user}</h2>
-         <p>Phone number: {toy.phone}</p>
-         <p>Phone number: {toy.user_id}</p>
-
-         <div>
-           <button onClick={() => setModalIsOpen(false)}>X</button>
-         </div>
-       </Modal>
-
+          onRequestClose={() => setModalIsOpen(false)}>
+          <h2>{toy.user}</h2>
+          <p>Phone number: {toy.phone}</p>
+          <p>Phone number: {toy.user_id}</p>
+          <div>
+            <button onClick={() => setModalIsOpen(false)}>X</button>
+          </div>
+      </Modal>
     </>
   )
 }

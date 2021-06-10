@@ -14,12 +14,8 @@ import {
 import React, { useState } from 'react';
 import AccountCircleIcon from '@material-ui/icons/AccountCircle';
 import EnhancedEncryptionIcon from '@material-ui/icons/EnhancedEncryption';
-import VisibilityIcon from '@material-ui/icons/Visibility';
-import VisibilityOffIcon from '@material-ui/icons/VisibilityOff';
 import { useDispatch } from 'react-redux';
 import {useSelector} from 'react-redux';
-import ReactPlayer from 'react-player';
-import alphabet from '../pictures/alphabet.jpg';
 
 
 function LoginForm() {
@@ -52,47 +48,44 @@ function LoginForm() {
 
   return (
     <>
-
-<form className="formPanel" onSubmit={login}>
-    <div className="login-box">
-      <h4>Login</h4>
-      {errors.loginMessage && (
-        <h3 className="alert" role="alert">
-          {errors.loginMessage}
-        </h3>
-      )}
-      <div className="textbox">
-        <i><AccountCircleIcon /></i>
-        <label htmlFor="username">
-          <TextField
-            style={{color: "white"}}
-            label="Username"
-            type="text"
-            name="username"
-            required
-            value={username}
-            onChange={(event) => setUsername(event.target.value)}
-          />
-        </label>
-      </div>
-      <div className="textbox">
-        <i><EnhancedEncryptionIcon /></i>
-      <label htmlFor="password"
-        style={{color:'white', fontFamily:'cursive'}}>      
-            <TextField
-              id="myInput"
-              label="Password"
-              type="password"
-              name="password"
-              required
-              value={password}
-              onChange={(event) => setPassword(event.target.value)}
-              />
-        </label>
-      </div>
-      <input className="btn" type="submit" name="submit" value="Log In" />
-    </div>
-</form> 
+          <form className="formPanel" onSubmit={login}>
+            <div className="login-box">
+              <h4>Login</h4>
+                {errors.loginMessage && (
+                  <h3 className="alert" role="alert">
+                    {errors.loginMessage}
+                  </h3>
+                )}
+              <div className="textbox">
+                <i><AccountCircleIcon /></i>
+                <label htmlFor="username">
+                    <TextField
+                      style={{color: "white"}}
+                      label="Username"
+                      type="text"
+                      name="username"
+                      required
+                      value={username}
+                      onChange={(event) => setUsername(event.target.value)}/>
+                </label>
+              </div>
+                <div className="textbox">
+                  <i><EnhancedEncryptionIcon /></i>
+                  <label htmlFor="password"
+                    style={{color:'white', fontFamily:'cursive'}}>      
+                      <TextField
+                        id="myInput"
+                        label="Password"
+                        type="password"
+                        name="password"
+                        required
+                        value={password}
+                        onChange={(event) => setPassword(event.target.value)}/>
+                  </label>
+                </div>
+                <input className="btn" type="submit" name="submit" value="Log In" />
+              </div>
+          </form> 
     </>
   );
 }

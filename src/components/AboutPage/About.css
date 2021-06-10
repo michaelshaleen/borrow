@@ -1,39 +1,33 @@
 .aboutInfo {
 background: #0b0b0b;   
 }
-
-p{
+p { 
   color: rgb(219, 214, 214);
 }
-.contact{
+.contact {
   color: rgb(219, 214, 214);
 }
-
-.container{
+.container {
   background-color: #363535
-
 }
-.wrapper{
+.wrapper {
   display: flex;
   flex-direction: row;
   width: 400vw;
   transform: rotate(90deg) translateY(-100vh);
   transform-origin: top left;
   background-color: #363535
-
 }
-
-.slide{
+.slide {
   background-color: #363535
 }
-.one{
+.one {
   background-color: #363535
 }
-.two{
+.two {
   background-color: #363535
 }
-
-.outer-wrapper{
+.outer-wrapper {
   width: 100vh;
   height: 100vw;
   transform: rotate(-90deg) translateX(-100vh);
@@ -41,5 +35,4 @@ p{
   overflow-y: scroll;
   overflow-x: hidden;
   position: absolute;
-
 }
