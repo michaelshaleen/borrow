@@ -35,3 +35,8 @@ table tr th {
 .MuiInputBase-input {
   color: white;
 }
+
+.share {
+  position: relative;
+  top: 100px;
+}

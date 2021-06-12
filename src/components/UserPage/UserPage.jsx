@@ -50,9 +50,8 @@ function UserPage() {
             <div class="w3-card-4 w3-dark-grey">
 
                 <div class="w3-container w3-center">
-                  <h3>Home Page</h3>
                   {/* <img src={Profile} alt="Avatar" style={{width: 100, height: 100}}  /> */}
-                  <h5>{user.username}</h5>
+                  <h5>Hey there {user.username}!</h5>
                 </div>
 
             </div>              
