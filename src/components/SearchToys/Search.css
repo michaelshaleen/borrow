@@ -24,7 +24,7 @@ Button {
   background: #fff;
 }
 table tr th {
-  color: #fff;
+  color: rgb(195, 162, 106);
 }
 .MuiOutlinedInput-notchedOutline {
   border-color: white;
