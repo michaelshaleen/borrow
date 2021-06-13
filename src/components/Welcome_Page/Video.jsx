@@ -19,13 +19,33 @@ function Video() {
 
   return(
     <>
+    <nav>
+
+    {/* <button
+      className="neon"
+      type="submit"
+      >
+      Submit 
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+    </button> */}
+        </nav>
   <section className="showcase">  
     <video src={process.env.PUBLIC_URL + '/kids_playing.mp4'} muted loop autoPlay> </video>
      <div className="text">
        <h3>Exploring ToiChare</h3>
         {/* <p className="intro">Welcome to ToiChare, please Log in 
         or Register an account to begin using!</p> */}
-        <a href="#login">Get Started!</a>
+        <a 
+          className="neon"
+          href="#login">Get Started!
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          </a>
     </div>
 
     <ul className="social"> 
@@ -36,6 +56,8 @@ function Video() {
     </ul>
     
 </section>
+
+
 </>
 )
 
