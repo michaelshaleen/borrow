@@ -11,6 +11,7 @@
 
 ul li {
   padding-left: 5px;
+  color: #b69166;
 }
 
 ul li:hover {
@@ -18,7 +19,7 @@ ul li:hover {
           transform: scale(1.2);
   -webkit-transition: 1.25s;
   transition: 1.25s;
-  color: #b69166;
+  color: #fff;
 }
 
 .text {
@@ -27,12 +28,9 @@ ul li:hover {
 }
 
 .text h3 {
-  right: 400px;
-  font-size: 4em;
+  font-size: 1em;
   font-weight: 700;
-  color: #b69166;
-  line-height: 1em;
-  text-transform: uppercase;
+  color: #0b0b0b;
 }
 
 .social {
