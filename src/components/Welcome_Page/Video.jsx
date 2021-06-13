@@ -19,8 +19,7 @@ function Video() {
 
   return(
     <>
-  <section className="showcase">
-  
+  <section className="showcase">  
     <video src={process.env.PUBLIC_URL + '/kids_playing.mp4'} muted loop autoPlay> </video>
      <div className="text">
        <h3>Exploring ToiChare</h3>

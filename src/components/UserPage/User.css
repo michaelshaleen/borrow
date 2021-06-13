@@ -1,4 +1,4 @@
-body {
+/* body {
 background-color: #363535
 }
 
@@ -18,18 +18,18 @@ h5{
   flex-direction: row;
   width: 400vw;
   transform: rotate(90deg) translateY(-100vh);
-  transform-origin: top left;
+  transform-origin: top left; 
 }
 
 .one{
-  /* background-image: image('../public/background.jpg'); */
+  /* background-image: image('../public/background.jpg'); 
   background-color: rgba(243, 239, 222, 0.904);
 
 }
 .two{
   background-color: rgba(243, 239, 222, 0.904);
 
-  /* background: url('../public/background.jpg'); */
+  /* background: url('../public/background.jpg'); 
 }
 .three{
   background-color: rgb(65, 40, 10);
@@ -51,10 +51,10 @@ h5{
 ::-webkit-scrollbar {
   display: none;
 
-} */
+} 
 
 body::-webkit-scrollbar {
-  display: none;               /* width of the entire scrollbar */
+  display: none;               /* width of the entire scrollbar 
 }
 
 .underline {
