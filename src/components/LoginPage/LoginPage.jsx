@@ -3,7 +3,7 @@ import LoginForm from '../LoginForm/LoginForm';
 import { useHistory } from 'react-router-dom';
 import Nav from '../Nav/Nav';
 import ToiChare from '../LandingPage/LandingPage';
-
+import './LoginPage.css';
 
 function LoginPage() {
   const history = useHistory();
@@ -14,11 +14,15 @@ function LoginPage() {
         <center>
           <button
             type="button"
-            className="btn btn_asLink"
+            className="register-btn"
             onClick={() => {
               history.push('/registration');
             }}>
             Register 
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
           </button>
         </center>
       </div>

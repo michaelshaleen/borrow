@@ -83,7 +83,13 @@ function LoginForm() {
                         onChange={(event) => setPassword(event.target.value)}/>
                   </label>
                 </div>
-                <input className="btn" type="submit" name="submit" value="Log In" />
+                <button className="btn" type="submit" name="submit" value="Log In">
+                  Submit
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                </button>
               </div>
           </form> 
     </>
