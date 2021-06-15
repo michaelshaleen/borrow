@@ -5,7 +5,7 @@ import {
   TextField,
   MenuItem,
   FormControl,
-  Select,
+  Select, 
   Paper,
   Fade,
   Tooltip,
@@ -90,7 +90,17 @@ function RegisterForm() {
                 </label>
               </div>
             </div>
-            <input className="btn" type="submit" name="submit" value="Register" />
+            <button 
+              className="btn"
+              type="submit" 
+              name="submit"
+            >
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            Register
+            </button>
           </div>
        </form> 
     </>

@@ -24,6 +24,10 @@ function RegisterPage() {
           }}
         >
           Login
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
         </button>
       </center>
     </div>

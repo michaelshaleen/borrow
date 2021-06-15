@@ -1,2 +1,11 @@
-$primaryBtn : rgb(182, 145, 102); 
-@import '../'
+@import "../LoginPage/LoginPage.scss";
+
+//button color scheme import
+.container {
+  color: $primaryBtn;
+}
+
+//snake effect mixin import
+.btn {
+  @include button;
+}

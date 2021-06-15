@@ -1,0 +1,5 @@
+@import "../Welcome_Page/Video.scss";
+
+.btn {
+  @include button;
+}
