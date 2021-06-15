@@ -16,6 +16,8 @@ import AccountCircleIcon from '@material-ui/icons/AccountCircle';
 import EnhancedEncryptionIcon from '@material-ui/icons/EnhancedEncryption';
 import { useDispatch } from 'react-redux';
 import {useSelector} from 'react-redux';
+import { useHistory } from 'react-router-dom';
+
 
 
 function LoginForm() {
@@ -24,6 +26,8 @@ function LoginForm() {
   const [visible, setVisible] = useState(true);
   const errors = useSelector(store => store.errors);
   const dispatch = useDispatch();
+  const history = useHistory();
+
 
   const login = (event) => {
     event.preventDefault();
@@ -90,6 +94,18 @@ function LoginForm() {
                   <span></span>
                   <span></span>
                 </button>
+                <button
+            type="button"
+            className="register-btn"
+            onClick={() => {
+              history.push('/registration');
+            }}>
+            Register 
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
               </div>
           </form> 
     </>

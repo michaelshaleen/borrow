@@ -1,8 +1,6 @@
 import React from 'react';
 import LoginForm from '../LoginForm/LoginForm';
 import { useHistory } from 'react-router-dom';
-import Nav from '../Nav/Nav';
-import ToiChare from '../LandingPage/LandingPage';
 import './LoginPage.css';
 
 function LoginPage() {
@@ -11,8 +9,8 @@ function LoginPage() {
     <>
       <div className="login_background">
         <LoginForm />
-        <center>
-          <button
+        
+          {/* <button
             type="button"
             className="register-btn"
             onClick={() => {
@@ -23,8 +21,7 @@ function LoginPage() {
             <span></span>
             <span></span>
             <span></span>
-          </button>
-        </center>
+          </button> */}
       </div>
     </>
   );
