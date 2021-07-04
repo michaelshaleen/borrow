@@ -1,42 +1,16 @@
-.container {
-  background-color: #363535
-}
-.slide {
-  background-color: #363535
-}
-.one {
-  background-color: #363535
-}
-.two {
-  background-color: #363535
-}
-.outer-wrapper {
-  width: 100vh;
-  height: 100vw;
-  transform: rotate(-90deg) translateX(-100vh);
-  transform-origin: top left;
-  overflow-y: scroll;
-  overflow-x: hidden;
-  position: absolute;
-}
-
-Button {
-  background: #fff;
-}
-table tr th {
-  color: #fff;
-}
-.MuiOutlinedInput-notchedOutline {
-  border-color: white;
-}
-.MuiFormLabel-root {
-  color: white;
-}
-.MuiInputBase-input {
+Button:hover {
+  border: 1px solid #b69166;
   color: white;
 }
 
-.share {
-  position: relative;
-  top: 100px;
+.spacer {
+  height: 200px;
+}
+
+h3 {
+  color: white;
+}
+
+table {
+  color: white;
 }

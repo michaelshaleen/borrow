@@ -10,8 +10,8 @@ import alphabet from '../pictures/alphabet.jpg';
 function AboutPage() {
   return (
     <>
-    <div className="container aboutInfo">
       <Nav />
+    <div className="container aboutInfo">
       <div >
           <p>If you have any questions or need assistance
             please use the following contact methods

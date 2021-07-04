@@ -1,4 +1,4 @@
-.btn {
+.register-btn {
   position: relative;
   display: inline-block;
   padding: 15px 30px;
@@ -13,7 +13,7 @@
   background-color: #b69166;
 }
 
-.btn:hover {
+.register-btn:hover {
   color: #b69166;
   background: #fff;
   -webkit-box-shadow: 0 0 10px #fff, 0 0 40px #fff, 0 0 80px #fff;
@@ -22,12 +22,12 @@
           transition-delay: 1s;
 }
 
-.btn span {
+.register-btn span {
   position: absolute;
   display: block;
 }
 
-.btn span:nth-child(1) {
+.register-btn span:nth-child(1) {
   top: 0;
   left: -100%;
   width: 100%;
@@ -36,13 +36,13 @@
   background: linear-gradient(90deg, transparent, #fff);
 }
 
-.btn:hover span:nth-child(1) {
+.register-btn:hover span:nth-child(1) {
   left: 100%;
   -webkit-transition: 1s;
   transition: 1s;
 }
 
-.btn span:nth-child(3) {
+.register-btn span:nth-child(3) {
   bottom: 0;
   right: -100%;
   width: 100%;
@@ -51,7 +51,7 @@
   background: linear-gradient(270deg, transparent, #fff);
 }
 
-.btn:hover span:nth-child(3) {
+.register-btn:hover span:nth-child(3) {
   right: 100%;
   -webkit-transition: 1s;
   transition: 1s;
@@ -59,7 +59,7 @@
           transition-delay: .5s;
 }
 
-.btn span:nth-child(2) {
+.register-btn span:nth-child(2) {
   top: -100%;
   right: 0;
   width: 2px;
@@ -68,7 +68,7 @@
   background: linear-gradient(180deg, transparent, #fff);
 }
 
-.btn:hover span:nth-child(2) {
+.register-btn:hover span:nth-child(2) {
   top: 100%;
   -webkit-transition: 1s;
   transition: 1s;
@@ -76,7 +76,7 @@
           transition-delay: 0.25s;
 }
 
-.btn span:nth-child(4) {
+.register-btn span:nth-child(4) {
   bottom: -100%;
   left: 0;
   width: 2px;
@@ -85,11 +85,11 @@
   background: linear-gradient(360deg, transparent, #fff);
 }
 
-.btn:hover span:nth-child(4) {
+.register-btn:hover span:nth-child(4) {
   bottom: 100%;
   -webkit-transition: 1s;
   transition: 1s;
   -webkit-transition-delay: 0.75s;
           transition-delay: 0.75s;
 }
-/*# sourceMappingURL=LoginForm.css.map */
+/*# sourceMappingURL=LoginPage.css.map */
