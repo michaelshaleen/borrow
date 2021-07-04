@@ -18,7 +18,7 @@ body::-webkit-scrollbar-thumb {
  
 }
 .table tr td {
-  color: rgb(245, 217, 217);
+  color: #008183;
   border-collapse: collapse;
   border: 1px solid white;
   text-align: center;
@@ -26,7 +26,7 @@ body::-webkit-scrollbar-thumb {
 }
 
 .table tr td Button{
-  color:rgb(245, 217, 217);
+  color: #008183;
 }
 /* tr:nth-child(even) {background-color: #181b2f}
 tr:nth-child(odd) {background-color: coral;} */

@@ -149,9 +149,10 @@ function SearchToys() {
               </div>
             </div>
           </div>
-              <footer>
+              <div
+                className="share">
                     <ShareToys />
-                </footer>
+                </div>
               </div>
         </div>
  </>)
