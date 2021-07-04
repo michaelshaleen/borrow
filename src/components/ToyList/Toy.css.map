@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAEA,AAAA,EAAE,CAAA;EACA,KAAK,EAAE,KAAK;CACb",
+    "sources": [
+        "Toy.scss"
+    ],
+    "names": [],
+    "file": "Toy.css"
+}

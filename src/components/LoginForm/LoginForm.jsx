@@ -88,7 +88,7 @@ function LoginForm() {
                   </label>
                 </div>
                 <button className="btn" type="submit" name="submit" value="Log In">
-                  Submit
+                  Login
                   <span></span>
                   <span></span>
                   <span></span>

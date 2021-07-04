@@ -15,13 +15,15 @@ import {
 import AccountCircleIcon from '@material-ui/icons/AccountCircle';
 import EnhancedEncryptionIcon from '@material-ui/icons/EnhancedEncryption';
 import PhoneAndroidIcon from '@material-ui/icons/PhoneAndroid';
+import { useHistory } from 'react-router-dom';
 
 function RegisterForm() {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
   const [phone, setPhone] = useState('');
-  const errors = useSelector((store) => store.errors);
   const dispatch = useDispatch();
+  const history = useHistory();
+  const errors = useSelector((store) => store.errors);
   const registerUser = (event) => {
     event.preventDefault();
 
@@ -33,7 +35,7 @@ function RegisterForm() {
         phone: phone
       },
     });
-  }; // end registerUser
+  };
 
   return (
     <>
@@ -101,6 +103,19 @@ function RegisterForm() {
             <span></span>
             Register
             </button>
+            <button
+          type="button"
+          className="btn btn_asLink"
+          onClick={() => {
+            history.push('/login');
+          }}
+        >
+          Login
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
           </div>
        </form> 
     </>
