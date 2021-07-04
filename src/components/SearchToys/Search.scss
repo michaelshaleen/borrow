@@ -1,0 +1,22 @@
+$primaryBtn : rgb(182, 145, 102); 
+
+
+Button {
+  &:hover {
+    border: 1px solid $primaryBtn;
+    color: white;
+  }
+
+}
+
+.spacer {
+  height: 200px;
+
+}
+h3 {
+  color: white;
+}
+
+table {
+  color: white;
+}

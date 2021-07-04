@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAGA,AACE,MADI,AACH,MAAM,CAAC;EACN,MAAM,EAAE,GAAG,CAAC,KAAK,CALP,OAAkB;EAM5B,KAAK,EAAE,KAAK;CACb;;AAIH,AAAA,OAAO,CAAC;EACN,MAAM,EAAE,KAAK;CAEd;;AACD,AAAA,EAAE,CAAC;EACD,KAAK,EAAE,KAAK;CACb;;AAED,AAAA,KAAK,CAAC;EACJ,KAAK,EAAE,KAAK;CACb",
+    "sources": [
+        "Search.scss"
+    ],
+    "names": [],
+    "file": "Search.css"
+}
