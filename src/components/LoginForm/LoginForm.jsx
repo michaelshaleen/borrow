@@ -52,7 +52,49 @@ function LoginForm() {
 
   return (
     <>
-          <form className="formPanel" onSubmit={login}>
+    <section className="login-section">
+      <div className="box">
+        <div className="form">
+          <h2>Login</h2>
+          <form>
+            <div className="input-box">
+              <input 
+                type="text" 
+                placeholder="Username">
+              </input>
+            </div>
+            <div className="input-box">
+              <input 
+                type="password" 
+                placeholder="Password">
+              </input>
+            </div> 
+            <label className="remember">
+              <input 
+                type="checkbox">
+              </input>
+              Remember Me
+            </label>
+            <div className="input-box">
+              <input 
+                type="submit" 
+                placeholder="Login">
+              </input>
+            </div>
+          </form>
+          <p>Forget
+            <a href="#"> Password</a>
+          </p>
+          <p>Need an
+            <a href="#"> Account</a>
+          </p>
+        </div>
+      </div>
+    </section>
+
+
+
+          {/* <form className="formPanel" onSubmit={login}>
             <div className="login-box">
               <h4>Login</h4>
                 {errors.loginMessage && (
@@ -107,7 +149,7 @@ function LoginForm() {
             <span></span>
           </button>
               </div>
-          </form> 
+          </form>  */}
     </>
   );
 }

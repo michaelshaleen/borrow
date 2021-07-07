@@ -1,6 +1,6 @@
 {
     "version": 3,
-    "mappings": "AAEA,AAAA,EAAE,CAAA;EACA,KAAK,EAAE,KAAK;CACb",
+    "mappings": "",
     "sources": [
         "Toy.scss"
     ],
