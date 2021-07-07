@@ -96,6 +96,16 @@
   margin-bottom: 20px;
 }
 
+.box .form .input-box i {
+  position: absolute;
+  top: 8px;
+  left: 10px;
+  -webkit-transform: scale(0.7);
+          transform: scale(0.7);
+  -webkit-filter: invert(1);
+          filter: invert(1);
+}
+
 .box .form .input-box input {
   width: 100%;
   outline: none;

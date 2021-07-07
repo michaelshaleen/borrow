@@ -56,14 +56,16 @@ function LoginForm() {
       <div className="box">
         <div className="form">
           <h2>Login</h2>
-          <form>
+          <form onSubmit={login}>
             <div className="input-box">
+            <i><AccountCircleIcon /></i>
               <input 
                 type="text" 
                 placeholder="Username">
               </input>
             </div>
             <div className="input-box">
+            <i><EnhancedEncryptionIcon /></i>
               <input 
                 type="password" 
                 placeholder="Password">
@@ -82,6 +84,19 @@ function LoginForm() {
               </input>
             </div>
           </form>
+          <button 
+            className="btn" 
+            type="submit" 
+            name="submit" 
+            value="Log In">
+                  Login
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                </button>
+
+
           <p>Forget
             <a href="#"> Password</a>
           </p>
