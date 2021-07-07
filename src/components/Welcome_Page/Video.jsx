@@ -45,10 +45,8 @@ function Video() {
               </ul>
           </div>
       </section>
-      <section
-        className="about">
           <About />
-        </section>
+        
     </div>
 </>
 )

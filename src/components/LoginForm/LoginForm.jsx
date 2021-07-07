@@ -81,19 +81,14 @@ function LoginForm() {
               </input>
               Remember Me
             </label>
-            <div className="input-box">
+            {/* <div className="input-box">
               <input 
                 type="submit" 
                 placeholder="Login">
               </input>
+            </div> */}
+            <div className="input-box">
             </div>
-            <button className="btn" type="submit" name="submit" value="Log In">
-                  Login
-                  <span></span>
-                  <span></span>
-                  <span></span>
-                  <span></span>
-                </button>
             <button
             type="button"
             className="register-btn"
@@ -110,8 +105,8 @@ function LoginForm() {
           <p>Forget
             <a href="#"> Password</a>
           </p>
-          <p>Need an
-            <a href="#"> Account</a>
+          <p>Register an
+            <a href="/registration"> Account</a>
           </p>
         </div>
       </div>
