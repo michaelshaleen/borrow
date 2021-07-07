@@ -60,15 +60,19 @@ function LoginForm() {
             <div className="input-box">
             <i><AccountCircleIcon /></i>
               <input 
+                value={username}
                 type="text" 
-                placeholder="Username">
+                placeholder="Username"
+                onChange={(event) => setUsername(event.target.value)}>
               </input>
             </div>
             <div className="input-box">
             <i><EnhancedEncryptionIcon /></i>
               <input 
+                value={password}
                 type="password" 
-                placeholder="Password">
+                placeholder="Password"
+                onChange={(event) => setPassword(event.target.value)}>
               </input>
             </div> 
             <label className="remember">
@@ -83,20 +87,26 @@ function LoginForm() {
                 placeholder="Login">
               </input>
             </div>
-          </form>
-          <button 
-            className="btn" 
-            type="submit" 
-            name="submit" 
-            value="Log In">
+            <button className="btn" type="submit" name="submit" value="Log In">
                   Login
                   <span></span>
                   <span></span>
                   <span></span>
                   <span></span>
                 </button>
-
-
+            <button
+            type="button"
+            className="register-btn"
+            onClick={() => {
+              history.push('/registration');
+            }}>
+            Register 
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+          </form>
           <p>Forget
             <a href="#"> Password</a>
           </p>

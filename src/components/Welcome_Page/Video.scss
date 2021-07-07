@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+
 $primaryBtn : rgb(104, 149, 108); 
 .showcase {
   video {
@@ -25,8 +27,8 @@ ul li {
   z-index: 10;
   h3 {
       font-size: 32px;
-      font-weight: 700;
-    }
+      font-weight: 100;
+      font-family: 'Pacifico', cursive;    }
 }
 .neon {
   position: fixed;

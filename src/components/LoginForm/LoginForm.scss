@@ -1,3 +1,4 @@
+$primaryBtn : rgb(104, 149, 108); 
 
 
 * {
@@ -96,6 +97,7 @@
         letter-spacing: 2px;
         cursor: pointer;
       }
+      
       &::placeholder {
         color: white;
       }
@@ -120,4 +122,8 @@
   }
 }
 
+button {
+  color: $primaryBtn;
+
+}
 
