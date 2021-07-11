@@ -52,7 +52,78 @@ function LoginForm() {
 
   return (
     <>
-          <form className="formPanel" onSubmit={login}>
+    <section className="login-section">
+      <div className="box">
+        <div className="form">
+          <h2>Login</h2>
+          <form onSubmit={login}>
+            <div className="input-box">
+            <i><AccountCircleIcon /></i>
+              <input 
+                value={username}
+                required
+                type="text" 
+                placeholder="Username"
+                onChange={(event) => setUsername(event.target.value)}>
+              </input>
+            </div>
+            <div className="input-box">
+            <i><EnhancedEncryptionIcon /></i>
+              <input 
+                value={password}
+                required
+                type="password" 
+                placeholder="Password"
+                onChange={(event) => setPassword(event.target.value)}>
+              </input>
+            </div> 
+            <label className="remember">
+              <input 
+                type="checkbox">
+              </input>
+              Remember Me
+            </label>
+            <div className="input-box">
+            <button 
+              className="register-btn-submit"
+              type="submit" 
+              name="submit"
+            >
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            Submit
+            </button>
+            </div>
+            <div className="input-box">
+            </div>
+            <button
+            type="button"
+            className="register-btn"
+            onClick={() => {
+              history.push('/registration');
+            }}>
+            Register 
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+          </form>
+          <p>Forget
+            <a href="#"> Password</a>
+          </p>
+          <p>Register an
+            <a href="/registration"> Account</a>
+          </p>
+        </div>
+      </div>
+    </section>
+
+
+
+          {/* <form className="formPanel" onSubmit={login}>
             <div className="login-box">
               <h4>Login</h4>
                 {errors.loginMessage && (
@@ -107,7 +178,7 @@ function LoginForm() {
             <span></span>
           </button>
               </div>
-          </form> 
+          </form>  */}
     </>
   );
 }

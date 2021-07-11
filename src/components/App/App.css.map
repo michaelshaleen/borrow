@@ -2,8 +2,8 @@
     "version": 3,
     "mappings": "",
     "sources": [
-        "LoginPage.scss"
+        "App.scss"
     ],
     "names": [],
-    "file": "LoginPage.css"
+    "file": "App.css"
 }
