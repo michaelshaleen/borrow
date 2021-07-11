@@ -24,9 +24,9 @@ function RegisterForm() {
   const dispatch = useDispatch();
   const history = useHistory();
   const errors = useSelector((store) => store.errors);
+
   const registerUser = (event) => {
     event.preventDefault();
-
     dispatch({
       type: 'REGISTER',
       payload: {

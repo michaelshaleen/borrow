@@ -61,6 +61,7 @@ function LoginForm() {
             <i><AccountCircleIcon /></i>
               <input 
                 value={username}
+                required
                 type="text" 
                 placeholder="Username"
                 onChange={(event) => setUsername(event.target.value)}>
@@ -70,6 +71,7 @@ function LoginForm() {
             <i><EnhancedEncryptionIcon /></i>
               <input 
                 value={password}
+                required
                 type="password" 
                 placeholder="Password"
                 onChange={(event) => setPassword(event.target.value)}>
@@ -82,10 +84,17 @@ function LoginForm() {
               Remember Me
             </label>
             <div className="input-box">
-              <input 
-                type="submit" 
-                placeholder="Login">
-              </input>
+            <button 
+              className="register-btn-submit"
+              type="submit" 
+              name="submit"
+            >
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            Submit
+            </button>
             </div>
             <div className="input-box">
             </div>
