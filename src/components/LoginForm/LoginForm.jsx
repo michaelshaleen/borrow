@@ -81,12 +81,12 @@ function LoginForm() {
               </input>
               Remember Me
             </label>
-            {/* <div className="input-box">
+            <div className="input-box">
               <input 
                 type="submit" 
                 placeholder="Login">
               </input>
-            </div> */}
+            </div>
             <div className="input-box">
             </div>
             <button

@@ -39,61 +39,54 @@ function RegisterForm() {
 
   return (
     <>
+        <section className="login-section">
+        <div className="box">
+        <div className="form">
+
         <form className="formPanel" onSubmit={registerUser}>
           <div className="login-box">
-            <h4>Register</h4>
+            <h2>Register</h2>
             {errors.loginMessage && (
               <h3 className="alert" role="alert">
                 {errors.loginMessage}
               </h3>
             )}
-            <div className="textbox">
+            <div className="input-box">
               <i><AccountCircleIcon /></i>
-              <label htmlFor="username">
-                <TextField
-                  style={{color: "white"}}
-                  label="Username"
-                  type="text"
-                  name="username"
-                  required
+                <input
                   value={username}
+                  type="text"
+                  placeholder="Username"
+                  required
                   onChange={(event) => setUsername(event.target.value)}
-                />
-              </label>
+                >
+              </input>
             </div>
-            <div className="textbox">
+            <div className="input-box">
               <i><EnhancedEncryptionIcon /></i>
-            <label htmlFor="password"
-                    style={{color:'white',
-                    fontFamily:'cursive'}}>      
-                  <TextField
-                    id="myInput"
-                    label="Password"
-                    type="password"
-                    name="password"
-                    required
+                  <input
                     value={password}
+                    type="password"
+                    id="myInput"
+                    placeholder="Password"
+                    required
                     onChange={(event) => setPassword(event.target.value)}
-                    />
-              </label>
-              <div>
+                    >
+              </input>
+              <div className="input-box">
                 <i><PhoneAndroidIcon /></i>
-              <label 
-                htmlFor="phone"
-                style={{color:'white', fontFamily: 'cursive'}}>
-                  <TextField
-                    label="867-5309"
+                <input
+                    placeholder="867-5309"
                     type="tel"
-                    name="phone"
                     value={phone}
                     required
                     onChange={(event) => setPhone(event.target.value)}
-                  />
-                </label>
+                  >
+                </input>
               </div>
             </div>
             <button 
-              className="btn"
+              className="register-btn-submit"
               type="submit" 
               name="submit"
             >
@@ -101,11 +94,11 @@ function RegisterForm() {
             <span></span>
             <span></span>
             <span></span>
-            Register
+            Submit
             </button>
             <button
           type="button"
-          className="btn btn_asLink"
+          className="register-btn"
           onClick={() => {
             history.push('/login');
           }}
@@ -118,6 +111,9 @@ function RegisterForm() {
         </button>
           </div>
        </form> 
+       </div>
+       </div>
+    </section>
     </>
     );
   }
