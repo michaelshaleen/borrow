@@ -16,9 +16,13 @@ import AccountCircleIcon from '@material-ui/icons/AccountCircle';
 import EnhancedEncryptionIcon from '@material-ui/icons/EnhancedEncryption';
 import { useDispatch } from 'react-redux';
 import {useSelector} from 'react-redux';
+<<<<<<< HEAD
 import { useHistory } from 'react-router-dom';
 
 
+=======
+import ReactPlayer from 'react-player';
+>>>>>>> 28d44e0030f5037cbc498b7b94cb2ff7d3dfb754
 
 function LoginForm() {
   const [username, setUsername] = useState('');
@@ -52,6 +56,7 @@ function LoginForm() {
 
   return (
     <>
+<<<<<<< HEAD
     <section className="login-section">
       <div className="box">
         <div className="form">
@@ -184,6 +189,63 @@ function LoginForm() {
           </button>
               </div>
           </form>  */}
+=======
+
+
+    <body className="landing">
+
+<div class="text">
+  
+    </div>
+    </body>
+    
+    <form className="formPanel" onSubmit={login}>
+      <h2 style={{color:'white', fontFamily:'cursive'}}>
+        Login
+      </h2>
+      {errors.loginMessage && (
+        <h3 className="alert" role="alert">
+          {errors.loginMessage}
+        </h3>
+      )}
+      <div>
+        <label htmlFor="username"
+        style={{color:'white', fontFamily: 'cursive'}}>
+          Username:
+          <input
+            type="text"
+            name="username"
+            required
+            value={username}
+            onChange={(event) => setUsername(event.target.value)}
+          />
+        </label>
+      </div>
+      <div>
+        <label htmlFor="password"
+        style={{color:'white', fontFamily:'cursive'}}>
+          Password:
+          <input
+            type="password"
+            name="password"
+            required
+            value={password}
+            onChange={(event) => setPassword(event.target.value)}
+          />
+        </label>
+      </div>
+      <div>
+        <input className="btn" type="submit" name="submit" value="Log In" />
+      </div>
+    </form> 
+
+
+
+
+
+
+
+>>>>>>> 28d44e0030f5037cbc498b7b94cb2ff7d3dfb754
     </>
   );
 }

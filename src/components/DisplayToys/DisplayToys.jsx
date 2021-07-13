@@ -11,6 +11,7 @@ function DisplayToys( { toy } ){
   return(
     <>
       <tr>
+<<<<<<< HEAD
         <td>{toy.name} </td>
         <td>{toy.ages}</td>
         <td>{toy.available ? <span> available </span>:<span> unavailable </span> }</td>
@@ -31,6 +32,16 @@ function DisplayToys( { toy } ){
             <button onClick={() => setModalIsOpen(false)}>X</button>
           </div>
       </Modal>
+=======
+         <td>{toy.name} </td>
+         <td>{toy.ages}</td>
+         <td>{toy.available ? <span> available </span>:<span> unavailable </span> }</td>
+         <td>Call Bradley at <CallIcon /> { toy.phone}</td>
+         {/* <td>{toy.</td> */}
+       </tr>
+
+
+>>>>>>> 28d44e0030f5037cbc498b7b94cb2ff7d3dfb754
     </>
   )
 }

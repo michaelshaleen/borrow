@@ -57,7 +57,11 @@ function ToyList({ toy }) {
     <table className="table">
     <tr>
       <td>{toy.name} </td>
+<<<<<<< HEAD
       <td>Ages {toy.ages} </td>
+=======
+      <td> {toy.ages} </td>
+>>>>>>> 28d44e0030f5037cbc498b7b94cb2ff7d3dfb754
       <td>{toy.available ? <span> Available </span>:<span> Unavailable </span>}</td>
       {/* <td>{toy.image}</td> */}
       {/* <img src={toy.image} width="100px" height="100px"/> */}
