@@ -38,7 +38,6 @@ function RegisterForm() {
   };
 
   return (
-<<<<<<< HEAD
     <>
         <section className="login-section">
         <div className="box">
@@ -185,16 +184,10 @@ function RegisterForm() {
     <div className="login-box">
       <h2>Login</h2>
       {errors.loginMessage && (
-=======
-    <form className="formPanel" onSubmit={registerUser}>
-      <h2 style={{color:'white', fontFamily:'cursive'}}>Register User</h2>
-      {errors.registrationMessage && (
->>>>>>> 28d44e0030f5037cbc498b7b94cb2ff7d3dfb754
         <h3 className="alert" role="alert">
           {errors.loginMessage}
         </h3>
       )}
-<<<<<<< HEAD
       <div className="textbox">
         <i className="fas fa-user"></i>
         <i class='fa fa-space-shuttle' ></i>
@@ -203,13 +196,11 @@ function RegisterForm() {
            <TextField
             style={{color: "white"}}
             label="Username"
-=======
       <div>
         <label htmlFor="username"
         style={{color:'white', fontFamily: 'cursive'}}>
           Username:
           <input
->>>>>>> 28d44e0030f5037cbc498b7b94cb2ff7d3dfb754
             type="text"
             name="username"
             required
@@ -218,7 +209,6 @@ function RegisterForm() {
           />
         </label>
       </div>
-<<<<<<< HEAD
       <div className="textbox">
       <i className="fas fa-lock"></i>
       <label htmlFor="password"
@@ -226,13 +216,11 @@ function RegisterForm() {
           
           <TextField
           label="Password"
-=======
       <div>
         <label htmlFor="password"
         style={{color:'white', fontFamily: 'cursive'}}>
           Password:
           <input
->>>>>>> 28d44e0030f5037cbc498b7b94cb2ff7d3dfb754
             type="password"
             name="password"
             required
@@ -241,31 +229,7 @@ function RegisterForm() {
           />
         </label>
       </div>
-<<<<<<< HEAD
       <input className="btn" type="submit" name="submit" value="Log In" />
     </div>
 </form> 
 */
-=======
-      <div>
-        <label htmlFor="phone"
-        style={{color:'white', fontFamily: 'cursive'}}>
-          Phone Number:
-          <input
-            type="tel"
-            name="phone"
-            value={phone}
-            required
-            onChange={(event) => setPhone(event.target.value)}
-          />
-        </label>
-      </div>
-      <div>
-        <input className="btn" type="submit" name="submit" value="Register" />
-      </div>
-    </form>
-  );
-}
-
-export default RegisterForm;
->>>>>>> 28d44e0030f5037cbc498b7b94cb2ff7d3dfb754

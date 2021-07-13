@@ -18,10 +18,6 @@ import ShareToys from '../ShareToys/ShareToys';
 import UserPage from '../UserPage/UserPage';
 import ToyList from '../ToyList/ToyList';
 import Video from '../Welcome_Page/Video';
-<<<<<<< HEAD
-=======
-
->>>>>>> 28d44e0030f5037cbc498b7b94cb2ff7d3dfb754
 import './App.css';
 
 function App() {
@@ -34,17 +30,9 @@ function App() {
   return (
     <Router>
       <div>
-<<<<<<< HEAD
         <Switch>
           {/* Visiting localhost:3000 will redirect to localhost:3000/home */}
           <Redirect exact from="/" to="/landing" />
-=======
-        {/* <Nav /> */}
-        <Switch>
-          {/* Visiting localhost:3000 will redirect to localhost:3000/home */}
-          <Redirect exact from="/" to="/landing" />
-
->>>>>>> 28d44e0030f5037cbc498b7b94cb2ff7d3dfb754
           {/* Visiting localhost:3000/about will show the about page. */}
           <Route exact path="/about" >
             <AboutPage />
@@ -73,15 +61,9 @@ function App() {
           <ProtectedRoute exact path="/search_toys">
             <SearchToys />
           </ProtectedRoute>
-<<<<<<< HEAD
           <ProtectedRoute exact path="/edit">
             <Edit />
           </ProtectedRoute>
-=======
-         
-          
-
->>>>>>> 28d44e0030f5037cbc498b7b94cb2ff7d3dfb754
           {/* When a value is supplied for the authRedirect prop the user will
             be redirected to the path supplied when logged in, otherwise they will
             be taken to the component and path supplied. */}
@@ -106,17 +88,6 @@ function App() {
           <Route exact path="/landing">
             <Video />
           </Route>
-<<<<<<< HEAD
-=======
-
-            
-            {/* // with authRedirect:
-            // - if logged in, redirects to "/user"
-            // - else shows LandingPage at "/home"
-            // authRedirect="/user" */}
-          
-
->>>>>>> 28d44e0030f5037cbc498b7b94cb2ff7d3dfb754
           {/* If none of the other routes matched, we will show a 404. */}
           <Route>
             <h1>404</h1>

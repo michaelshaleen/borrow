@@ -5,34 +5,21 @@ import DisplayToys from '../DisplayToys/DisplayToys';
 import Button from '@material-ui/core/Button';
 import Nav from '../Nav/Nav';
 import React from 'react';
-<<<<<<< HEAD
 import './Search.css';
 import ShareToys from '../ShareToys/ShareToys';
-=======
-
-
-
->>>>>>> 28d44e0030f5037cbc498b7b94cb2ff7d3dfb754
 import AddCircleIcon from '@material-ui/icons/AddCircle';
 import CancelIcon from '@material-ui/icons/Cancel';
 import TextField from '@material-ui/core/TextField';
 import swal from 'sweetalert';
 import { makeStyles } from '@material-ui/styles';
-<<<<<<< HEAD
-=======
 import ToiChare from '../LandingPage/LandingPage';
->>>>>>> 28d44e0030f5037cbc498b7b94cb2ff7d3dfb754
 import InputLabel from '@material-ui/core/InputLabel';
 import MenuItem from '@material-ui/core/MenuItem';
 import FormHelperText from '@material-ui/core/FormHelperText';
 import FormControl from '@material-ui/core/FormControl';
 import Select from '@material-ui/core/Select';
-<<<<<<< HEAD
- 
-=======
 import LogOutButton from '../LogOutButton/LogOutButton';
 
->>>>>>> 28d44e0030f5037cbc498b7b94cb2ff7d3dfb754
 
 function SearchToys() {
   const dispatch = useDispatch(); 
@@ -48,14 +35,6 @@ function SearchToys() {
   else{
     console.log("more than zero")
   }
-
-<<<<<<< HEAD
-=======
-  
-  const [toyName, setToyName] = useState('');
-  const [ageGroup, setAgeGroup] = useState('');
->>>>>>> 28d44e0030f5037cbc498b7b94cb2ff7d3dfb754
-
   const searchBtn = (action) => {
     if(!toyName || !ageGroup){
       swal({
@@ -82,7 +61,6 @@ function SearchToys() {
     )
   }
 
-<<<<<<< HEAD
 
   const useStyles = makeStyles((theme) => ({
     formControl: {
@@ -93,71 +71,6 @@ function SearchToys() {
       // marginTop: theme.spacing(2),
     },
   }));
-=======
-
-  const useStyles = makeStyles((theme) => ({
-    formControl: {
-      // margin: theme.spacing(1),
-      minWidth: 120,
-    },
-    selectEmpty: {
-      // marginTop: theme.spacing(2),
-    },
-  }));
-
-
-
-  
-    const classes = useStyles();
-    const [age, setAge] = React.useState('');
-  
-    const handleChange = (event) => {
-      setAge(event.target.value);
-    };
-
-  return(
-    <div className="container">
-
-    <div className="search_Container">
-    <p><h3>Search Toys</h3></p>
-
-    <Nav />
-
-<div>
-
-    <TextField 
-            style={{top: '16px'}}
-            value={toyName}
-            type="text"
-            placeholder="Name"
-            onChange={(event) => setToyName(event.target.value)}
-            />
-    <FormControl className={classes.formControl}>
-
-
-          <InputLabel id="demo-simple-select-label">Ages</InputLabel>
-          <Select
-            labelId="demo-simple-select-label"
-            id="demo-simple-select"
-            value={ageGroup}
-            onChange={(event) => setAgeGroup(event.target.value)}
-            >
-            <MenuItem value="0-3">0-3</MenuItem>
-            <MenuItem value="3-5">3-5</MenuItem>
-            <MenuItem value="5-10">5-10</MenuItem>
-          </Select>
-        </FormControl>
- 
-
-    <Button 
-          variant="contained"
-          color="default"
-          size="small"
-          endIcon={ <AddCircleIcon /> }
-          onClick={searchBtn}>
-          Share Toy
-          </Button>
->>>>>>> 28d44e0030f5037cbc498b7b94cb2ff7d3dfb754
 
           <Button 
             variant="contained"
@@ -167,11 +80,6 @@ function SearchToys() {
             onClick={cancelBtn}>
             Cancel
             </Button>
-              </div>
-
-
-<<<<<<< HEAD
-  
     const classes = useStyles();
     const [age, setAge] = React.useState('');
   
@@ -255,35 +163,10 @@ function SearchToys() {
                 className="share">
                     <ShareToys />
                 </div>
+                <footer><LogOutButton /> </footer>
  </>)
-=======
-    <table >
-    <thead>
-        <tr>
-          <th>Description </th>
-          <th>Age </th>
-          <th>Available </th>
-          <th>Owner's Phone</th>
-        </tr>
-        </thead>
-        <tbody>
-                {searchedToys.map(toy => {
-                return <DisplayToys key={toy.id} toy={toy}/>  
-              }
-              )}
-              </tbody>
-      </table>
+   
       {/* if searchedToys === null */}
-
-
-
-
-
-      <footer><LogOutButton /> </footer>
-</div>
-              </div>
-  )
->>>>>>> 28d44e0030f5037cbc498b7b94cb2ff7d3dfb754
 }
 
 export default SearchToys;

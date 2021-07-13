@@ -4,12 +4,8 @@ import Button from '@material-ui/core/Button';
 import axios from 'axios';
 import Nav from '../Nav/Nav';
 import React from 'react';
-<<<<<<< HEAD
 import './Share.css';
  
-=======
-
->>>>>>> 28d44e0030f5037cbc498b7b94cb2ff7d3dfb754
 
 // const express = require('express');
 // const fileUpload = require('express-fileupload');
@@ -132,7 +128,6 @@ function ShareToys() {
 
 
   return(
-<<<<<<< HEAD
     <div >
             <h3 className="share">Share New Toys</h3>
 
@@ -143,48 +138,25 @@ function ShareToys() {
             style={{top: '16px'}}
             value={toyName}
             type="input"
-=======
-    <div className="container">
-            <p><h3>Share New Toys</h3></p>
-
-            <Nav />
-            <div>
-
-
-
-          <TextField 
-            style={{top: '16px'}}
-            value={toyName}
-            type="text"
->>>>>>> 28d44e0030f5037cbc498b7b94cb2ff7d3dfb754
             placeholder="Name"
             onChange={(event) => setToyName(event.target.value)}
             />
              
         <FormControl className={classes.formControl}>
-<<<<<<< HEAD
           {/* <InputLabel>Ages</InputLabel>
             <p>Ages</p>
           <Select
             className="input"
-=======
-          <InputLabel id="demo-simple-select-label">Ages</InputLabel>
-          <Select
->>>>>>> 28d44e0030f5037cbc498b7b94cb2ff7d3dfb754
             labelId="demo-simple-select-label"
             id="demo-simple-select"
             value={ageGroup}
             onChange={(event) => setAgeGroup(event.target.value)}
             >
-<<<<<<< HEAD
             <MenuItem value="#"></MenuItem>
             <MenuItem value="0-3">0-3</MenuItem>
             <MenuItem value="3-5">3-5</MenuItem>
             <MenuItem value="5-10">5-10</MenuItem>
           </Select> */}
-
-
-
         <InputLabel id="demo-simple-select-helper-label">Age</InputLabel>
         <Select
           labelId="demo-simple-select-label"
@@ -202,7 +174,9 @@ function ShareToys() {
           </FormControl>
         <FormControl className={classes.formControl}>
         <InputLabel 
-              id="demo-simple-select-label">Available</InputLabel>            <Select
+              id="demo-simple-select-label">Available
+        </InputLabel>
+              <Select
               labelId="demo-simple-select-label"
               id="demo-simple-select"
               value={available}
@@ -211,38 +185,11 @@ function ShareToys() {
               <MenuItem value="true">Available Now</MenuItem>
               <MenuItem value="false">Not Available</MenuItem>
             </Select>
-=======
-            <MenuItem value="0-3">0-3</MenuItem>
-            <MenuItem value="3-5">3-5</MenuItem>
-            <MenuItem value="5-10">5-10</MenuItem>
-          </Select>
         </FormControl>
-
-        <FormControl className={classes.formControl}>
-            <InputLabel id="demo-simple-select-label">Available</InputLabel>
-              <Select
-                labelId="demo-simple-select-label"
-                id="demo-simple-select"
-                value={available}
-                onChange={(event) => setAvailable(event.target.value)}
-                >
-                  <MenuItem value="true">Available Now</MenuItem>
-                <MenuItem value="false">Not Available</MenuItem>
-              </Select>
->>>>>>> 28d44e0030f5037cbc498b7b94cb2ff7d3dfb754
-        </FormControl>
-
-
-
         <label className="custom-file-label" htmlFor="customFile"></label>
           
           <Button 
-<<<<<<< HEAD
           className="input"
-=======
-          variant="contained"
-          color="default"
->>>>>>> 28d44e0030f5037cbc498b7b94cb2ff7d3dfb754
           size="small"
           endIcon={ <AddCircleIcon /> }
           onClick={shareToy}>
@@ -250,11 +197,6 @@ function ShareToys() {
           </Button>
 
           <Button 
-<<<<<<< HEAD
-=======
-            variant="contained"
-            color="inherit"
->>>>>>> 28d44e0030f5037cbc498b7b94cb2ff7d3dfb754
             size="small"
             endIcon={ <CancelIcon /> }
             onClick={cancelBtn}>
