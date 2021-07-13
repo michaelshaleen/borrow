@@ -56,6 +56,11 @@ function LoginForm() {
       <div className="box">
         <div className="form">
           <h2>Login</h2>
+          {errors.loginMessage && (
+                  <h3 className="alert" role="alert">
+                    {errors.loginMessage}
+                  </h3>
+                )}
           <form onSubmit={login}>
             <div className="input-box">
             <i><AccountCircleIcon /></i>

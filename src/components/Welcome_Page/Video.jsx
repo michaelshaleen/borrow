@@ -2,9 +2,15 @@ import LinkedInIcon from '@material-ui/icons/LinkedIn';
 import PersonIcon from '@material-ui/icons/Person';
 import TwitterIcon from '@material-ui/icons/Twitter';
 import './Video.css';
+import React from 'react';
 import About from '../AboutPage/AboutPage';
+import useScrollSnap from 'react-use-scroll-snap';
+import RedoIcon from '@material-ui/icons/Redo';
 
 function Video() {
+  const scrollRef = React.useRef(null);
+
+  useScrollSnap({ref: scrollRef, duration: 50, delay: 0});
 
 
   const linkedIn = () => {
@@ -18,16 +24,21 @@ function Video() {
   }
 
 
+  
+
+
+
   return(
     <>
     <div className="container">
         <section className="showcase">  
           <video src={process.env.PUBLIC_URL + '/kids_playing.mp4'} muted loop autoPlay> </video>
           <div className="text">
-            <h3>Exploring ToiChare</h3>
+            <h5>ToiChare</h5>
               {/* <p className="intro">Welcome to ToiChare, please Log in 
               or Register an account to begin using!</p> */}
           </div>
+          
           <div>
               <a 
                 className="neon"
@@ -44,10 +55,19 @@ function Video() {
                 <li onClick={twitterPage}><TwitterIcon /></li>
               </ul>
           </div>
+              <i className="arrow-icon">
+              <RedoIcon />
+              Scroll Down
+              </i>
       </section>
-          <About />
         
     </div>
+      <section 
+        className="about"
+        ref={ scrollRef }
+        >
+          <About />
+      </section>
 </>
 )
 

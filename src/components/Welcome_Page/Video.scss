@@ -1,13 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
 
-$primaryBtn : rgb(104, 149, 108); 
+// $primaryBtn : rgb(104, 149, 108); 
+$primaryBtn : #112c38;
 .showcase {
   video {
   position: absolute;
   top: 0;
   left: 0;
-  width: 100%;
-  height: 100%;
+  width: 100vw;
+  height: 100vh;
   object-fit: cover;
   // opacity: 0.8;
   }
@@ -25,8 +26,7 @@ ul li {
 .text {
   position: relative;
   z-index: 10;
-  h3 {
-      font-size: 32px;
+  h5 {
       font-weight: 100;
       font-family: 'Pacifico', cursive;    }
 }
@@ -118,10 +118,23 @@ ul li {
 }
 .container {
   scroll-snap-type: y proximity;
-  height: 100vh;
+  overflow-y: scroll;
+
 }
 
 section {
   height: 100vh;
   display: flex;
+  scroll-snap-align: start;
+
+
+}
+.about {
+  height: 50vh;
+}
+
+.arrow-icon {
+  position: absolute;
+  top: 92%;
+  left: 5%;
 }

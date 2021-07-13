@@ -83,7 +83,7 @@ function SearchToys() {
 
   return(
     <>
-        <div>
+        <div className="startDiv">
           <div>
               <div>
                   <div>
