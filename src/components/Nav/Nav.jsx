@@ -27,7 +27,6 @@ function Nav() {
             <ul>
                 <li><a href="#/landing">Welcome Page</a></li>
                 <li><a href="#/user">My Profile</a></li>
-                <li><a href="#/about">Our Family</a></li>
                 <li><a href="#/search_toys">Toys</a></li>
                 <li><a href="#/edit">Edit My Profile</a></li>
                 <li
