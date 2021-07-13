@@ -8,15 +8,11 @@ import alphabet from '../pictures/alphabet.jpg';
 import useScrollSnap from 'react-use-scroll-snap';
 import RedoIcon from '@material-ui/icons/Redo';
 
-
 function AboutPage() {
-  const scrollRef = React.useRef(null);
-  useScrollSnap({ref: scrollRef, duration: 50, delay: 0});
-
-
+  // const scrollRef = React.useRef(null);
+  // useScrollSnap({ref: scrollRef, duration: 50, delay: 0});
   return (
-    <>
-      
+  <>   
     <div className="about-container">
       <section className="history">
           <h1><u>Our History</u></h1>
@@ -38,7 +34,7 @@ function AboutPage() {
       </section>
       <section 
         className="contact"
-        ref={scrollRef}>
+        >
       <div >
         <h1><u>Contact</u></h1>
           <p>If you have any questions or need assistance
@@ -51,21 +47,6 @@ function AboutPage() {
           </div>
       </div>
       </section>
-      <div className="outer-wrapper">
-        <div className="wrapper">
-          <div className="slide one">
-              <div className="userBody">
-                  <div className="container">
-                    {/* <img src={pic} />
-                      <div className="slide two">
-                        <p>Hello</p>
-                      </div> */}
-                  </div>
-              </div>
-          </div>
-        </div>
-      </div>
-      
     </div>
   </>);
 }

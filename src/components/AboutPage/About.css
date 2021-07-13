@@ -4,6 +4,26 @@
   width: 100vw;
 }
 
+.about-container .history {
+  height: 100vh;
+  position: relative;
+  padding: 100px;
+}
+
+.about-container .contact {
+  background: #112c38;
+  height: 50vh;
+}
+
+.about-container .future {
+  text-align: right;
+  height: 50vh;
+}
+
+.about-container .future p {
+  color: black;
+}
+
 p {
   color: white;
   padding-left: 5px;
@@ -12,24 +32,5 @@ p {
 
 h1 {
   color: white;
-}
-
-.history {
-  position: relative;
-  padding: 100px;
-}
-
-.future {
-  text-align: right;
-  height: 50vh;
-}
-
-.future p {
-  color: black;
-}
-
-.contact {
-  background: #112c38;
-  height: 50vh;
 }
 /*# sourceMappingURL=About.css.map */

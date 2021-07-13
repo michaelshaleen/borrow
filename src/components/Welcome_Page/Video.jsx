@@ -11,8 +11,6 @@ function Video() {
   const scrollRef = React.useRef(null);
 
   useScrollSnap({ref: scrollRef, duration: 50, delay: 0});
-
-
   const linkedIn = () => {
     window.open("https://www.linkedin.com/in/michael-s-57a181188/", "_blank");
   }
@@ -23,21 +21,11 @@ function Video() {
     window.open("https://twitter.com/Michael58173715")
   }
 
-
-  
-
-
-
   return(
     <>
     <div className="container">
         <section className="showcase">  
           <video src={process.env.PUBLIC_URL + '/kids_playing.mp4'} muted loop autoPlay> </video>
-          <div className="text">
-            <h5>ToiChare</h5>
-              {/* <p className="intro">Welcome to ToiChare, please Log in 
-              or Register an account to begin using!</p> */}
-          </div>
           
           <div>
               <a 
@@ -70,19 +58,6 @@ function Video() {
       </section>
 </>
 )
-
 }
 
 export default Video;
-{/* 
-  <div className="toggle">
-      <div class="menu">
-        <ul>
-          <li><a href="#/user">Home</a></li>
-          <li><a href="#">News</a></li>
-          <li><a href="#">Destination</a></li>
-          <li><a href="#">Blog</a></li>
-          <li><a href="#/about">Contact</a></li>
-        </ul>
-      </div>
-  </div> */}

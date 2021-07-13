@@ -56,27 +56,6 @@ router.post('/file', rejectUnauthenticated, (req, res) => {
     console.log("file success")
     
   })
-<<<<<<< HEAD
-=======
-  //
-
-  // const sqlText = `
-  // INSERT INTO 
-  // VALUES ($1)`;
-
-  // const paramsText = uploadedFile.image;
-
-  // pool.query(sqlText, paramsText)
-  // .then((result) => {
-  //   console.log(result, "file results")
-  //   res.sendStatus(201);
-
-  // })
-  // .catch((error) => {
-  //   console.log("error post upload", error)
-  //   res.sendStatus(500);
-  // })
->>>>>>> 28d44e0030f5037cbc498b7b94cb2ff7d3dfb754
 })
 
 

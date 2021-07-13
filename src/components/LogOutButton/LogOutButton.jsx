@@ -1,7 +1,7 @@
 import React from 'react';
 import { useDispatch } from 'react-redux';
 import ExitToAppIcon from '@material-ui/icons/ExitToApp';
-
+import Tab from '@material-ui/core/Tab';
 
 function LogOutButton(props) {
   const dispatch = useDispatch();

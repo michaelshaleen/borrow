@@ -2,7 +2,22 @@
   background: #112c38;
   height: 100vh;
   width: 100vw;
- 
+  .history {
+    height: 100vh;
+  position: relative;
+  padding: 100px;
+  }
+  .contact {
+    background: #112c38;
+    height: 50vh;
+  }
+  .future {
+    text-align: right;
+    height: 50vh;
+    p {
+      color: black;
+    }
+  }
 }
 
 p {
@@ -17,24 +32,6 @@ h1 {
 
 }
 
-.history {
-position: relative;
-padding: 100px;
-
-}
-.future {
-  text-align: right;
-  height: 50vh;
 
 
-  p {
-    color: black;
-  }
-}
 
-.contact {
-  background: #112c38;
-  height: 50vh;
-
-
-}

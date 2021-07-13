@@ -181,12 +181,12 @@
   overflow: hidden;
   -webkit-transition: .5s;
   transition: .5s;
-  background-color: #68956c;
+  background-color: #112c38;
   border-radius: 2px;
 }
 
 .register-btn:hover {
-  color: #68956c;
+  color: #112c38;
   background: #fff;
   -webkit-box-shadow: 0 0 10px #fff, 0 0 40px #fff, 0 0 80px #fff;
           box-shadow: 0 0 10px #fff, 0 0 40px #fff, 0 0 80px #fff;
