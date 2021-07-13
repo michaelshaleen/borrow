@@ -90,7 +90,7 @@ function SearchToys() {
                       <div>
                           <div className="image_back">
                             <Nav />
-                          <div className="container">
+                          <div className="toy-container">
                   <div>
                       <p><h3>Search Toys</h3></p>
                   <div>

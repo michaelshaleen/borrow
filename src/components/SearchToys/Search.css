@@ -2,7 +2,19 @@
   height: 100vh;
 }
 
+.table-head {
+  margin-top: 15px;
+}
+
 .table-head tr th {
+  padding-left: 15px;
+}
+
+h3 {
+  color: black;
+}
+
+.toy-container {
   padding-left: 15px;
 }
 /*# sourceMappingURL=Search.css.map */
