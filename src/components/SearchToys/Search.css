@@ -1,4 +1,8 @@
 .startDiv {
   height: 100vh;
 }
+
+.table-head tr th {
+  padding-left: 15px;
+}
 /*# sourceMappingURL=Search.css.map */

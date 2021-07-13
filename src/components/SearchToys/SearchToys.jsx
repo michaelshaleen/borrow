@@ -128,7 +128,7 @@ function SearchToys() {
                   </Button>
               </div>
               <table>
-              <thead>
+              <thead className="table-head">
                   <tr>
                     <th>Description </th>
                     <th>Age </th>
@@ -138,7 +138,9 @@ function SearchToys() {
                   </thead>
                   <tbody>
                           {searchedToys.map(toy => {
-                            return <DisplayToys key={toy.id} toy={toy}/>  
+                            return <DisplayToys 
+                              key={toy.id} 
+                              toy={toy}/>  
                           }
                           )}
                         </tbody>
@@ -149,12 +151,12 @@ function SearchToys() {
               </div>
             </div>
           </div>
+              </div>
+        </div>
               <div
                 className="share">
                     <ShareToys />
                 </div>
-              </div>
-        </div>
  </>)
 }
 
