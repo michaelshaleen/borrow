@@ -32,7 +32,7 @@ function Video() {
                 className="neon"
                 href="#login">Get Started!
                 <span></span>
-                <span></span>
+                <span></span> 
                 <span></span>
                 <span></span>
                 </a>
