@@ -35,7 +35,7 @@ function Video() {
           </div>
               <i className="arrow-icon">
               <RedoIcon />
-              Scroll Down silly
+              Scroll Down 
               </i>
       </section>
         
