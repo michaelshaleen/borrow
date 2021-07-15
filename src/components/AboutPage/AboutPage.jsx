@@ -3,8 +3,6 @@ import Nav from '../Nav/Nav';
 import ToiChare from '../LandingPage/LandingPage';
 import LogOutButton from '../LogOutButton/LogOutButton';
 import './About.css';
-import pic from '../pictures/sharkKid.jpg';
-import alphabet from '../pictures/alphabet.jpg';
 import useScrollSnap from 'react-use-scroll-snap';
 import RedoIcon from '@material-ui/icons/Redo';
 

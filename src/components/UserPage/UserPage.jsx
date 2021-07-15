@@ -12,7 +12,6 @@ import ToiChare from '../LandingPage/LandingPage';
 import '../Nav/Nav.css';
 import SearchToys from '../SearchToys/SearchToys';
 import ShareToys from '../ShareToys/ShareToys';
-import Profile from '../pictures/sharkKid.jpg';
 
 function UserPage() {
   const user = useSelector((store) => store.user);
@@ -65,7 +64,6 @@ function UserPage() {
                   })}
               </tbody>
             </table>
-            <footer><LogOutButton /> </footer>
     </>
   );
 }
