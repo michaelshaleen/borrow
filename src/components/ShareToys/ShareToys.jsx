@@ -35,13 +35,7 @@ function ShareToys() {
   const newToy = useSelector((store) => store.toy)
   const phone = useSelector((store) => store.user.phone);
   const userId = useSelector((store) => store.user.id);
-
-
   console.log(toyImage, "image");
-  
-
-
-
 
   const shareToy = (action) => {
     console.log(toyImage, "image here")
@@ -113,8 +107,6 @@ function ShareToys() {
   }));
 
 
-
-  
     const classes = useStyles();
     const [age, setAge] = React.useState('');
   
@@ -123,16 +115,9 @@ function ShareToys() {
     };
 
 
-
-  
-
-
   return(
-    <div >
-            <h3 className="share">Share New Toys</h3>
-
-            <div className="share">
-              
+    <div className="share">
+            <h3 >Share New Toys</h3>
           <TextField 
             // className="input"
             style={{top: '16px'}}
@@ -141,22 +126,7 @@ function ShareToys() {
             placeholder="Name"
             onChange={(event) => setToyName(event.target.value)}
             />
-             
         <FormControl className={classes.formControl}>
-          {/* <InputLabel>Ages</InputLabel>
-            <p>Ages</p>
-          <Select
-            className="input"
-            labelId="demo-simple-select-label"
-            id="demo-simple-select"
-            value={ageGroup}
-            onChange={(event) => setAgeGroup(event.target.value)}
-            >
-            <MenuItem value="#"></MenuItem>
-            <MenuItem value="0-3">0-3</MenuItem>
-            <MenuItem value="3-5">3-5</MenuItem>
-            <MenuItem value="5-10">5-10</MenuItem>
-          </Select> */}
         <InputLabel id="demo-simple-select-helper-label">Age</InputLabel>
         <Select
           labelId="demo-simple-select-label"
@@ -202,14 +172,7 @@ function ShareToys() {
             onClick={cancelBtn}>
             Cancel
           </Button>
-
               </div>
-
-          <footer><LogOutButton /> </footer>
-
-
-    </div>
-    
   )
 
 }
