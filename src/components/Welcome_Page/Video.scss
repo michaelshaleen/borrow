@@ -108,15 +108,7 @@ ul li {
     transition-delay: 0.75s;
   } 
 }
-.social {
-  font-size: x-small;
-  // position: fixed;
-  // z-index: 10;
-  // margin-bottom: 3px;
-  // display: flex;
-  // justify-content: center;
-  // align-items: center;
-}
+
 .container {
   scroll-snap-type: y proximity;
   overflow-y: scroll;
