@@ -141,22 +141,7 @@ function ShareToys() {
             placeholder="Name"
             onChange={(event) => setToyName(event.target.value)}
             />
-             
         <FormControl className={classes.formControl}>
-          {/* <InputLabel>Ages</InputLabel>
-            <p>Ages</p>
-          <Select
-            className="input"
-            labelId="demo-simple-select-label"
-            id="demo-simple-select"
-            value={ageGroup}
-            onChange={(event) => setAgeGroup(event.target.value)}
-            >
-            <MenuItem value="#"></MenuItem>
-            <MenuItem value="0-3">0-3</MenuItem>
-            <MenuItem value="3-5">3-5</MenuItem>
-            <MenuItem value="5-10">5-10</MenuItem>
-          </Select> */}
         <InputLabel id="demo-simple-select-helper-label">Age</InputLabel>
         <Select
           labelId="demo-simple-select-label"
@@ -204,9 +189,6 @@ function ShareToys() {
           </Button>
 
               </div>
-
-          <footer><LogOutButton /> </footer>
-
 
     </div>
     

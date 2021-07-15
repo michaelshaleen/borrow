@@ -163,7 +163,6 @@ function SearchToys() {
                 className="share">
                     <ShareToys />
                 </div>
-                <footer><LogOutButton /> </footer>
  </>)
    
       {/* if searchedToys === null */}
