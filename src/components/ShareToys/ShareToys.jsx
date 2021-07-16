@@ -76,22 +76,11 @@ function ShareToys() {
       axios.post('/upload', toyImage)
       //how to send other data with form data
     }
-
-    // dispatch({
-    //   type: 'ADD_FILE',
-    //   payload:{
-    //     file: toyImage
-    //   }
     const sendImage = (event) => {
       event.preventDefault();
-      console.log(toyImage, "send image value")
-     
-      
-        
+      console.log(toyImage, "send image value")    
       }
     
-
-
   const cancelBtn = () => {
     console.log("cancel")
     return(
@@ -113,8 +102,6 @@ function ShareToys() {
   }));
 
 
-
-  
     const classes = useStyles();
     const [age, setAge] = React.useState('');
   
@@ -122,17 +109,10 @@ function ShareToys() {
       setAge(event.target.value);
     };
 
-
-
-  
-
-
   return(
-    <div >
-            <h3 className="share">Share New Toys</h3>
-
-            <div className="share">
-              
+    <div className="share" >
+            <h3 >Share New Toys</h3>
+            <div>
           <TextField 
             // className="input"
             style={{top: '16px'}}

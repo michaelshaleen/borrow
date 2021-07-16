@@ -1,8 +1,6 @@
 .text-nav {
-  position: relative;
   padding-top: 10px;
   margin-bottom: 10vh;
-  text-align: right;
   z-index: 10;
   border-bottom: 3px solid #800000;
   background: #112c38;
@@ -11,6 +9,7 @@
 .text-nav ul {
   margin-bottom: 15px;
   padding: 0;
+  text-align: center;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
