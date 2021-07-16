@@ -1,4 +1,14 @@
-ul {
+.text-nav {
+  position: relative;
+  padding-top: 10px;
+  margin-bottom: 10vh;
+  text-align: right;
+  z-index: 10;
+  border-bottom: 3px solid #800000;
+  background: #112c38;
+}
+
+.text-nav ul {
   margin-bottom: 15px;
   padding: 0;
   display: -webkit-box;
@@ -6,7 +16,7 @@ ul {
   display: flex;
 }
 
-ul:hover li a {
+.text-nav ul:hover li a {
   -webkit-transform: scale(1);
           transform: scale(1);
   opacity: .2;
@@ -14,14 +24,14 @@ ul:hover li a {
           filter: blur(1px);
 }
 
-ul li {
+.text-nav ul li {
   list-style: none;
   margin: 0 15px;
   -webkit-transition: 0.5s;
   transition: 0.5s;
 }
 
-ul li a {
+.text-nav ul li a {
   display: block;
   position: relative;
   text-decoration: none;
@@ -34,7 +44,7 @@ ul li a {
   transition: 0.5s;
 }
 
-ul li a:hover {
+.text-nav ul li a:hover {
   -webkit-transform: scale(1.25);
           transform: scale(1.25);
   opacity: 1;
@@ -43,7 +53,7 @@ ul li a:hover {
   color: white;
 }
 
-ul li a:hover::before {
+.text-nav ul li a:hover::before {
   -webkit-transition: -webkit-transform 0.5s;
   transition: -webkit-transform 0.5s;
   transition: transform 0.5s;
@@ -54,7 +64,7 @@ ul li a:hover::before {
           transform: scaleX(1);
 }
 
-ul li a::before {
+.text-nav ul li a::before {
   content: '';
   position: absolute;
   top: 0;
@@ -70,15 +80,5 @@ ul li a::before {
   -webkit-transform: scaleX(0);
           transform: scaleX(0);
   z-index: -1;
-}
-
-.text-nav {
-  position: relative;
-  padding-top: 10px;
-  margin-bottom: 10vh;
-  text-align: right;
-  z-index: 10;
-  border-bottom: 3px solid #800000;
-  background: #112c38;
 }
 /*# sourceMappingURL=Nav.css.map */
