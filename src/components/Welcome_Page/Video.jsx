@@ -22,7 +22,6 @@ function Video() {
     <div className="container">
         <section className="showcase">  
           <video src={process.env.PUBLIC_URL + '/kids_playing.mp4'} muted loop autoPlay> </video>
-          
           <div>
               <a 
                 className="neon"

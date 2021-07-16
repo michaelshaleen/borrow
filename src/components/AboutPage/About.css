@@ -15,6 +15,10 @@
   height: 50vh;
 }
 
+.about-container .contact .social {
+  font-size: x-small;
+}
+
 .about-container .future {
   text-align: right;
   height: 50vh;

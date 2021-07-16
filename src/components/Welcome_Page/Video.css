@@ -131,10 +131,6 @@ ul li:hover {
           transition-delay: 0.75s;
 }
 
-.social {
-  font-size: x-small;
-}
-
 .container {
   -ms-scroll-snap-type: y proximity;
       scroll-snap-type: y proximity;
