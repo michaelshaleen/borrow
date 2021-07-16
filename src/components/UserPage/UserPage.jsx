@@ -50,7 +50,7 @@ function UserPage() {
 
                 <div class="w3-container w3-center">
                   {/* <img src={Profile} alt="Avatar" style={{width: 100, height: 100}}  /> */}
-                  <h2>Hey there {user.username}!</h2>
+                  <h1 className="greeting">Hey there {user.username}!</h1>
                 </div>
 
             </div>              
