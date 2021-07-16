@@ -187,9 +187,7 @@ function ShareToys() {
             onClick={cancelBtn}>
             Cancel
           </Button>
-
-              </div>
-
+      </div>
     </div>
     
   )
