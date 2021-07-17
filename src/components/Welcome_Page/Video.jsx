@@ -37,14 +37,12 @@ function Video() {
               Scroll Down 
               </i>
       </section>
-        
     </div>
-      <section 
-        className="about"
-        ref={ scrollRef }
-        >
-          <About />
-      </section>
+    <section 
+      className="about"
+      ref={ scrollRef }>
+        <About />
+    </section>
 </>
 )
 }
