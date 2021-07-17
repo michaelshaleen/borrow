@@ -204,3 +204,27 @@ $primaryBtn : #112c38;
   @include snakeButton();
 
 }
+
+.register-btn-submit {
+  position: fixed;
+    padding: 15px 30px;
+    right: 200px;
+    bottom: 0px;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-decoration: none;
+    font-size: 16px;
+    overflow: hidden;
+    transition: .5s;
+    background-color: $primaryBtn;
+    border-radius: 2px;
+    &:hover {
+      color: $primaryBtn;
+      background: #fff;
+      box-shadow: 0 0 10px #fff,
+      0 0 40px #fff,
+      0 0 80px #fff;
+      transition-delay: 1s;
+    }
+}

@@ -262,4 +262,30 @@
   -webkit-transition-delay: 0.75s;
           transition-delay: 0.75s;
 }
+
+.register-btn-submit {
+  position: fixed;
+  padding: 15px 30px;
+  right: 200px;
+  bottom: 0px;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-decoration: none;
+  font-size: 16px;
+  overflow: hidden;
+  -webkit-transition: .5s;
+  transition: .5s;
+  background-color: #112c38;
+  border-radius: 2px;
+}
+
+.register-btn-submit:hover {
+  color: #112c38;
+  background: #fff;
+  -webkit-box-shadow: 0 0 10px #fff, 0 0 40px #fff, 0 0 80px #fff;
+          box-shadow: 0 0 10px #fff, 0 0 40px #fff, 0 0 80px #fff;
+  -webkit-transition-delay: 1s;
+          transition-delay: 1s;
+}
 /*# sourceMappingURL=LoginForm.css.map */
