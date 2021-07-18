@@ -41,7 +41,9 @@ function Edit() {
   return (<>
       <Nav />
       <p>{user} User Id</p>
-      <div>
+      <section className="login-section">
+        <div className="box">
+        <div className="form">
         <form className="formPanel" onSubmit={edit}>
             <h2>Edit User</h2>
             <div>
@@ -95,7 +97,9 @@ function Edit() {
       <span></span>
     </button>
         </form>
-    </div>
+        </div>
+      </div>
+    </section>
   </>)
 }
 

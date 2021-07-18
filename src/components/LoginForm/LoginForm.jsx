@@ -49,7 +49,7 @@ function LoginForm() {
 
   const changeIcon = () => {    
     console.log("changed")
-  }
+  } 
 
   return (
     <>
