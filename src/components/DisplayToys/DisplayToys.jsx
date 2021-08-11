@@ -19,11 +19,12 @@ function DisplayToys( { toy } ){
         <td>{toy.name} </td>
         <td>{toy.ages}</td>
         <td>{toy.available ? <span> available </span>:<span> unavailable </span> }</td>
+        <td>{toy.phone}</td>
         <td>
-          <CallIcon 
-              onClick={() => setModalIsOpen(true)}/> 
+          {/* <CallIcon 
+              onClick={() => setModalIsOpen(true)}/>
           <MessageIcon 
-            onClick={() => setModalIsOpen(true)}/>
+            onClick={() => setModalIsOpen(true)}/> */}
         </td>
       </tr>
         <Modal
