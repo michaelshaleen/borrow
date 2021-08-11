@@ -1,0 +1,31 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+}
+.login-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: linear-gradient(
+    -30deg, #03f46f 0%, #3ab744 50%,
+    #262626 50%, #607d8b 100%);
+    filter: hue-rotate(120deg);
+  animation: animate 5s linear infinite;
+
+}
+@keyframes animate {
+  0% {
+    filter: hue-rotate(0deg);
+  }
+  100% {
+    filter: hue-rotate(360deg);
+  }
+}
+
+section {
+  height: 100vh;
+}
+

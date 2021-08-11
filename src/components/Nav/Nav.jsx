@@ -33,7 +33,7 @@ function Nav() {
                   onClick={() => 
                   dispatch({ type: 'LOGOUT' })}>
                     <a exact component={LogOutButton}>
-                      Leave
+                      Log Out
                     </a>
                 </li>
             </ul>

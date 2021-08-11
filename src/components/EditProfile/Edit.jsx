@@ -44,7 +44,7 @@ function Edit() {
       <section className="login-section">
         <div className="box">
         <div className="form">
-        <form className="formPanel" onSubmit={edit}>
+        <form onSubmit={edit}>
             <h2>Edit User</h2>
             <div>
               <i><AccountCircleIcon /></i>

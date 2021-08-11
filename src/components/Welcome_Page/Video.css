@@ -154,4 +154,10 @@ section {
   top: 92%;
   left: 5%;
 }
+
+@media screen and (min-width: 830px) {
+  .neon {
+    color: red;
+  }
+}
 /*# sourceMappingURL=Video.css.map */
