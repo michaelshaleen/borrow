@@ -6,4 +6,19 @@
 .share h3 {
   color: white;
 }
+
+.select {
+  background: white;
+  margin: 10px;
+}
+
+.select-button {
+  height: 30px;
+  margin: 16px;
+  padding-bottom: 30px;
+}
+
+label {
+  color: white;
+}
 /*# sourceMappingURL=Share.css.map */

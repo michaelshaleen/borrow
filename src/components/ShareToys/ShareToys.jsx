@@ -5,8 +5,6 @@ import axios from 'axios';
 import Nav from '../Nav/Nav';
 import React from 'react';
 import './Share.css';
- 
-
 // const express = require('express');
 // const fileUpload = require('express-fileupload');
 // const app = express();
@@ -24,10 +22,8 @@ import FormControl from '@material-ui/core/FormControl';
 import Select from '@material-ui/core/Select';
 import LogOutButton from '../LogOutButton/LogOutButton';
 
-
 function ShareToys() {
   const dispatch = useDispatch();
-
   const [toyName, setToyName] = useState('');
   const [ageGroup, setAgeGroup] = useState('');
   const [available, setAvailable] = useState('');
@@ -35,14 +31,7 @@ function ShareToys() {
   const newToy = useSelector((store) => store.toy)
   const phone = useSelector((store) => store.user.phone);
   const userId = useSelector((store) => store.user.id);
-
-
   console.log(toyImage, "image");
-  
-
-
-
-
   const shareToy = (action) => {
     console.log(toyImage, "image here")
     if(!toyName || !ageGroup || !available){
@@ -69,8 +58,6 @@ function ShareToys() {
     }
       
     }
-
-
     const sendFile = (event) => {
 
       axios.post('/upload', toyImage)
@@ -113,8 +100,11 @@ function ShareToys() {
     <div className="share" >
             <h3 >Share New Toys</h3>
             <div>
+              <label>
+                Toy Name
+              </label>
           <TextField 
-            // className="input"
+            className="select"
             style={{top: '16px'}}
             value={toyName}
             type="input"
@@ -122,8 +112,10 @@ function ShareToys() {
             onChange={(event) => setToyName(event.target.value)}
             />
         <FormControl className={classes.formControl}>
-        <InputLabel id="demo-simple-select-helper-label">Age</InputLabel>
+        <label 
+          id="demo-simple-select-helper-label">Age</label>
         <Select
+          className="select"
           labelId="demo-simple-select-label"
           id="demo-simple-select"
           value={ageGroup}
@@ -138,10 +130,11 @@ function ShareToys() {
         </Select>
           </FormControl>
         <FormControl className={classes.formControl}>
-        <InputLabel 
+        <label 
               id="demo-simple-select-label">Available
-        </InputLabel>
+        </label>
               <Select
+              className="select"
               labelId="demo-simple-select-label"
               id="demo-simple-select"
               value={available}
@@ -153,20 +146,21 @@ function ShareToys() {
         </FormControl>
         <label className="custom-file-label" htmlFor="customFile"></label>
           
-          <Button 
-          className="input"
+          <button 
+          className="select-button"
           size="small"
-          endIcon={ <AddCircleIcon /> }
           onClick={shareToy}>
           Share Toy
-          </Button>
+          <AddCircleIcon />
+          </button>
 
-          <Button 
+          <button
+            className="select-button"
             size="small"
-            endIcon={ <CancelIcon /> }
             onClick={cancelBtn}>
             Cancel
-          </Button>
+            <CancelIcon />
+          </button>
       </div>
     </div>
     
