@@ -98,7 +98,7 @@ function SearchToys() {
                             <Nav />
                           <div className="toy-container">
                   <div>
-                      <p><h3>Search Toys</h3></p>
+                      <p><h1>Search Toys</h1></p>
                   <div>
                   <TextField 
                           style={{top: '16px'}}
