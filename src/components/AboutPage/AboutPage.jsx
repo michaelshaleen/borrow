@@ -20,6 +20,7 @@ function AboutPage() {
           caring, so let's practice what we preach. Lets cut down on needless spending, Let's empower
           community relationships, and hopefully step on a few less toys around our homes. 
         </p>
+        <p>This is a test commit</p>
       </section>
       <section className="future">
           <p>
