@@ -26,6 +26,7 @@ function RegisterForm() {
   const errors = useSelector((store) => store.errors);
 
   const registerUser = (event) => {
+    console.log("here")
     event.preventDefault();
     dispatch({
       type: 'REGISTER',
@@ -96,23 +97,25 @@ function RegisterForm() {
             <span></span>
             Submit
             </button>
-            <button
-          type="button"
-          className="register-btn"
-          onClick={() => {
-            history.push('/login');
-          }}
-        >
-          Login
-          <span></span>
-          <span></span>
-          <span></span>
-          <span></span>
-        </button>
-          </div>
-       </form> 
-       </div>
-       </div>
+            {/* </form> */}
+
+                <button
+              type="button"
+              className="register-btn"
+              onClick={() => {
+                history.push('/login');
+              }}
+            >
+              Login
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+            </button>
+              </div>
+        </form> 
+      </div>
+      </div>
     </section>
     </>
     );
