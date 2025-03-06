@@ -104,6 +104,8 @@ function LoginForm() {
             </div>
             <div className="input-box">
             </div>
+
+
             <button
             type="button"
             className="register-btn"
@@ -121,7 +123,9 @@ function LoginForm() {
             <a href="#"> Password</a>
           </p>
           <p>Register an
-            <a href=""> Account</a>
+            <a onClick={() => {
+              history.push('/registration');
+            }} ><u>Account</u> </a>
           </p>
         </div>
       </div>
