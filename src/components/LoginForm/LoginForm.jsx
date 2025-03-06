@@ -121,7 +121,7 @@ function LoginForm() {
             <a href="#"> Password</a>
           </p>
           <p>Register an
-            <a href="/registration"> Account</a>
+            <a href=""> Account</a>
           </p>
         </div>
       </div>
