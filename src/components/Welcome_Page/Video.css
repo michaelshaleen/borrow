@@ -14,11 +14,8 @@ ul li {
   color: #112c38;
   list-style-type: none;
 }
-
 ul li:hover {
-  -webkit-transform: scale(1.2);
-          transform: scale(1.2);
-  -webkit-transition: 1.25s;
+  transform: scale(1.2);
   transition: 1.25s;
   color: #fff;
 }
@@ -28,10 +25,9 @@ ul li:hover {
   top: 5px;
   z-index: 10;
 }
-
 .text h5 {
   font-weight: 100;
-  font-family: 'Pacifico', cursive;
+  font-family: "Pacifico", cursive;
 }
 
 .neon {
@@ -45,102 +41,75 @@ ul li:hover {
   text-decoration: none;
   font-size: 24px;
   overflow: hidden;
-  -webkit-transition: .5s;
-  transition: .5s;
+  transition: 0.5s;
   background-color: #112c38;
   border-radius: 2px;
 }
-
 .neon:hover {
   color: #112c38;
   background: #fff;
-  -webkit-box-shadow: 0 0 10px #fff, 0 0 40px #fff, 0 0 80px #fff;
-          box-shadow: 0 0 10px #fff, 0 0 40px #fff, 0 0 80px #fff;
-  -webkit-transition-delay: 1s;
-          transition-delay: 1s;
+  box-shadow: 0 0 10px #fff, 0 0 40px #fff, 0 0 80px #fff;
+  transition-delay: 1s;
 }
-
 .neon span {
   position: absolute;
   display: block;
 }
-
 .neon span:nth-child(1) {
   top: 0;
   left: -100%;
   width: 100%;
   height: 2px;
-  background: -webkit-gradient(linear, left top, right top, from(transparent), to(#fff));
   background: linear-gradient(90deg, transparent, #fff);
 }
-
 .neon:hover span:nth-child(1) {
   left: 100%;
-  -webkit-transition: 1s;
   transition: 1s;
 }
-
 .neon span:nth-child(3) {
   bottom: 0;
   right: -100%;
   width: 100%;
   height: 2px;
-  background: -webkit-gradient(linear, right top, left top, from(transparent), to(#fff));
   background: linear-gradient(270deg, transparent, #fff);
 }
-
 .neon:hover span:nth-child(3) {
   right: 100%;
-  -webkit-transition: 1s;
   transition: 1s;
-  -webkit-transition-delay: .5s;
-          transition-delay: .5s;
+  transition-delay: 0.5s;
 }
-
 .neon span:nth-child(2) {
   top: -100%;
   right: 0;
   width: 2px;
   height: 100%;
-  background: -webkit-gradient(linear, left top, left bottom, from(transparent), to(#fff));
   background: linear-gradient(180deg, transparent, #fff);
 }
-
 .neon:hover span:nth-child(2) {
   top: 100%;
-  -webkit-transition: 1s;
   transition: 1s;
-  -webkit-transition-delay: 0.25s;
-          transition-delay: 0.25s;
+  transition-delay: 0.25s;
 }
-
 .neon span:nth-child(4) {
   bottom: -100%;
   left: 0;
   width: 2px;
   height: 100%;
-  background: -webkit-gradient(linear, left bottom, left top, from(transparent), to(#fff));
   background: linear-gradient(360deg, transparent, #fff);
 }
-
 .neon:hover span:nth-child(4) {
   bottom: 100%;
-  -webkit-transition: 1s;
   transition: 1s;
-  -webkit-transition-delay: 0.75s;
-          transition-delay: 0.75s;
+  transition-delay: 0.75s;
 }
 
 .container {
-  -ms-scroll-snap-type: y proximity;
-      scroll-snap-type: y proximity;
+  scroll-snap-type: y proximity;
   overflow-y: scroll;
 }
 
 section {
   height: 100vh;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   scroll-snap-align: start;
 }
@@ -153,5 +122,4 @@ section {
   position: absolute;
   top: 92%;
   left: 5%;
-}
-/*# sourceMappingURL=Video.css.map */
+}/*# sourceMappingURL=Video.css.map */

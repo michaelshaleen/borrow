@@ -3,27 +3,22 @@
   height: 100vh;
   width: 100vw;
 }
-
 .about-container .history {
   height: 100vh;
   position: relative;
   padding: 100px;
 }
-
 .about-container .contact {
   background: #112c38;
   height: 50vh;
 }
-
 .about-container .contact .social {
   font-size: x-small;
 }
-
 .about-container .future {
   text-align: right;
   height: 50vh;
 }
-
 .about-container .future p {
   color: black;
 }
@@ -36,5 +31,4 @@ p {
 
 h1 {
   color: white;
-}
-/*# sourceMappingURL=About.css.map */
+}/*# sourceMappingURL=About.css.map */
