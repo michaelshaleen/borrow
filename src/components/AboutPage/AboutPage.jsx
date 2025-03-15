@@ -50,7 +50,7 @@ function AboutPage() {
         
           <div>
             <p>Email: toi_admin@gmail.com</p>
-            <p>Phone: 801-010-8010</p>
+            <p>Phone: 763-219-6648</p>
             <ul className="social"> 
                 <li onClick={linkedIn}><LinkedInIcon /></li> 
                 {/* link personal website */}

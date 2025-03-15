@@ -41,5 +41,5 @@ const PORT = process.env.PORT || 5432;
 
 /** Listen * */
 app.listen(PORT, () => {
-  console.log(`Listening on port: ${PORT}`);
+  console.log(`Listening on port: ${PORT}` );
 });

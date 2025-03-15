@@ -5,6 +5,20 @@
  change `prime_app` to the name of your database, and you should be all set!
 */
 
+
+
+
+// const pool = new Pool({
+//   user: 'myappuser',
+//   host: 'localhost',
+//   database: 'myappdb',
+//   password: 'mypassword',
+//   port: 5432,
+// });
+
+
+
+
 const pg = require('pg');
 const url = require('url');
 
