@@ -83,12 +83,12 @@ function LoginForm() {
                 onChange={(event) => setPassword(event.target.value)}>
               </input>
             </div> 
-            <label className="remember">
+            {/* <label className="remember">
               <input 
                 type="checkbox">
               </input>
               Remember Me
-            </label>
+            </label> */}
             <div className="input-box">
             <button 
               className="register-btn-submit"
@@ -119,14 +119,14 @@ function LoginForm() {
             <span></span>
           </button>
           </form>
-          <p>Forget
+          {/* <p>Forget
             <a href="#"> Password</a>
-          </p>
-          <p>Register an
+          </p> */}
+          {/* <p>Register an
             <a onClick={() => {
               history.push('/registration');
             }} ><u>Account</u> </a>
-          </p>
+          </p> */}
         </div>
       </div>
     </section>
