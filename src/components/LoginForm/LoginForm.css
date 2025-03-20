@@ -10,8 +10,8 @@
   align-items: center;
   min-height: 100vh;
   background: linear-gradient(-30deg, #03f46f 0%, #3ab744 50%, #262626 50%, #607d8b 100%);
-  filter: hue-rotate(120deg);
-  animation: animate 5s linear infinite;
+  filter: hue-rotate(10deg);
+  animation: animate 10s linear infinite;
 }
 
 @keyframes animate {
