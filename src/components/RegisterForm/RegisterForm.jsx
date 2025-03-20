@@ -26,7 +26,7 @@ function RegisterForm() {
   const errors = useSelector((store) => store.errors);
 
   const registerUser = (event) => {
-    console.log("here")
+    console.log("here", event)
     event.preventDefault();
     dispatch({
       type: 'REGISTER',
